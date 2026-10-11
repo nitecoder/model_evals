@@ -1,0 +1,44 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky and Sun -->
+  <rect width="400" height="400" fill="#87CEEB" />
+  <circle cx="320" cy="70" r="35" fill="#FFD700" />
+  
+  <!-- Sea -->
+  <rect y="270" width="400" height="130" fill="#0077be" />
+  
+  <!-- Gateway of India (More detailed Arch) -->
+  <g transform="translate(80, 80)" fill="#A9A9A9">
+    <rect x="0" y="60" width="160" height="160" />
+    <!-- Top Dome/Arch Section -->
+    <path d="M0 60 Q80 0 160 60 L160 70 L0 70 Z" />
+    <rect x="0" y="0" width="160" height="10" />
+    <!-- The Archway -->
+    <path d="M40 220 L40 90 Q80 50 120 90 L120 220 Z" fill="#87CEEB" />
+    <!-- Decorative lines -->
+    <rect x="10" y="75" width="140" height="5" />
+    <rect x="10" y="215" width="140" height="5" />
+  </g>
+
+  <!-- Foreground: Table and Person -->
+  <!-- Table -->
+  <rect x="180" y="335" width="180" height="10" fill="#5D4037" />
+  
+  <!-- Person Silhouette (Seated, connected) -->
+  <g fill="#111">
+    <!-- Head -->
+    <circle cx="280" cy="260" r="18" />
+    <!-- Neck -->
+    <rect x="274" y="275" width="12" height= "8" />
+    <!-- Shoulders and Torso -->
+    <path d="M230 380 Q230 285 280 285 Q330 285 330 380 Z" />
+    <!-- Arm -->
+    <path d="M310 310 Q315 330 260 335" fill="none" stroke="#111" stroke-width="15" stroke-linecap="round" />
+  </g>
+
+  <!-- Drink Glass -->
+  <g>
+    <path d="M240 300 L265 300 L260 335 L245 335 Z" fill="rgba(255, 255, 255, 0.5)" stroke="#FFF" stroke-width="1" />
+    <rect x="245" y="305" width="15" height="25" fill="#FF4500" /> <!-- Juice -->
+    <line x1="252" y1="290" x2="252" y2="300" stroke="#FFF" stroke-width="2" /> <!-- Straw -->
+  </g>
+</svg>

@@ -1,0 +1,103 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0077be;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004d66;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="stoneGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#A9A9A9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGrad">
+      <stop offset="0%" style="stop-color:#FFFACD;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. Background: Sky & Sun -->
+  <rect width="800" height="800" fill="url(#skyGrad)" />
+  <circle cx="600" cy="150" r="60" fill="url(#sunGrad)" opacity="0.8" />
+  
+  <!-- 2. Sea -->
+  <rect y="550" width="800" height="250" fill="url(#seaGrad)" />
+  <!-- Waves -->
+  <path d="M0 550 Q 100 540 200 550 T 400 550 T 600 550 T 800 550 V 560 H 0 Z" fill="#FFFFFF" opacity="0.2" />
+
+  <!-- 3. Landmarks -->
+  <g transform="translate(100, 250)">
+    <!-- Taj Mahal Palace (Detailed Dome & Windows) -->
+    <g id="TajPalace">
+      <rect x="0" y="150" width="250" height="150" fill="#8B4513" /> <!-- Main building -->
+      <path d="M0 150 Q 125 50 250 150 Z" fill="#A52A2A" /> <!-- Dome -->
+      <rect x="110" y="30" width="30" height="20" fill="#A52A2A" /> <!-- Dome peak -->
+      <!-- Windows -->
+      <rect x="30" y="180" width="20" height="30" fill="#333" />
+      <rect x="70" y="180" width="20" height="30" fill="#333" />
+      <rect x="110" y="180" width="20" height="30" fill="#333" />
+      <rect x="150" y="180" width="20" height="30" fill="#333" />
+      <rect x="190" y="180" width="20" height="30" fill="#333" />
+      <rect x="30" y="230" width="20" height="30" fill="#333" />
+      <rect x="70" y="230" width="20" height="30" fill="#333" />
+      <rect x="110" y="230" width="20" height="30" fill="#333" />
+      <rect x="150" y="230" width="20" height="30" fill="#333" />
+      <rect x="190" y="230" width="20" height="30" fill="#333" />
+    </g>
+
+    <!-- Gateway of India (Detailed Archway) -->
+    <g id="Gateway" transform="translate(350, 200)">
+      <rect x="0" y="100" width="220" height="200" fill="url(#stoneGrad)" />
+      <!-- The Arch -->
+      <path d="M50 300 L50 120 Q110 60 170 120 L170 300 Z" fill="#87CEEB" />
+      <path d="M65 300 L65 140 Q110 90 155 140 L155 300 Z" fill="#E0F6FF" />
+      <!-- Top Structure -->
+      <path d="M-10 100 Q110 -20 230 100 L230 110 L-10 110 Z" fill="#696969" />
+      <!-- Decoration -->
+      <rect x="40" y="120" width="140" height="5" fill="#555" />
+      <rect x="40" y="280" width="140" height="5" fill="#555" />
+    </g>
+  </g>
+
+  <!-- 4. Taxi (Premier Padmini) -->
+  <g transform="translate(500, 480)">
+    <rect x="0" y="20" width="120" height="40" fill="#FFD700" /> <!-- Yellow Bottom -->
+    <path d="M10 20 Q 10 0 30 0 L 80 0 Q 100 0 100 20 Z" fill="#111" /> <!-- Black Top -->
+    <rect x="20" y="5" width="30" height="15" fill="#ADD8E6" opacity="0.6" /> <!-- Window -->
+    <rect x="60" y="5" width="30" height="15" fill="#ADD8E6" opacity="0.6" /> <!-- Window -->
+    <circle cx="25" cy="60" r="12" fill="#333" /> <!-- Wheel -->
+    <circle cx="25" cy="60" r="5" fill="#999" /> <!-- Hubcap -->
+    <circle cx="95" cy="60" r="12" fill="#333" /> <!-- Wheel -->
+    <circle cx="95" cy="60" r="5" fill="#999" /> <!-- Hubcap -->
+    <rect x="110" y="25" width="10" height="10" fill="#FFF" /> <!-- Headlight -->
+  </g>
+
+  <!-- 5. Foreground: Person at Cafe -->
+  <g transform="translate(0, 0)">
+    <!-- Seated Person Silhouette -->
+    <g id="Person" fill="#000">
+      <circle cx="650" cy="550" r="35" /> <!-- Head -->
+      <path d="M580 800 Q600 600 650 600 Q700 600 720 800 Z" /> <!-- Torso -->
+      <path d="M650 610 Q700 630 750 700" fill="none" stroke="#000" stroke-width="40" stroke-linecap="round" /> <!-- Arm -->
+    </g>
+
+    <!-- Table -->
+    <rect x="500" y="680" width="280" height="120" fill="#3E2723" />
+    <rect x="500" y="680" width="280" height="15" fill="#5D4037" />
+    
+    <!-- Cutting Chai Glass -->
+    <g transform="translate(580, 620)">
+      <!-- Glass Shadow -->
+      <ellipse cx="25" cy="65" rx="25" ry="5" fill="rgba(0,0,0,0.2)" />
+      <!-- Glass Body -->
+      <path d="M5 0 L45 0 L40 60 L10 60 Z" fill="rgba(255, 255, 255, 0.3)" stroke="#FFF" stroke-width="2" />
+      <!-- Chai Liquid -->
+      <path d="M10 5 L40 5 L37 55 L13 55 Z" fill="#D2691E" />
+      <!-- Steam -->
+      <path d="M20 0 Q 25 -10 20 -20" fill="none" stroke="#FFF" stroke-width="2" opacity="0.4" />
+      <path d="M30 0 Q 35 -15 30 -25" fill="none" stroke="#FFF" stroke-width="2" opacity="0.3" />
+    </g>
+  </g>
+</svg>

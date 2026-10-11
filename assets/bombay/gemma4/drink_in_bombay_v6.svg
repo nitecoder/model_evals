@@ -1,0 +1,51 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 1. Background: Sky and Sun -->
+  <rect width="400" height="400" fill="#87CEEB" />
+  <circle cx="320" cy="70" r="35" fill="#FFD700" />
+  
+  <!-- 2. Sea -->
+  <rect y="270" width="400" height="130" fill="#0077be" />
+  
+  <!-- 3. Landmarks: Gateway of India & Taj Mahal Palace -->
+  <g transform="translate(60, 80)">
+    <!-- Taj Mahal Palace (Simplified Silhouette) -->
+    <rect x="20" y="40" width="120" height="140" fill="#444" />
+    <path d="M20 40 L80 0 L140 40 Z" fill="#333" />
+    
+    <!-- Gateway of India -->
+    <g transform="translate(60, 40)" fill="#A9A9A9">
+      <rect x="0" y="60" width="160" height= "160" />
+      <path d="M0 60 Q80 0 160 60 L160 70 L0 70 Z" />
+      <path d="M40 220 L40 90 Q80 50 120 90 L120 220 Z" fill="#87CEEB" />
+      <rect x="10" y="75" width="140" height="5" />
+      <rect x="10" y="215" width="140" height="5" />
+    </g>
+  </g>
+
+  <!-- 4. Middle Ground: Person Silhouette -->
+  <g fill="#111">
+    <circle cx="280" cy="260" r="18" /> <!-- Head -->
+    <rect x="274" y="278" width="12" height="8" /> <!-- Neck -->
+    <path d="M230 380 Q230 285 280 285 Q330 285 330 380 Z" /> <!-- Torso -->
+    <path d="M310 310 Q315 330 260 335" fill="none" stroke="#111" stroke-width="15" stroke-linecap="round" /> <!-- Arm -->
+  </g>
+
+  <!-- 5. Foreground: Table (In front of the person) -->
+  <rect x="150" y="330" width="220" height="15" fill="#5D4037" />
+  
+  <!-- 6. Foreground: Cutting Chai Glass (On the table) -->
+  <g transform="translate(220, 305)">
+    <!-- Glass shape -->
+    <path d="M0 0 L30 0 L25 40 L5 40 Z" fill="rgba(255, 255, 255, 0.4)" stroke="#FFF" stroke-width="1" />
+    <!-- Tea (Chai) -->
+    <path d="M5 5 L25 5 L22 35 L8 35 Z" fill="#D2691E" />
+  </g>
+
+  <!-- 7. Extra detail: Black and Yellow Taxi (Side view in distance) -->
+  <g transform="translate(20, 240)">
+    <rect width="60" height="25" fill="#FFD700" /> <!-- Yellow Top -->
+    <rect y="25" width="60" height="15" fill="#111" /> <!-- Black Bottom -->
+    <circle cx="15" cy="40" r="8" fill="#333" /> <!-- Wheel -->
+    <circle cx="45" cy="40" r="8" fill="#333" /> <!-- Wheel -->
+  </g>
+</svg>

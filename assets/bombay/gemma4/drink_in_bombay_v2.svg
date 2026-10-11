@@ -1,0 +1,28 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: Tropical Sky -->
+  <rect width="400" height="400" fill="#FFD1DC" />
+  <circle cx="320" cy="80" r="50" fill="#FFD700" opacity="0.8" />
+  
+  <!-- Sea -->
+  <rect y="260" width="400" height="140" fill="#0077be" />
+  
+  <!-- Gateway of India Silhouette -->
+  <path d="M30 280 L30 160 L60 130 L90 160 L90 280 Z" fill="#333" />
+  <rect x="50" y="200" width="20" height="80" fill="#111" />
+
+  <!-- Person Silhouette -->
+  <!-- Head -->
+  <circle cx="180" cy="160" r="22" fill="#222" />
+  <!-- Shoulders and Torso -->
+  <path d="M130 300 Q 160 220 230 280 L 230 400 L 130 400 Z" fill="#222" />
+  <!-- Arm reaching for drink -->
+  <path d="M210 250 Q 250 270 270 310" fill="none" stroke="#222" stroke-width="18" stroke-linecap="round" />
+
+  <!-- Table -->
+  <rect x="230" y="340" width="140" height="8" fill="#5D4037" />
+  
+  <!-- Drink Glass -->
+  <path d="M260 300 L 290 300 L 285 340 L 265 340 Z" fill="rgba(255, 255, 255, 0.4)" stroke="#FFF" stroke-width="1" />
+  <rect x="267" y="305" width="16" height="30" fill="#FF4500" /> <!-- Orange Juice -->
+  <line x1="275" y1="290" x2="278" y2="315" stroke="#FFF" stroke-width="2" /> <!-- Straw -->
+</svg>

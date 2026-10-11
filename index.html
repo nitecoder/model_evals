@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b22">
+  <meta name="description" content="A visual gallery for side-by-side model evaluations.">
+  <title>Model Atlas — visual evaluations</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to results</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><span>MODEL<span class="brand-accent">/</span>ATLAS</span></div>
+    <span class="header-label">A visual evaluation archive</span>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> FIELD NOTES / 001</p>
+        <h1 id="page-title">Same prompt.<br><em>Different eyes.</em></h1>
+        <p class="intro-description">Explore model outputs on equal footing. Browse each result, inspect earlier iterations, and compare the work side by side.</p>
+        <a class="intro-link" href="#results">Explore the results <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="intro-aside" aria-label="Archive overview">
+        <div class="overview-number" id="evaluation-count">—</div><div class="overview-caption">EVALUATION<span id="evaluation-plural"></span></div>
+        <div class="overview-rule"></div>
+        <div class="overview-number" id="result-count">—</div><div class="overview-caption">MODEL RESULTS</div>
+        <div class="overview-rule"></div>
+        <p>Built for visual comparison today, with room for families, runtimes, quantizations and memory profiles as the archive grows.</p>
+      </div>
+    </section>
+
+    <section class="study" aria-labelledby="study-title">
+      <div class="section-kicker"><span class="section-index">01</span><span>CURRENT STUDY</span></div>
+      <div class="study-heading"><div><h2 id="study-title">Loading study…</h2><p id="study-description"></p></div><div class="study-count" id="study-count"></div></div>
+      <div class="brief"><div class="brief-label">THE BRIEF</div><blockquote id="study-brief"></blockquote></div>
+    </section>
+
+    <section class="gallery-section" id="results" aria-labelledby="results-title">
+      <div class="section-kicker"><span class="section-index">02</span><span>THE OUTPUTS</span></div>
+      <div class="results-heading"><div><h2 id="results-title">The gallery</h2><p id="visible-count">Browse the selected result from each model run.</p></div><button id="compare-button" class="button-outline" type="button" disabled>Compare selected <span id="selected-count">0</span></button></div>
+      <div class="controls" aria-label="Filter results">
+        <label>Study <select id="study-filter"></select></label>
+        <label>Family <select id="family-filter"><option value="">All families</option></select></label>
+        <label>Runtime <select id="runtime-filter"><option value="">All runtimes</option></select></label>
+        <label>Quantization <select id="quantization-filter"><option value="">All quantizations</option></select></label>
+        <label>Memory <select id="memory-filter"><option value="">Any / unknown</option></select></label>
+        <button id="reset-button" class="reset-button" type="button">Reset filters</button>
+      </div>
+      <div class="gallery" id="gallery" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state" hidden>No results match these filters. Try resetting them.</p>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="section-kicker"><span class="section-index">03</span><span>READING THE RESULTS</span></div>
+      <div class="about-grid"><h2 id="about-title">Look closely.<br><em>Judge for yourself.</em></h2><div><p>Each card starts with one selected SVG per model run. Where earlier versions exist, use the version menu to inspect them. Open any image for a larger view or select up to four cards for a direct comparison.</p><p>Explore the images and model details to form your own view. Some details may not be available for every result.</p></div></div>
+    </section>
+  </main>
+
+  <footer><span>MODEL / ATLAS</span><span>Independent visual evaluations</span><a href="#page-title">Back to top ↑</a></footer>
+
+  <dialog id="viewer" class="viewer" aria-labelledby="viewer-title"><div class="viewer-shell"><div class="viewer-bar"><div><span class="viewer-kicker">IMAGE VIEWER</span><h2 id="viewer-title"></h2></div><button class="viewer-close" id="viewer-close" type="button" aria-label="Close image viewer">×</button></div><div class="viewer-canvas"><img id="viewer-image" alt=""></div><div class="viewer-foot"><span id="viewer-detail"></span><a id="viewer-original" href="#" target="_blank" rel="noopener">Open original SVG ↗</a></div></div></dialog>
+  <dialog id="comparison" class="comparison" aria-labelledby="comparison-title"><div class="comparison-shell"><div class="comparison-head"><div><span class="viewer-kicker">SIDE BY SIDE</span><h2 id="comparison-title">Selected results</h2></div><button id="comparison-close" class="viewer-close" type="button" aria-label="Close comparison">×</button></div><div id="comparison-grid" class="comparison-grid"></div></div></dialog>
+</body>
+</html>

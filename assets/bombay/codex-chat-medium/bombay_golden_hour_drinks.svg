@@ -1,0 +1,452 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <!-- Sky and sea -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6f8fb5"/>
+      <stop offset="42%" stop-color="#d3a277"/>
+      <stop offset="72%" stop-color="#f4b56d"/>
+      <stop offset="100%" stop-color="#d97557"/>
+    </linearGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd89b" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#fff6df" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#708da2"/>
+      <stop offset="38%" stop-color="#557888"/>
+      <stop offset="100%" stop-color="#314e59"/>
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7cb" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#ffd073" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#ff9d51" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Terrace and table -->
+    <linearGradient id="terrace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#76685e"/>
+      <stop offset="100%" stop-color="#3c3531"/>
+    </linearGradient>
+    <linearGradient id="tableWood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#936b49"/>
+      <stop offset="45%" stop-color="#5f422f"/>
+      <stop offset="100%" stop-color="#34251f"/>
+    </linearGradient>
+
+    <!-- Glasses -->
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="35%" stop-color="#dbeaf4" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#b8d2df" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="amberDrink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4c56f"/>
+      <stop offset="55%" stop-color="#d98433"/>
+      <stop offset="100%" stop-color="#8b451e"/>
+    </linearGradient>
+    <linearGradient id="rubyDrink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f19173"/>
+      <stop offset="100%" stop-color="#8d2f30"/>
+    </linearGradient>
+
+    <!-- Skin and clothing -->
+    <radialGradient id="skin1" cx="40%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#d9a174"/>
+      <stop offset="65%" stop-color="#b97751"/>
+      <stop offset="100%" stop-color="#744632"/>
+    </radialGradient>
+    <radialGradient id="skin2" cx="38%" cy="30%" r="82%">
+      <stop offset="0%" stop-color="#e7b08a"/>
+      <stop offset="66%" stop-color="#bf7b58"/>
+      <stop offset="100%" stop-color="#74422f"/>
+    </radialGradient>
+    <linearGradient id="shirt1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ede7df"/>
+      <stop offset="100%" stop-color="#a69c92"/>
+    </linearGradient>
+    <linearGradient id="dress2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5c2732"/>
+      <stop offset="100%" stop-color="#23161b"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dx="0" dy="8" result="off"/>
+      <feColorMatrix in="off" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 .38 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <filter id="blur20">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="blur8">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- subtle photo grain -->
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.035"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="soft-light"/>
+    </filter>
+
+    <!-- Glass blur-ish -->
+    <filter id="glassBlur">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect x="0" y="0" width="1600" height="560" fill="url(#haze)"/>
+
+  <!-- Sun and glow -->
+  <circle cx="1280" cy="220" r="178" fill="url(#sunGlow)" filter="url(#blur20)"/>
+  <circle cx="1288" cy="220" r="56" fill="#ffe8a8" opacity="0.9"/>
+  <circle cx="1288" cy="220" r="38" fill="#fff4c8" opacity="0.96"/>
+
+  <!-- distant haze / skyline -->
+  <g opacity="0.88">
+    <path d="M0 492 L92 487 L112 433 L132 487 L183 481 L204 447 L227 481
+             L295 478 L320 435 L346 478 L391 476 L406 429 L421 476
+             L467 474 L483 446 L498 474 L548 470 L563 421 L578 470
+             L634 469 L659 446 L680 469 L730 465 L760 414 L787 465
+             L838 462 L855 437 L875 462 L930 458 L950 406 L972 458
+             L1012 454 L1032 430 L1054 454 L1110 448 L1132 408 L1157 448
+             L1210 444 L1230 418 L1250 444 L1308 438 L1336 403 L1360 438
+             L1410 432 L1436 407 L1460 432 L1520 425 L1545 390 L1570 425 L1600 422 L1600 585 L0 585 Z"
+          fill="#756760" opacity="0.48"/>
+  </g>
+
+  <!-- Marine Drive / Art Deco buildings -->
+  <g opacity="0.94">
+    <rect x="120" y="420" width="110" height="118" rx="4" fill="#d2c2aa"/>
+    <rect x="250" y="395" width="94" height="144" rx="4" fill="#c8b49a"/>
+    <rect x="364" y="430" width="128" height="110" rx="5" fill="#b99f87"/>
+    <rect x="512" y="390" width="105" height="149" rx="4" fill="#d7c2a3"/>
+    <rect x="640" y="420" width="125" height="119" rx="5" fill="#c9b79f"/>
+    <rect x="792" y="380" width="110" height="159" rx="5" fill="#d7c1a2"/>
+    <rect x="930" y="414" width="126" height="125" rx="4" fill="#c2ae96"/>
+
+    <!-- art deco strip windows -->
+    <g fill="#5f6f77" opacity="0.66">
+      <g>
+        <rect x="136" y="442" width="16" height="8"/><rect x="164" y="442" width="16" height="8"/><rect x="192" y="442" width="16" height="8"/>
+        <rect x="136" y="466" width="16" height="8"/><rect x="164" y="466" width="16" height="8"/><rect x="192" y="466" width="16" height="8"/>
+        <rect x="136" y="490" width="16" height="8"/><rect x="164" y="490" width="16" height="8"/><rect x="192" y="490" width="16" height="8"/>
+      </g>
+      <g>
+        <rect x="265" y="420" width="16" height="9"/><rect x="294" y="420" width="16" height="9"/><rect x="323" y="420" width="10" height="9"/>
+        <rect x="265" y="448" width="16" height="9"/><rect x="294" y="448" width="16" height="9"/><rect x="323" y="448" width="10" height="9"/>
+        <rect x="265" y="476" width="16" height="9"/><rect x="294" y="476" width="16" height="9"/><rect x="323" y="476" width="10" height="9"/>
+      </g>
+      <g>
+        <rect x="530" y="415" width="16" height="8"/><rect x="558" y="415" width="16" height="8"/><rect x="586" y="415" width="16" height="8"/>
+        <rect x="530" y="445" width="16" height="8"/><rect x="558" y="445" width="16" height="8"/><rect x="586" y="445" width="16" height="8"/>
+        <rect x="530" y="475" width="16" height="8"/><rect x="558" y="475" width="16" height="8"/><rect x="586" y="475" width="16" height="8"/>
+      </g>
+      <g>
+        <rect x="808" y="405" width="16" height="9"/><rect x="836" y="405" width="16" height="9"/><rect x="864" y="405" width="16" height="9"/>
+        <rect x="808" y="435" width="16" height="9"/><rect x="836" y="435" width="16" height="9"/><rect x="864" y="435" width="16" height="9"/>
+        <rect x="808" y="465" width="16" height="9"/><rect x="836" y="465" width="16" height="9"/><rect x="864" y="465" width="16" height="9"/>
+      </g>
+    </g>
+
+    <!-- rounded deco corners/details -->
+    <path d="M250 415 q35 -28 70 0" fill="none" stroke="#8c7865" stroke-width="7" opacity=".6"/>
+    <path d="M792 400 q42 -35 88 0" fill="none" stroke="#8f7864" stroke-width="7" opacity=".62"/>
+  </g>
+
+  <!-- recognizable Gateway of India silhouette at distance -->
+  <g transform="translate(1110 330) scale(.78)" opacity="0.72">
+    <path d="M0 210 L0 130 L20 130 L20 110 L38 110 L38 72
+             Q80 20 122 72 L122 110 L140 110 L140 130 L160 130 L160 210 Z"
+          fill="#665c59"/>
+    <path d="M55 210 L55 130 Q80 90 105 130 L105 210 Z" fill="#c18b67" opacity=".32"/>
+    <rect x="-14" y="202" width="188" height="16" fill="#5f5552"/>
+    <path d="M20 110 L20 88 L38 88 L38 58 L48 58 L48 35 L58 35 L58 18 L67 18 L80 0 L93 18 L102 18 L102 35 L112 35 L112 58 L122 58 L122 88 L140 88 L140 110"
+          fill="none" stroke="#5f5552" stroke-width="10"/>
+  </g>
+
+  <!-- Sea -->
+  <path d="M0 520 C270 500 440 520 640 510 C890 495 1060 520 1600 492 L1600 735 L0 735 Z" fill="url(#sea)"/>
+
+  <!-- golden reflection -->
+  <path d="M1170 492 C1250 510 1375 500 1458 520 C1350 540 1270 562 1165 575 C1215 560 1260 540 1170 492 Z"
+        fill="#f0b56a" opacity=".24" filter="url(#blur8)"/>
+  <g opacity=".22" fill="#ffd58b">
+    <ellipse cx="1285" cy="520" rx="85" ry="5"/>
+    <ellipse cx="1315" cy="542" rx="110" ry="4"/>
+    <ellipse cx="1240" cy="568" rx="75" ry="3"/>
+  </g>
+
+  <!-- boats -->
+  <g opacity="0.72">
+    <path d="M1440 566 q42 18 86 0 l-14 17 h-57z" fill="#302d2d"/>
+    <path d="M1484 535 v34" stroke="#2d2d2d" stroke-width="4"/>
+    <path d="M1485 537 l42 16 l-42 0z" fill="#e4d2b2" opacity=".72"/>
+    <path d="M1008 580 q34 14 70 0 l-12 13 h-47z" fill="#373232"/>
+    <path d="M1042 556 v26" stroke="#313131" stroke-width="3"/>
+  </g>
+
+  <!-- Marine Drive promenade edge + Queen's Necklace lamps -->
+  <path d="M0 610 C240 590 475 602 714 588 C927 575 1110 590 1325 566 C1435 553 1520 550 1600 548
+           L1600 670 C1350 675 1120 692 860 706 C580 720 300 712 0 735 Z"
+        fill="#7c7168"/>
+  <path d="M0 617 C260 604 420 613 700 597 C930 585 1110 600 1330 578 C1440 565 1520 562 1600 560"
+        fill="none" stroke="#cab78f" stroke-width="8" opacity=".72"/>
+  <g fill="#ffd275" stroke="#48433f" stroke-width="4">
+    <g transform="translate(90 615)"><line x1="0" y1="0" x2="0" y2="-36"/><circle cx="0" cy="-42" r="6"/></g>
+    <g transform="translate(240 607)"><line x1="0" y1="0" x2="0" y2="-34"/><circle cx="0" cy="-40" r="6"/></g>
+    <g transform="translate(420 607)"><line x1="0" y1="0" x2="0" y2="-34"/><circle cx="0" cy="-40" r="6"/></g>
+    <g transform="translate(640 597)"><line x1="0" y1="0" x2="0" y2="-32"/><circle cx="0" cy="-38" r="5.5"/></g>
+    <g transform="translate(890 590)"><line x1="0" y1="0" x2="0" y2="-31"/><circle cx="0" cy="-37" r="5.5"/></g>
+    <g transform="translate(1160 590)"><line x1="0" y1="0" x2="0" y2="-31"/><circle cx="0" cy="-37" r="5"/></g>
+    <g transform="translate(1400 570)"><line x1="0" y1="0" x2="0" y2="-30"/><circle cx="0" cy="-35" r="5"/></g>
+  </g>
+
+  <!-- Bombay taxi cue -->
+  <g transform="translate(228 642) scale(.75)" filter="url(#softShadow)">
+    <path d="M0 55 C10 34 29 20 55 18 L126 18 C148 21 168 35 178 55 L191 60 L190 82 L-3 82 L-6 62 Z" fill="#201f20"/>
+    <path d="M48 20 L67 0 L120 0 L142 20 Z" fill="#f1c531"/>
+    <path d="M13 57 L173 57 L182 79 L3 79 Z" fill="#f2c331"/>
+    <circle cx="34" cy="81" r="16" fill="#1e1d1d"/><circle cx="151" cy="81" r="16" fill="#1e1d1d"/>
+    <circle cx="34" cy="81" r="7" fill="#777"/><circle cx="151" cy="81" r="7" fill="#777"/>
+    <path d="M62 4 h52 l18 16 H49 Z" fill="#4c6770"/>
+  </g>
+
+  <!-- Terrace foreground -->
+  <path d="M0 740 L1600 660 L1600 1000 L0 1000 Z" fill="url(#terrace)"/>
+  <path d="M0 800 L1600 720" stroke="#93857a" stroke-width="3" opacity=".35"/>
+  <path d="M0 900 L1600 820" stroke="#2f2a27" stroke-width="4" opacity=".24"/>
+
+  <!-- railing -->
+  <g opacity=".88">
+    <rect x="0" y="698" width="1600" height="12" fill="#383838"/>
+    <g stroke="#404040" stroke-width="7">
+      <line x1="110" y1="702" x2="110" y2="838"/>
+      <line x1="320" y1="692" x2="320" y2="825"/>
+      <line x1="540" y1="684" x2="540" y2="815"/>
+      <line x1="760" y1="675" x2="760" y2="805"/>
+      <line x1="985" y1="667" x2="985" y2="795"/>
+      <line x1="1210" y1="660" x2="1210" y2="785"/>
+      <line x1="1430" y1="652" x2="1430" y2="775"/>
+    </g>
+    <rect x="0" y="812" width="1600" height="10" fill="#3d3b3a" opacity=".75"/>
+  </g>
+
+  <!-- table -->
+  <g filter="url(#softShadow)">
+    <ellipse cx="824" cy="850" rx="360" ry="125" fill="#231b18" opacity=".32"/>
+    <ellipse cx="824" cy="805" rx="330" ry="95" fill="url(#tableWood)"/>
+    <ellipse cx="824" cy="790" rx="330" ry="95" fill="#5a3d2d"/>
+    <ellipse cx="824" cy="775" rx="326" ry="88" fill="url(#tableWood)"/>
+    <path d="M815 850 h18 l28 150 h-75z" fill="#31231f"/>
+  </g>
+
+  <!-- small plates -->
+  <g opacity=".95">
+    <ellipse cx="720" cy="775" rx="58" ry="18" fill="#d9d4c8"/>
+    <ellipse cx="720" cy="773" rx="47" ry="12" fill="#f2eee4"/>
+    <ellipse cx="944" cy="784" rx="49" ry="15" fill="#d9d4c8"/>
+    <ellipse cx="944" cy="782" rx="40" ry="10" fill="#f1eee6"/>
+    <g fill="#826338">
+      <ellipse cx="705" cy="771" rx="9" ry="4"/>
+      <ellipse cx="720" cy="774" rx="11" ry="5"/>
+      <ellipse cx="739" cy="770" rx="8" ry="4"/>
+      <ellipse cx="932" cy="780" rx="8" ry="4"/>
+      <ellipse cx="949" cy="783" rx="10" ry="5"/>
+    </g>
+  </g>
+
+  <!-- bottle -->
+  <g transform="translate(1010 660)" filter="url(#softShadow)">
+    <rect x="28" y="0" width="26" height="38" rx="6" fill="#263f31"/>
+    <rect x="23" y="30" width="36" height="22" rx="7" fill="#315845"/>
+    <path d="M17 48 Q41 36 65 48 L72 164 Q42 176 11 164 Z" fill="#244c3b"/>
+    <rect x="18" y="86" width="48" height="44" rx="4" fill="#d8c69b" opacity=".88"/>
+    <path d="M24 98 h36 v18 H24z" fill="#6d5137" opacity=".8"/>
+    <path d="M22 52 Q44 45 64 53" fill="none" stroke="#6ea182" stroke-width="4" opacity=".6"/>
+  </g>
+
+  <!-- male person left -->
+  <g transform="translate(260 450)" filter="url(#softShadow)">
+    <!-- chair -->
+    <path d="M128 430 q-30 84 -5 150 h32 q-16 -81 11 -144z" fill="#332b29"/>
+    <path d="M256 428 q38 92 10 154 h-31 q16 -87 -12 -144z" fill="#332b29"/>
+
+    <!-- torso -->
+    <path d="M118 218 Q171 188 236 209 Q275 231 298 320 L275 425 L89 423 L77 322 Q84 248 118 218 Z"
+          fill="url(#shirt1)"/>
+    <!-- shirt folds -->
+    <path d="M150 225 q17 65 5 184" fill="none" stroke="#887f76" stroke-width="4" opacity=".45"/>
+    <path d="M215 220 q-8 78 4 191" fill="none" stroke="#f6f3ee" stroke-width="3" opacity=".45"/>
+
+    <!-- neck -->
+    <path d="M166 173 L210 177 L218 230 Q190 251 155 228 Z" fill="url(#skin1)"/>
+
+    <!-- head -->
+    <ellipse cx="186" cy="126" rx="74" ry="90" fill="url(#skin1)"/>
+    <!-- ears -->
+    <ellipse cx="111" cy="134" rx="13" ry="22" fill="#a96e4e"/>
+    <ellipse cx="259" cy="133" rx="13" ry="22" fill="#a96e4e"/>
+    <!-- hair -->
+    <path d="M113 114 Q117 37 183 26 Q243 26 258 92 Q219 68 184 72 Q146 70 113 114 Z"
+          fill="#2c211d"/>
+    <path d="M121 79 q46 -45 100 -19" fill="none" stroke="#4b3327" stroke-width="13" opacity=".65"/>
+
+    <!-- face -->
+    <path d="M158 115 q17 -12 34 0" fill="none" stroke="#5d3e32" stroke-width="4"/>
+    <path d="M208 114 q15 -10 29 1" fill="none" stroke="#5d3e32" stroke-width="4"/>
+    <ellipse cx="174" cy="120" rx="4.2" ry="3.2" fill="#262120"/>
+    <ellipse cx="223" cy="120" rx="4.2" ry="3.2" fill="#262120"/>
+    <path d="M197 124 q-8 28 -1 39 q10 5 18 0" fill="none" stroke="#81503c" stroke-width="3"/>
+    <path d="M164 171 q24 22 53 0" fill="none" stroke="#6c3733" stroke-width="4"/>
+    <path d="M173 176 q20 11 36 -1" fill="none" stroke="#fff1e5" stroke-width="2.5" opacity=".7"/>
+    <!-- stubble -->
+    <path d="M144 158 Q187 210 234 160" fill="none" stroke="#49352f" stroke-width="2" opacity=".28"/>
+
+    <!-- left arm resting -->
+    <path d="M92 263 Q53 308 70 380 Q83 407 117 401 L155 349 Q132 320 137 287 Z"
+          fill="url(#skin1)"/>
+    <!-- right arm lifted -->
+    <path d="M254 260 Q309 279 334 240 Q347 221 365 198 L389 213 Q373 262 342 303 Q308 343 269 326 Z"
+          fill="url(#skin1)"/>
+
+    <!-- hand around glass -->
+    <g transform="translate(361 158)">
+      <path d="M5 42 Q11 12 29 5 Q44 6 49 21 L43 57 Q23 65 5 42 Z" fill="url(#skin1)"/>
+      <!-- tumbler -->
+      <g transform="translate(23 -4) rotate(-8)">
+        <path d="M0 0 H54 L47 74 H8 Z" fill="url(#glass)" stroke="#eaf6ff" stroke-opacity=".75" stroke-width="2"/>
+        <path d="M7 32 H48 L43 68 H12 Z" fill="url(#amberDrink)" opacity=".92"/>
+        <ellipse cx="28" cy="32" rx="20" ry="4" fill="#ffc979" opacity=".62"/>
+        <circle cx="17" cy="46" r="9" fill="#d8edf6" opacity=".48"/>
+        <circle cx="38" cy="54" r="8" fill="#d8edf6" opacity=".42"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- female person right -->
+  <g transform="translate(995 430)" filter="url(#softShadow)">
+    <!-- chair -->
+    <path d="M100 455 q-28 86 -2 143 h29 q-13 -84 11 -138z" fill="#332a29"/>
+    <path d="M248 450 q36 90 10 150 h-31 q13 -84 -12 -138z" fill="#332a29"/>
+
+    <!-- torso/dress -->
+    <path d="M108 226 Q171 196 225 214 Q268 231 290 327 L275 438 L83 438 L73 332 Q78 260 108 226 Z"
+          fill="url(#dress2)"/>
+    <path d="M135 235 q18 84 9 183" fill="none" stroke="#8f4e58" stroke-width="4" opacity=".34"/>
+
+    <!-- neck -->
+    <path d="M159 177 L206 180 L214 231 Q183 250 151 229 Z" fill="url(#skin2)"/>
+
+    <!-- head -->
+    <ellipse cx="184" cy="126" rx="70" ry="88" fill="url(#skin2)"/>
+    <!-- ears -->
+    <ellipse cx="113" cy="136" rx="12" ry="20" fill="#bb7957"/>
+    <ellipse cx="253" cy="136" rx="12" ry="20" fill="#bb7957"/>
+
+    <!-- hair -->
+    <path d="M110 132 Q104 53 166 25 Q235 17 260 93 Q256 177 238 207 Q249 142 226 75 Q179 53 135 83 Q116 123 129 196 Q109 167 110 132 Z"
+          fill="#25191a"/>
+    <path d="M118 76 Q177 31 232 62" fill="none" stroke="#59323a" stroke-width="10" opacity=".55"/>
+
+    <!-- face -->
+    <path d="M153 116 q17 -11 33 0" fill="none" stroke="#6a4139" stroke-width="3.6"/>
+    <path d="M205 116 q15 -9 28 1" fill="none" stroke="#6a4139" stroke-width="3.6"/>
+    <ellipse cx="168" cy="121" rx="4.5" ry="3.2" fill="#222"/>
+    <ellipse cx="218" cy="121" rx="4.5" ry="3.2" fill="#222"/>
+    <path d="M193 125 q-7 27 1 38 q11 4 18 0" fill="none" stroke="#8c5748" stroke-width="2.7"/>
+    <path d="M160 169 q24 21 53 1" fill="none" stroke="#7e303b" stroke-width="4"/>
+    <path d="M168 174 q20 9 37 -1" fill="none" stroke="#f7e4df" stroke-width="2" opacity=".7"/>
+
+    <!-- left arm to table -->
+    <path d="M96 280 Q47 324 73 404 Q91 428 120 408 L149 350 Q126 324 137 286 Z" fill="url(#skin2)"/>
+    <!-- right arm raised toast -->
+    <path d="M257 266 Q298 281 331 246 Q352 224 364 198 L391 208 Q379 251 350 295 Q320 343 273 330 Z"
+          fill="url(#skin2)"/>
+
+    <!-- hand/glass -->
+    <g transform="translate(365 165)">
+      <path d="M4 38 Q10 10 27 4 Q43 7 47 21 L42 54 Q22 62 4 38 Z" fill="url(#skin2)"/>
+      <g transform="translate(23 -11) rotate(7)">
+        <path d="M8 0 H58 L47 46 Q33 58 19 46 Z" fill="url(#glass)" stroke="#edf8ff" stroke-width="2" stroke-opacity=".75"/>
+        <path d="M17 22 H51 L45 43 Q33 51 22 43 Z" fill="url(#rubyDrink)" opacity=".92"/>
+        <path d="M33 49 v52" stroke="#e4eef4" stroke-width="3.5" opacity=".85"/>
+        <ellipse cx="33" cy="103" rx="24" ry="5" fill="none" stroke="#e4eef4" stroke-width="3" opacity=".8"/>
+        <!-- lime -->
+        <path d="M49 13 q12 3 10 15 q-11 5 -18 -3z" fill="#9bbf58"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Their glasses near each other / toast sparkle -->
+  <g opacity=".8" filter="url(#glow)">
+    <circle cx="659" cy="618" r="3" fill="#fff8cc"/>
+    <circle cx="1376" cy="585" r="2.6" fill="#fff8cc"/>
+  </g>
+
+  <!-- table glass in foreground -->
+  <g transform="translate(825 690)" filter="url(#softShadow)">
+    <path d="M0 0 H66 L57 95 H10 Z" fill="url(#glass)" stroke="#f2fbff" stroke-width="2" stroke-opacity=".72"/>
+    <path d="M8 43 H58 L52 88 H14 Z" fill="url(#amberDrink)" opacity=".9"/>
+    <ellipse cx="33" cy="44" rx="25" ry="4" fill="#fbd399" opacity=".55"/>
+    <circle cx="20" cy="58" r="10" fill="#d9edf5" opacity=".4"/>
+    <circle cx="44" cy="71" r="11" fill="#d9edf5" opacity=".36"/>
+    <path d="M60 17 q15 6 13 20 q-12 7 -23 -2z" fill="#cab64f"/>
+  </g>
+
+  <!-- flowers / candle -->
+  <g transform="translate(650 695)" filter="url(#softShadow)">
+    <ellipse cx="0" cy="66" rx="26" ry="9" fill="#2d2c25"/>
+    <path d="M-10 62 L-3 15 L5 62" fill="#59744b"/>
+    <circle cx="-10" cy="12" r="9" fill="#e8d4b0"/>
+    <circle cx="3" cy="8" r="8" fill="#d99d8b"/>
+    <circle cx="12" cy="18" r="7" fill="#e7c5a8"/>
+  </g>
+  <g transform="translate(930 700)">
+    <rect x="-12" y="10" width="24" height="52" rx="5" fill="#f0e4c9" opacity=".9"/>
+    <ellipse cx="0" cy="11" rx="11" ry="4" fill="#fff7df"/>
+    <path d="M0 8 q-8 -14 0 -23 q8 9 0 23z" fill="#ffd27a" filter="url(#glow)"/>
+  </g>
+
+  <!-- foreground bokeh -->
+  <g filter="url(#blur8)" opacity=".38">
+    <circle cx="92" cy="878" r="38" fill="#ffcc7e"/>
+    <circle cx="1510" cy="860" r="46" fill="#ffb966"/>
+    <circle cx="1420" cy="925" r="30" fill="#d7694d"/>
+  </g>
+
+  <!-- Mumbai label sign as subtle terrace detail -->
+  <g transform="translate(70 747)" opacity=".85">
+    <rect x="0" y="0" width="208" height="48" rx="6" fill="#2d2a2a" opacity=".72"/>
+    <text x="104" y="31" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif" font-size="22"
+          fill="#f2d3a0" letter-spacing="3">BOMBAY • MUMBAI</text>
+  </g>
+
+  <!-- overall warm rim light -->
+  <rect width="1600" height="1000" fill="#ffb45f" opacity=".045"/>
+
+  <!-- vignette -->
+  <radialGradient id="vig" cx="50%" cy="45%" r="70%">
+    <stop offset="58%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity=".36"/>
+  </radialGradient>
+  <rect width="1600" height="1000" fill="url(#vig)"/>
+
+  <!-- grain overlay -->
+  <rect width="1600" height="1000" fill="transparent" filter="url(#grain)"/>
+</svg>

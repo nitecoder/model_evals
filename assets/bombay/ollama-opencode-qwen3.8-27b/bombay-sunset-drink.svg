@@ -1,0 +1,455 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- ============== GRADIENTS ============== -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#1f2b52"/>
+      <stop offset="18%" stop-color="#3a3a6b"/>
+      <stop offset="34%" stop-color="#7a4a7e"/>
+      <stop offset="48%" stop-color="#c56a6a"/>
+      <stop offset="60%" stop-color="#ef8f5c"/>
+      <stop offset="72%" stop-color="#ffc271"/>
+      <stop offset="84%" stop-color="#ffe39c"/>
+      <stop offset="100%" stop-color="#fff2c4"/>
+    </linearGradient>
+
+    <radialGradient id="sunCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fffdf0"/>
+      <stop offset="32%" stop-color="#fff4d0"/>
+      <stop offset="60%" stop-color="#ffd98a"/>
+      <stop offset="100%" stop-color="#ffb85e" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="sunHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffdca0" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#ffb85e" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#ff9d52" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ff9d52" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#ffd89b"/>
+      <stop offset="14%" stop-color="#e9a86a"/>
+      <stop offset="30%" stop-color="#a5647a"/>
+      <stop offset="55%" stop-color="#4a3f63"/>
+      <stop offset="100%" stop-color="#1d1c33"/>
+    </linearGradient>
+
+    <linearGradient id="sunReflection" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff6da" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#ffd68a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffb060" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="terrace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3a2a3d"/>
+      <stop offset="45%" stop-color="#241826"/>
+      <stop offset="100%" stop-color="#100a14"/>
+    </linearGradient>
+
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#ffcf8a"/>
+      <stop offset="50%" stop-color="#ff9e5a"/>
+      <stop offset="100%" stop-color="#ff7e46"/>
+    </linearGradient>
+
+    <linearGradient id="glass1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff3d0" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#ffcf82" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff9a5c" stop-opacity="0.25"/>
+    </linearGradient>
+
+    <linearGradient id="grade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3a1e4a" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#ff8a3c" stop-opacity="0.06"/>
+      <stop offset="78%" stop-color="#ffb347" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7a3a10" stop-opacity="0.28"/>
+    </linearGradient>
+
+    <radialGradient id="vignette" cx="46%" cy="42%" r="72%">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="62%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0610" stop-opacity="0.62"/>
+    </radialGradient>
+
+    <radialGradient id="bokehGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#ffe9b0" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#ffbf6a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffb85e" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="chair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#4a2f3f"/>
+      <stop offset="100%" stop-color="#1a0f1a"/>
+    </linearGradient>
+
+    <linearGradient id="palm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#2a1622"/>
+      <stop offset="100%" stop-color="#0d0710"/>
+    </linearGradient>
+
+    <!-- ============== FILTERS ============== -->
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="tinyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0"/>
+    </filter>
+
+    <filter id="waveTexture" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.06" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 0.8  0 0 0 0 0.45  0 0 0 0.14 0" result="c"/>
+      <feComposite in="c" in2="SourceGraphic" operator="atop"/>
+    </filter>
+
+    <radialGradient id="skyVign" cx="50%" cy="88%" r="60%">
+      <stop offset="0%" stop-color="#fff0c0" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#fff0c0" stop-opacity="0.0"/>
+    </radialGradient>
+
+    <clipPath id="canvas"><rect x="0" y="0" width="1600" height="900"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#canvas)">
+
+    <!-- ============== SKY ============== -->
+    <rect x="0" y="0" width="1600" height="560" fill="url(#sky)"/>
+
+    <!-- faint high clouds, golden streaks -->
+    <g filter="url(#softer)" opacity="0.5">
+      <ellipse cx="330" cy="150" rx="230" ry="14" fill="#ffd89a"/>
+      <ellipse cx="1180" cy="110" rx="300" ry="16" fill="#e9b06a"/>
+      <ellipse cx="820" cy="70" rx="260" ry="10" fill="#c98a9a"/>
+      <ellipse cx="1010" cy="230" rx="200" ry="12" fill="#ffb87a"/>
+      <ellipse cx="250" cy="250" rx="170" ry="10" fill="#ffc98a"/>
+    </g>
+
+    <!-- god rays from sun -->
+    <g filter="url(#softer)" opacity="0.28" style="mix-blend-mode:screen">
+      <polygon points="780,360 700,900 900,900" fill="#ffd88a"/>
+      <polygon points="820,360 1080,900 1320,900" fill="#ffc87a"/>
+      <polygon points="760,360 200,900 470,900" fill="#ffbf7a"/>
+      <polygon points="800,360 1480,760 1600,640" fill="#ffd490"/>
+    </g>
+
+    <!-- SUN -->
+    <circle cx="800" cy="360" r="360" fill="url(#sunHalo)" filter="url(#softer)"/>
+    <circle cx="800" cy="360" r="120" fill="url(#sunHalo)"/>
+    <circle cx="800" cy="360" r="78" fill="url(#sunCore)"/>
+    <circle cx="800" cy="360" r="46" fill="#fffdf3" filter="url(#tinyGlow)"/>
+
+    <!-- ============== ARABIAN SEA ============== -->
+    <rect x="0" y="540" width="1600" height="360" fill="url(#sea)"/>
+    <rect x="0" y="540" width="1600" height="360" filter="url(#waveTexture)"/>
+
+    <!-- sun reflection column on the water -->
+    <g filter="url(#soft)" opacity="0.85" style="mix-blend-mode:screen">
+      <polygon points="700,542 900,542 1010,860 590,860" fill="url(#sunReflection)"/>
+      <rect x="735" y="546" width="130" height="7" fill="#fff4d0" opacity="0.9"/>
+      <rect x="720" y="566" width="160" height="6" fill="#ffe6a8" opacity="0.8"/>
+      <rect x="705" y="590" width="190" height="7" fill="#ffd78a" opacity="0.7"/>
+      <rect x="690" y="620" width="220" height="8" fill="#ffcd78" opacity="0.65"/>
+      <rect x="665" y="656" width="270" height="9" fill="#ffc568" opacity="0.55"/>
+      <rect x="640" y="700" width="320" height="11" fill="#ffbc5c" opacity="0.5"/>
+      <rect x="605" y="750" width="390" height="13" fill="#ffb250" opacity="0.42"/>
+      <rect x="570" y="812" width="460" height="16" fill="#ffa840" opacity="0.34"/>
+    </g>
+
+    <!-- distant boats -->
+    <g filter="url(#tinyGlow)" opacity="0.9">
+      <g transform="translate(300,556)">
+        <path d="M0,6 q18,8 40,0 l-6,-6 h-28 z" fill="#160e18"/>
+        <rect x="14" y="-14" width="3" height="12" fill="#160e18"/>
+        <polygon points="17,-13 34,4 17,4" fill="#2a1722"/>
+      </g>
+      <g transform="translate(1230,560)">
+        <path d="M0,6 q20,9 46,0 l-7,-7 h-32 z" fill="#160e18"/>
+        <rect x="16" y="-16" width="3" height="14" fill="#160e18"/>
+        <polygon points="19,-15 38,5 19,5" fill="#2a1722"/>
+      </g>
+    </g>
+
+    <!-- ============== BOMBAY SKYLINE (silhouettes, back to front) ============== -->
+    <g fill="#1c1326">
+      <!-- far hazy band -->
+      <rect x="0" y="512" width="1600" height="34" opacity="0.55" filter="url(#soft)"/>
+      <!-- generic sea-facing towers -->
+      <path d="M0,548
+        L0,512 L40,512 L40,498 L86,498 L86,512 L120,512 L120,486 L150,486 L150,500
+        L188,500 L188,472 L214,472 L214,500 L250,500 L250,470 L284,470 L284,500
+        L320,500 L320,486 L356,486 L356,512 L400,512 L400,492 L430,492 L430,500
+        L470,500 L470,476 L508,476 L508,500 L548,500 L548,490 L588,490 L588,512
+        L640,512 L640,500 L690,500 L690,548 Z"/>
+      <path d="M690,548
+        L690,496 L716,496 L716,510 L744,510 L744,548 Z" opacity="0.85"/>
+      <path d="M1500,548
+        L1500,500 L1530,500 L1530,478 L1556,478 L1556,500 L1596,500 L1596,486
+        L1600,486 L1600,548 Z"/>
+    </g>
+
+    <!-- Gateway of India (iconic arches) on the promenade -->
+    <g fill="#160d1e">
+      <rect x="470" y="470" width="60" height="80"/>
+      <!-- central big arch -->
+      <path d="M484,550 L484,520 a16,16 0 0 1 32,0 L516,550 Z" fill="#0c0713"/>
+      <!-- side arches -->
+      <path d="M472,550 L474,532 a7,7 0 0 1 14,0 L488,550 Z" fill="#0c0713"/>
+      <path d="M512,550 L526,532 a7,7 0 0 1 14,0 L538,550 Z" fill="#0c0713"/>
+      <!-- top dome/tower -->
+      <rect x="492" y="456" width="16" height="16"/>
+      <path d="M490,456 q8,-14 16,0 Z"/>
+      <rect x="476" y="464" width="10" height="8"/>
+      <rect x="514" y="464" width="10" height="8"/>
+    </g>
+
+    <!-- Bandra / sea towers mid band with lit windows -->
+    <g fill="#1d1228">
+      <rect x="560" y="452" width="34" height="98"/>
+      <rect x="600" y="430" width="26" height="120"/>
+      <polygon points="600,430 613,410 626,430" fill="#1d1228"/>
+      <rect x="634" y="466" width="30" height="84"/>
+      <rect x="1180" y="458" width="30" height="92"/>
+      <rect x="1216" y="440" width="24" height="110"/>
+      <rect x="1246" y="470" width="28" height="80"/>
+      <rect x="1280" y="452" width="20" height="98"/>
+    </g>
+    <!-- lit windows (warm) -->
+    <g fill="#ffcf7a" opacity="0.85">
+      <rect x="566" y="462" width="3" height="4"/><rect x="574" y="470" width="3" height="4"/>
+      <rect x="582" y="486" width="3" height="4"/><rect x="566" y="494" width="3" height="4"/>
+      <rect x="574" y="508" width="3" height="4"/><rect x="582" y="520" width="3" height="4"/>
+      <rect x="606" y="446" width="3" height="4"/><rect x="614" y="456" width="3" height="4"/>
+      <rect x="606" y="470" width="3" height="4"/><rect x="614" y="484" width="3" height="4"/>
+      <rect x="606" y="500" width="3" height="4"/><rect x="614" y="516" width="3" height="4"/>
+      <rect x="1186" y="468" width="3" height="4"/><rect x="1194" y="482" width="3" height="4"/>
+      <rect x="1222" y="456" width="3" height="4"/><rect x="1230" y="472" width="3" height="4"/>
+      <rect x="1286" y="462" width="3" height="4"/><rect x="1292" y="478" width="3" height="4"/>
+      <rect x="640" y="476" width="3" height="4"/><rect x="648" y="490" width="3" height="4"/>
+      <rect x="640" y="506" width="3" height="4"/>
+    </g>
+
+    <!-- ============== PALM TREES ============== -->
+    <g fill="url(#palm)" filter="url(#tinyGlow)">
+      <!-- left palm -->
+      <path d="M112,560 q-8,-70 -22,-140 q-2,-26 6,-28 q10,-2 10,22 q12,70 18,146 z"/>
+      <g transform="translate(86,392)">
+        <path d="M0,0 q-46,-26 -92,-14 q40,-24 92,2 z"/>
+        <path d="M0,0 q-30,-46 -70,-64 q28,30 26,70 z"/>
+        <path d="M0,0 q46,-30 96,-18 q-42,-22 -96,4 z"/>
+        <path d="M0,0 q34,-44 76,-58 q-26,30 -22,66 z"/>
+        <path d="M0,0 q-8,-52 8,-92 q-10,44 12,90 z"/>
+        <circle cx="-20" cy="-6" r="7"/><circle cx="20" cy="-6" r="7"/><circle cx="0" cy="-12" r="7"/>
+      </g>
+      <!-- right palm -->
+      <path d="M1470,560 q10,-72 24,-146 q3,-26 -6,-27 q-10,-1 -8,24 q-12,72 -18,149 z"/>
+      <g transform="translate(1490,390)">
+        <path d="M0,0 q46,-26 92,-14 q-40,-24 -92,2 z"/>
+        <path d="M0,0 q30,-46 70,-64 q-28,30 -26,70 z"/>
+        <path d="M0,0 q-46,-30 -96,-18 q42,-22 96,4 z"/>
+        <path d="M0,0 q-34,-44 -76,-58 q26,30 22,66 z"/>
+        <path d="M0,0 q8,-52 -8,-92 q10,44 -12,90 z"/>
+        <circle cx="18" cy="-6" r="7"/><circle cx="-18" cy="-6" r="7"/><circle cx="0" cy="-12" r="7"/>
+      </g>
+    </g>
+
+    <!-- ============== ROOFTOP TERRACE ============== -->
+    <rect x="0" y="560" width="1600" height="340" fill="url(#terrace)"/>
+    <!-- floor tile perspective lines -->
+    <g stroke="#3a2a3d" stroke-width="1.4" opacity="0.5">
+      <line x1="800" y1="562" x2="-120" y2="900"/>
+      <line x1="800" y1="562" x2="180" y2="900"/>
+      <line x1="800" y1="562" x2="470" y2="900"/>
+      <line x1="800" y1="562" x2="760" y2="900"/>
+      <line x1="800" y1="562" x2="1040" y2="900"/>
+      <line x1="800" y1="562" x2="1330" y2="900"/>
+      <line x1="800" y1="562" x2="1720" y2="900"/>
+      <line x1="0" y1="660" x2="1600" y2="660"/>
+      <line x1="0" y1="740" x2="1600" y2="740"/>
+      <line x1="0" y1="838" x2="1600" y2="838"/>
+    </g>
+    <!-- warm reflected light pool on floor -->
+    <ellipse cx="820" cy="770" rx="560" ry="120" fill="#ff8a3c" opacity="0.14" filter="url(#soft)"/>
+
+    <!-- railing string lights across the terrace edge -->
+    <g filter="url(#tinyGlow)">
+      <path d="M0,568 q200,26 400,16 q200,-10 400,18 q200,30 400,8 q200,-16 400,4"
+            fill="none" stroke="#5a3a44" stroke-width="1.5" opacity="0.7"/>
+      <g fill="url(#bokehGlow)">
+        <circle cx="120" cy="580" r="3.4"/><circle cx="250" cy="588" r="3.4"/>
+        <circle cx="380" cy="584" r="3.4"/><circle cx="510" cy="592" r="3.4"/>
+        <circle cx="640" cy="598" r="3.4"/><circle cx="770" cy="596" r="3.4"/>
+        <circle cx="900" cy="602" r="3.4"/><circle cx="1030" cy="602" r="3.4"/>
+        <circle cx="1160" cy="594" r="3.4"/><circle cx="1290" cy="588" r="3.4"/>
+        <circle cx="1420" cy="582" r="3.4"/><circle cx="1530" cy="578" r="3.4"/>
+      </g>
+    </g>
+
+    <!-- ============== LOUNGE CHAIRS + TABLE + PEOPLE ============== -->
+
+    <!-- Chair A (left, woman) -->
+    <g>
+      <rect x="470" y="704" width="150" height="16" rx="6" fill="url(#chair)"/>
+      <rect x="470" y="672" width="14" height="40" fill="#2a1a26"/>
+      <rect x="606" y="708" width="12" height="90" fill="#2a1a26"/>
+      <rect x="474" y="720" width="12" height="96" fill="#2a1a26"/>
+      <path d="M470,706 q-30,-44 -64,-70 l14,-12 q34,26 54,66 z" fill="url(#chair)"/>
+      <!-- woman sitting, leaning back, holding a cocktail up -->
+      <g>
+        <!-- lower body / legs -->
+        <path d="M556,712 q60,4 120,-2 q10,10 -4,18 q-70,8 -120,4 z" fill="#160c16"/>
+        <path d="M556,720 q58,6 116,2 l6,30 q-64,8 -128,-2 z" fill="#1c0f1c"/>
+        <!-- torso leaning back -->
+        <path d="M516,712 q-30,-58 -6,-108 q30,-26 56,-4 q10,60 -6,112 z" fill="#20101e"/>
+        <!-- raised arm holding glass -->
+        <path d="M520,636 q34,-30 70,-58 q14,6 6,18 q-30,30 -62,58 z" fill="#20101e"/>
+        <circle cx="600" cy="580" r="10" fill="#241324"/>
+        <!-- head + hair -->
+        <circle cx="496" cy="592" r="24" fill="#1a0d18"/>
+        <path d="M472,588 q-10,-34 24,-44 q40,-6 40,30 q4,30 -14,52 q-26,6 -40,-38 z" fill="#140a14"/>
+        <!-- golden rim light on her -->
+        <path d="M520,602 q8,-40 2,-84 q18,8 16,84 z" fill="url(#rim)" opacity="0.9" filter="url(#tinyGlow)"/>
+        <path d="M560,640 q28,-30 66,-52" fill="none" stroke="url(#rim)" stroke-width="3" opacity="0.85" filter="url(#tinyGlow)"/>
+        <path d="M518,566 q12,-30 -6,-48 q20,4 22,40 q-4,16 -16,14 z" fill="url(#rim)" opacity="0.95" filter="url(#tinyGlow)"/>
+        <!-- her cocktail, raised -->
+        <g filter="url(#tinyGlow)">
+          <path d="M586,566 l28,0 l-8,30 l-12,0 z" fill="url(#glass1)"/>
+          <ellipse cx="600" cy="566" rx="14" ry="4" fill="#ffd98a" opacity="0.7"/>
+          <line x1="600" y1="596" x2="600" y2="618" stroke="#ffcf8a" stroke-width="2.5" opacity="0.8"/>
+          <circle cx="600" cy="620" r="6" fill="#ffcf8a" opacity="0.7"/>
+          <!-- little fruit garnish -->
+          <circle cx="592" cy="560" r="4" fill="#ff7a3c" opacity="0.9"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Side table between them -->
+    <g>
+      <ellipse cx="700" cy="726" rx="78" ry="22" fill="#1a0f1a"/>
+      <ellipse cx="700" cy="720" rx="78" ry="20" fill="#2a1824"/>
+      <rect x="686" y="720" width="6" height="70" fill="#160c16"/>
+      <rect x="710" y="720" width="6" height="70" fill="#160c16"/>
+      <!-- table top items -->
+      <g filter="url(#tinyGlow)">
+        <!-- tiki-style coconut drink -->
+        <path d="M660,700 q16,-22 32,0 q6,28 -16,40 q-22,-12 -16,-40 z" fill="#3a2416"/>
+        <ellipse cx="676" cy="700" rx="16" ry="6" fill="#7a4a1e"/>
+        <line x1="688" y1="698" x2="700" y2="676" stroke="#ffe0a0" stroke-width="2" opacity="0.85"/>
+        <circle cx="700" cy="676" r="4" fill="#ff7a3c" opacity="0.9"/>
+        <!-- second glass -->
+        <path d="M724,696 l26,0 l-7,30 l-12,0 z" fill="url(#glass1)"/>
+        <ellipse cx="737" cy="696" rx="13" ry="4" fill="#ffb860" opacity="0.7"/>
+        <line x1="737" y1="726" x2="737" y2="744" stroke="#ffcf8a" stroke-width="2.4" opacity="0.8"/>
+        <circle cx="737" cy="746" r="5.5" fill="#ffcf8a" opacity="0.6"/>
+        <!-- small lantern on table -->
+        <circle cx="762" cy="702" r="9" fill="url(#bokehGlow)"/>
+        <rect x="759" y="706" width="6" height="8" fill="#3a2416"/>
+      </g>
+    </g>
+
+    <!-- Chair B (right, man) -->
+    <g>
+      <rect x="840" y="706" width="150" height="16" rx="6" fill="url(#chair)"/>
+      <rect x="840" y="674" width="14" height="40" fill="#2a1a26"/>
+      <rect x="976" y="710" width="12" height="92" fill="#2a1a26"/>
+      <rect x="844" y="722" width="12" height="96" fill="#2a1a26"/>
+      <path d="M990,708 q30,44 66,70 l-14,12 q-34,-26 -56,-66 z" fill="url(#chair)"/>
+      <!-- man sitting, relaxed, one leg crossed, holding a beer/cocktail -->
+      <g>
+        <path d="M848,714 q-66,2 -116,-8 q-8,12 8,18 q58,12 110,2 z" fill="#160c16"/>
+        <path d="M852,722 q-58,4 -110,-6 l-4,30 q62,10 116,-2 z" fill="#1c0f1c"/>
+        <path d="M938,712 q30,-56 4,-106 q-32,-24 -56,-2 q-12,58 4,108 z" fill="#22111f"/>
+        <!-- resting arm on table -->
+        <path d="M900,636 q-40,-14 -92,-8 q-12,8 -2,18 q40,8 82,4 z" fill="#22111f"/>
+        <circle cx="804" cy="650" r="10" fill="#261426"/>
+        <!-- head -->
+        <circle cx="912" cy="592" r="24" fill="#1c0f1a"/>
+        <path d="M888,586 q2,-30 24,-32 q26,0 26,30 q0,16 -10,30 q-34,6 -40,-28 z" fill="#160b16"/>
+        <!-- golden rim light -->
+        <path d="M916,594 q10,-40 2,-84 q20,8 18,84 z" fill="url(#rim)" opacity="0.9" filter="url(#tinyGlow)"/>
+        <path d="M876,636 q-30,-10 -86,-6" fill="none" stroke="url(#rim)" stroke-width="3" opacity="0.85" filter="url(#tinyGlow)"/>
+        <path d="M934,566 q-12,-30 6,-48 q-20,4 -22,40 q4,16 16,14 z" fill="url(#rim)" opacity="0.95" filter="url(#tinyGlow)"/>
+        <!-- his drink on the table edge -->
+        <g filter="url(#tinyGlow)">
+          <rect x="772" y="628" width="18" height="34" rx="3" fill="url(#glass1)"/>
+          <rect x="772" y="636" width="18" height="26" rx="2" fill="#ff8a3c" opacity="0.55"/>
+          <ellipse cx="781" cy="628" rx="9" ry="3" fill="#fff0c8" opacity="0.7"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- ============== FOREGROUND PLANTS + LANTERNS ============== -->
+    <!-- hanging string of bulbs in upper foreground (bokeh) -->
+    <g filter="url(#soft)" opacity="0.9" style="mix-blend-mode:screen">
+      <path d="M60,140 q400,60 820,0 q430,-60 660,20" fill="none" stroke="#6a4a3a" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="160" cy="176" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="330" cy="196" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="520" cy="200" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="720" cy="176" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="920" cy="152" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="1120" cy="150" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="1330" cy="156" r="5" fill="url(#bokehGlow)"/>
+      <circle cx="1500" cy="182" r="5" fill="url(#bokehGlow)"/>
+    </g>
+
+    <!-- foreground monstera / banana plant, framing left -->
+    <g fill="#0c0610" filter="url(#soft)" opacity="0.96">
+      <path d="M-20,900 q40,-160 120,-250 q-160,60 -150,250 z"/>
+      <path d="M-40,900 q70,-120 160,-180 q-150,20 -160,180 z"/>
+      <path d="M60,900 q60,-190 150,-300 q-60,150 -110,300 z"/>
+    </g>
+    <!-- foreground plant right -->
+    <g fill="#0c0610" filter="url(#soft)" opacity="0.96">
+      <path d="M1620,900 q-40,-160 -120,-250 q160,60 150,250 z"/>
+      <path d="M1660,900 q-70,-120 -160,-180 q150,20 160,180 z"/>
+    </g>
+
+    <!-- ============== ATMOSPHERIC & GRADE ============== -->
+    <rect x="0" y="540" width="1600" height="360" fill="#ff8a3c" opacity="0.05" filter="url(#soft)"/>
+    <rect x="0" y="0" width="1600" height="900" fill="url(#grade)"/>
+
+    <!-- big soft bokeh orbs in front (out-of-focus lights) -->
+    <g style="mix-blend-mode:screen" filter="url(#soft)">
+      <circle cx="180" cy="470" r="34" fill="url(#bokehGlow)" opacity="0.7"/>
+      <circle cx="320" cy="560" r="22" fill="url(#bokehGlow)" opacity="0.6"/>
+      <circle cx="1440" cy="520" r="40" fill="url(#bokehGlow)" opacity="0.7"/>
+      <circle cx="1300" cy="600" r="24" fill="url(#bokehGlow)" opacity="0.55"/>
+      <circle cx="1520" cy="430" r="26" fill="url(#bokehGlow)" opacity="0.55"/>
+      <circle cx="60"  cy="640" r="30" fill="url(#bokehGlow)" opacity="0.5"/>
+    </g>
+
+    <!-- lens flare streak across the sun -->
+    <g style="mix-blend-mode:screen" filter="url(#soft)" opacity="0.8">
+      <ellipse cx="800" cy="360" rx="620" ry="6" fill="#ffe6a8"/>
+      <circle cx="600" cy="360" r="10" fill="#ffe6a8" opacity="0.5"/>
+      <circle cx="470" cy="360" r="16" fill="#ffb85e" opacity="0.35"/>
+      <circle cx="1050" cy="360" r="12" fill="#ffe6a8" opacity="0.4"/>
+    </g>
+
+    <!-- film grain -->
+    <rect x="0" y="0" width="1600" height="900" filter="url(#grain)"/>
+
+    <!-- vignette -->
+    <rect x="0" y="0" width="1600" height="900" fill="url(#vignette)"/>
+
+    <!-- tiny subtle caption-free warm edge glow -->
+    <rect x="0" y="0" width="1600" height="900" fill="none" stroke="#ffb85e" stroke-opacity="0.06" stroke-width="30"/>
+  </g>
+</svg>

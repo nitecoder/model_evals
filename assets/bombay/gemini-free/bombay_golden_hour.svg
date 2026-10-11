@@ -1,0 +1,403 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Atmosphere Gradients -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1b1947" />
+      <stop offset="25%" stop-color="#39285c" />
+      <stop offset="50%" stop-color="#683264" />
+      <stop offset="70%" stop-color="#ba485a" />
+      <stop offset="85%" stop-color="#e66e4e" />
+      <stop offset="100%" stop-color="#f7c06d" />
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="20%" stop-color="#fff3a1" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#fca34d" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ba485a" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="seaGlow" cx="45%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#fce2a6" stop-opacity="0.7"/>
+      <stop offset="30%" stop-color="#e67e53" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#683264" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#181124" stop-opacity="0.2"/>
+    </radialGradient>
+    
+    <!-- Sea Material Gradients -->
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e67e53" />
+      <stop offset="15%" stop-color="#9c465d" />
+      <stop offset="40%" stop-color="#4a2552" />
+      <stop offset="100%" stop-color="#1c122c" />
+    </linearGradient>
+
+    <!-- Gateway of India Materials -->
+    <linearGradient id="gatewayBase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3a2336" />
+      <stop offset="30%" stop-color="#5c384a" />
+      <stop offset="50%" stop-color="#734956" />
+      <stop offset="70%" stop-color="#5c384a" />
+      <stop offset="100%" stop-color="#2b1828" />
+    </linearGradient>
+    <linearGradient id="gatewayHighlight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#f7a379" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#ba5264" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#3a2336" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Balcony & Table Elements -->
+    <linearGradient id="woodTable" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5c352b" />
+      <stop offset="50%" stop-color="#3b1f18" />
+      <stop offset="100%" stop-color="#1f100c" />
+    </linearGradient>
+    <linearGradient id="tableTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a86958" />
+      <stop offset="10%" stop-color="#7d473a" />
+      <stop offset="80%" stop-color="#3b1f18" />
+      <stop offset="100%" stop-color="#21100b" />
+    </linearGradient>
+    <linearGradient id="balconyRailing" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d2930" />
+      <stop offset="50%" stop-color="#17141a" />
+      <stop offset="100%" stop-color="#050405" />
+    </linearGradient>
+
+    <!-- Glass & Liquid Gradients -->
+    <linearGradient id="beerLiquid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5cc" />
+      <stop offset="15%" stop-color="#f7c844" />
+      <stop offset="70%" stop-color="#d68209" />
+      <stop offset="100%" stop-color="#804400" />
+    </linearGradient>
+    <linearGradient id="wineLiquid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6680" />
+      <stop offset="30%" stop-color="#b81437" />
+      <stop offset="80%" stop-color="#570314" />
+      <stop offset="100%" stop-color="#2b0007" />
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="80%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Human Silhouettes / Tones -->
+    <linearGradient id="manTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e69c73" />
+      <stop offset="40%" stop-color="#7d4434" />
+      <stop offset="100%" stop-color="#26110c" />
+    </linearGradient>
+    <linearGradient id="womanTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7bd99" />
+      <stop offset="50%" stop-color="#94523f" />
+      <stop offset="100%" stop-color="#30140e" />
+    </linearGradient>
+    <linearGradient id="clothingMan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff4e0" />
+      <stop offset="50%" stop-color="#cca885" />
+      <stop offset="100%" stop-color="#473425" />
+    </linearGradient>
+    <linearGradient id="clothingWoman" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8da1" />
+      <stop offset="40%" stop-color="#d93654" />
+      <stop offset="100%" stop-color="#4a0814" />
+    </linearGradient>
+
+    <!-- Warm Rim Light Filter for Depth -->
+    <filter id="rimGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- BACKGROUND: THE BOMBAY SKYLINE AT GOLDEN HOUR -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" />
+
+  <!-- The Setting Sun -->
+  <circle cx="550" cy="460" r="180" fill="url(#sunGlow)" />
+  <circle cx="550" cy="460" r="45" fill="#ffffff" filter="blur(4px)" />
+
+  <!-- Distant Clouds Caught in Golden Hour Light -->
+  <path d="M-50,320 Q150,280 350,330 T750,310 T1150,340 L1250,500 L-50,500 Z" fill="#ba485a" opacity="0.25" />
+  <path d="M100,380 Q300,350 500,390 T900,370 T1300,400 L1300,500 L100,500 Z" fill="#e66e4e" opacity="0.35" />
+  <path d="M300,430 Q500,410 700,440 T1100,420 L1100,500 L300,500 Z" fill="#f7c06d" opacity="0.4" />
+
+  <!-- THE ARABIAN SEA -->
+  <rect x="0" y="480" width="1200" height="320" fill="url(#seaGrad)" />
+  <!-- Sea Surface Reflection and Glow -->
+  <rect x="0" y="480" width="1200" height="320" fill="url(#seaGlow)" mix-blend-mode="overlay" />
+  
+  <!-- Detailed Sea Ripples / Shimmer -->
+  <g opacity="0.6">
+    <ellipse cx="550" cy="490" rx="350" ry="4" fill="#fff1bd" filter="blur(1px)"/>
+    <ellipse cx="530" cy="505" rx="280" ry="5" fill="#ffd984" filter="blur(1px)"/>
+    <ellipse cx="570" cy="520" rx="220" ry="6" fill="#fca34d" />
+    <ellipse cx="510" cy="540" rx="170" ry="8" fill="#e67e53" />
+    <ellipse cx="600" cy="565" rx="120" ry="10" fill="#9c465d" />
+    <!-- Fine horizon lines -->
+    <line x1="0" y1="482" x2="1200" y2="482" stroke="#ffe699" stroke-width="1.5" opacity="0.8"/>
+    <line x1="200" y1="485" x2="1000" y2="485" stroke="#fcd36a" stroke-width="1.2"/>
+    <line x1="400" y1="495" x2="850" y2="495" stroke="#fca34d" stroke-width="2"/>
+    <line x1="450" y1="510" x2="750" y2="510" stroke="#e67e53" stroke-width="2.5"/>
+  </g>
+
+  <!-- DISTANT BOMBAY BOATS & SHIPS -->
+  <g opacity="0.7">
+    <!-- Small Fishing Boat 1 -->
+    <path d="M220,483 L245,483 L250,479 L215,479 Z" fill="#3a2336" />
+    <line x1="233" y1="479" x2="233" y2="465" stroke="#3a2336" stroke-width="1.5" />
+    <polygon points="233,467 245,473 233,475" fill="#e66e4e" />
+    
+    <!-- Small Fishing Boat 2 -->
+    <path d="M880,488 L900,488 L904,485 L876,485 Z" fill="#2b1828" />
+    <line x1="888" y1="485" x2="888" y2="472" stroke="#2b1828" stroke-width="1" />
+
+    <!-- Distant Cargo Ship Silhouette -->
+    <path d="M90,481 L140,481 L143,484 L87,484 Z" fill="#1c122c" opacity="0.6"/>
+    <rect x="105" y="476" width="20" height="5" fill="#1c122c" opacity="0.6"/>
+  </g>
+
+  <!-- MID-GROUND: THE GATEWAY OF INDIA (Iconic Bombay Monument) -->
+  <g id="GatewayOfIndia" transform="translate(680, 240)">
+    <!-- Main Base and Block Structure -->
+    <rect x="0" y="100" width="340" height="150" fill="url(#gatewayBase)" />
+    <rect x="0" y="100" width="340" height="150" fill="url(#gatewayHighlight)" />
+    
+    <!-- Left & Right Main Pylons/Wings -->
+    <rect x="0" y="40" width="75" height="210" fill="url(#gatewayBase)" />
+    <rect x="0" y="40" width="75" height="210" fill="url(#gatewayHighlight)" />
+    <rect x="265" y="40" width="75" height="210" fill="url(#gatewayBase)" />
+    <rect x="265" y="40" width="75" height="210" fill="url(#gatewayHighlight)" />
+
+    <!-- Central Archway (Cutout illusion using deep background colors) -->
+    <path d="M85,250 L85,130 C85,80 255,80 255,130 L255,250 Z" fill="#211224" />
+    <path d="M85,250 L85,130 C85,80 255,80 255,130 L255,250 Z" fill="url(#seaGlow)" opacity="0.4" />
+    
+    <!-- Side Small Arches -->
+    <path d="M15,250 L15,190 C15,170 60,170 60,190 L60,250 Z" fill="#211224" opacity="0.9"/>
+    <path d="M280,250 L280,190 C280,170 325,170 325,190 L325,250 Z" fill="#211224" opacity="0.9"/>
+
+    <!-- Upper Frieze and Cornice Architectural Details -->
+    <rect x="-10" y="30" width="360" height="15" fill="#2b1828" />
+    <rect x="70" y="15" width="200" height="20" fill="#42273d" />
+    
+    <!-- Distinctive Dome-topped Chatris (Minarets/Turrets) -->
+    <!-- Left Turret -->
+    <rect x="5" y="-10" width="20" height="40" fill="#3a2336"/>
+    <path d="M0,-10 Q15,-30 30,-10 Z" fill="#2b1828"/>
+    <!-- Center-Left Turret -->
+    <rect x="75" y="-25" width="25" height="45" fill="#42273d"/>
+    <path d="M70,-25 Q87.5,-50 105,-25 Z" fill="#3a2336"/>
+    <!-- Center-Right Turret -->
+    <rect x="240" y="-25" width="25" height="45" fill="#42273d"/>
+    <path d="M235,-25 Q252.5,-50 270,-25 Z" fill="#3a2336"/>
+    <!-- Right Turret -->
+    <rect x="315" y="-10" width="20" height="40" fill="#3a2336"/>
+    <path d="M310,-10 Q325,-30 340,-10 Z" fill="#2b1828"/>
+
+    <!-- Architectural Relief Lines and Shadows -->
+    <line x1="0" y1="70" x2="340" y2="70" stroke="#1d0f1c" stroke-width="3" />
+    <line x1="0" y1="100" x2="340" y2="100" stroke="#1d0f1c" stroke-width="4" />
+    <line x1="75" y1="40" x2="75" y2="250" stroke="#1d0f1c" stroke-width="2" />
+    <line x1="265" y1="40" x2="265" y2="250" stroke="#1d0f1c" stroke-width="2" />
+
+    <!-- Window Grilles and Fine Arches Structure -->
+    <path d="M95,130 C95,100 245,100 245,130" stroke="#5c384a" stroke-width="3" fill="none"/>
+    <path d="M105,135 C105,115 235,115 235,135" stroke="#5c384a" stroke-width="2" fill="none"/>
+    
+    <!-- Soft Silhouetted Birds flocking around the Monument -->
+    <path d="M60,-60 Q65,-70 70,-65 Q75,-75 80,-60 Q73,-65 60,-60 Z" fill="#1d0f1c" transform="scale(0.8) translate(50, -40)"/>
+    <path d="M40,-90 Q45,-100 50,-95 Q55,-105 60,-90 Q53,-95 40,-90 Z" fill="#1d0f1c" transform="scale(0.7) translate(120, -80)"/>
+    <path d="M90,-110 Q95,-120 100,-115 Q105,-125 110,-110 Z" fill="#2b1828" transform="scale(0.6) translate(200, -100)"/>
+  </g>
+
+  <!-- PIGEONS IN THE SKY (Signature Bombay Element) -->
+  <g fill="#2b1828" opacity="0.8">
+    <!-- Closer birds over the sea -->
+    <path d="M380,300 Q392,288 400,295 Q412,284 418,302 Q405,296 380,300 Z" />
+    <path d="M340,325 Q350,315 358,321 Q368,312 373,327 Q362,322 340,325 Z" />
+    <path d="M420,280 Q427,272 433,277 Q442,269 446,282 Z" opacity="0.5"/>
+  </g>
+
+  <!-- FOREGROUND: LUXURIOUS ROOFTOP BAR / BALCONY OVERLOOKING THE SEA -->
+  
+  <!-- Balcony Floor / Platform Base -->
+  <path d="M0,620 L1200,560 L1200,800 L0,800 Z" fill="#1f1a24" />
+  
+  <!-- Luxury Glass & Iron Railing running across the view -->
+  <!-- Railing Base Bar -->
+  <path d="M0,620 L1200,560" stroke="#110e14" stroke-width="12" fill="none" />
+  <!-- Glass Panels Fill (Reflecting the Golden Hour Glow) -->
+  <path d="M0,620 L1200,560 L1200,720 L0,790 Z" fill="#fca34d" opacity="0.15" />
+  <!-- Railing Posts (Vertical) -->
+  <line x1="60" y1="617" x2="60" y2="780" stroke="url(#balconyRailing)" stroke-width="8" />
+  <line x1="240" y1="608" x2="240" y2="770" stroke="url(#balconyRailing)" stroke-width="8" />
+  <line x1="420" y1="600" x2="420" y2="760" stroke="url(#balconyRailing)" stroke-width="8" />
+  <line x1="600" y1="590" x2="600" y2="750" stroke="url(#balconyRailing)" stroke-width="8" />
+  <line x1="780" y1="581" x2="780" y2="740" stroke="url(#balconyRailing)" stroke-width="8" />
+  <line x1="960" y1="572" x2="960" y2="730" stroke="url(#balconyRailing)" stroke-width="8" />
+  <line x1="1140" y1="563" x2="1140" y2="720" stroke="url(#balconyRailing)" stroke-width="8" />
+  <!-- Railing Top Handrail -->
+  <path d="M0,600 L1200,540" stroke="url(#balconyRailing)" stroke-width="16" fill="none" />
+  <path d="M0,596 L1200,536" stroke="#fce2a6" stroke-width="2" fill="none" opacity="0.4" /> <!-- Top Specular Highlight -->
+
+  <!-- Warm ambiance string lights or decor edge blur -->
+  <circle cx="100" cy="530" r="25" fill="#ffcc66" opacity="0.15" filter="blur(10px)"/>
+  <circle cx="350" cy="510" r="30" fill="#ffcc66" opacity="0.1" filter="blur(12px)"/>
+
+  <!-- THE SEATED DRINKING COMPANY: DETAILED CHARACTERS -->
+  
+  <!-- CHARACTER 1: MAN ON THE LEFT (Relaxing, holding a beer mug) -->
+  <g id="manCharacter" transform="translate(120, 420)">
+    <!-- Back of the Lounge Chair -->
+    <path d="M20,320 L0,160 C-10,100 40,80 60,110 L90,200 Z" fill="#140d12" />
+    
+    <!-- Torso & Clothing (Linen Shirt caught in warm light) -->
+    <path d="M60,200 C80,180 130,170 170,190 C200,210 220,260 210,320 L80,350 Z" fill="url(#clothingMan)" />
+    <!-- Shirt Shadows and Creases -->
+    <path d="M120,185 C140,200 160,230 155,270" stroke="#8c6b4f" stroke-width="3" fill="none" opacity="0.6"/>
+    <path d="M80,220 C100,240 120,280 115,320" stroke="#8c6b4f" stroke-width="2.5" fill="none" opacity="0.5"/>
+    
+    <!-- Left Arm resting on chair armrest -->
+    <path d="M50,220 Q20,250 30,290 Q40,320 80,310" stroke="url(#manTone)" stroke-width="34" stroke-linecap="round" fill="none" />
+
+    <!-- Head & Neck -->
+    <path d="M110,140 Q115,180 130,180 Q145,180 145,140 Z" fill="url(#manTone)" /> <!-- Neck -->
+    <ellipse cx="135" cy="115" rx="35" ry="42" fill="url(#manTone)" /> <!-- Face -->
+    <!-- Profile Details (Looking slightly right towards his partner) -->
+    <!-- Hair & Beard (Classic modern Bombay style) -->
+    <path d="M105,100 C100,70 140,65 155,80 C165,90 170,110 168,120 C160,122 150,115 145,105 Z" fill="#1a0f0b"/>
+    <path d="M125,125 C135,155 165,150 165,130 C165,125 155,125 145,125 Z" fill="#1a0f0b" opacity="0.95"/> <!-- Beard -->
+    <!-- Rim Light on Man's Profile -->
+    <path d="M150,85 C165,95 172,115 166,135" stroke="#ffb380" stroke-width="4" fill="none" filter="url(#rimGlow)" opacity="0.9"/>
+
+    <!-- Right Shoulder & Arm (Reaching forward to hold the drink) -->
+    <path d="M160,195 C190,210 240,220 270,240 C285,250 280,275 250,275 C220,275 180,260 165,240" fill="url(#manTone)" />
+    <!-- Sleeve Overlay -->
+    <path d="M160,195 C180,200 205,210 215,235 L175,255 Z" fill="url(#clothingMan)" />
+
+    <!-- Hand details wrapped around the handle (Implicit behind the glass) -->
+    <circle cx="275" cy="255" r="14" fill="url(#manTone)"/>
+  </g>
+
+  <!-- CHARACTER 2: WOMAN ON THE RIGHT (Laughing/relaxed, holding a wine glass) -->
+  <g id="womanCharacter" transform="translate(680, 400)">
+    <!-- Elegant chair outline -->
+    <path d="M420,340 L450,140 C460,90 400,80 380,120 L360,220 Z" fill="#140d12" />
+
+    <!-- Torso & Dress (Rich silk texture reflecting golden sunset) -->
+    <path d="M370,230 C340,210 290,210 260,240 C230,270 225,320 235,370 L380,370 Z" fill="url(#clothingWoman)" />
+    <!-- Dress Folds and Highlights -->
+    <path d="M320,235 C290,260 270,300 265,340" stroke="#ff6680" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M350,245 C330,280 315,320 320,360" stroke="#80081c" stroke-width="3" fill="none" opacity="0.7"/>
+
+    <!-- Head & Elegant Neck Line -->
+    <path d="M310,165 C305,210 335,210 335,165 Z" fill="url(#womanTone)" /> <!-- Neck -->
+    <ellipse cx="315" cy="130" rx="30" ry="38" fill="url(#womanTone)" /> <!-- Face -->
+    <!-- Beautifully styled hair updose / traditional modern blend -->
+    <circle cx="340" cy="115" r="28" fill="#120a07" />
+    <path d="M290,115 C285,150 330,160 345,140 C345,110 310,95 290,115 Z" fill="#120a07" />
+    <circle cx="355" cy="105" r="14" fill="#120a07" /> <!-- Hair Bun -->
+    <!-- Golden Earring Detail -->
+    <circle cx="328" cy="152" r="5" fill="#fcd36a" />
+    <circle cx="328" cy="160" r="8" fill="#ffb330" opacity="0.9" />
+    <!-- Golden sunset rim light on her face/neck -->
+    <path d="M295,110 C282,125 285,150 300,165" stroke="#ffe399" stroke-width="3.5" fill="none" filter="url(#rimGlow)" opacity="0.95"/>
+
+    <!-- Left Arm and Hand resting elegantly on her lap -->
+    <path d="M360,250 C380,280 370,330 340,340" stroke="url(#womanTone)" stroke-width="22" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+    <!-- Right Arm elevated, holding her wine glass stem -->
+    <path d="M275,245 C240,255 190,270 170,290 C155,305 175,320 195,310 C220,295 255,275 275,265" fill="url(#womanTone)" />
+    <!-- Sleeve edge -->
+    <path d="M275,245 C265,250 255,260 252,270 L275,265 Z" fill="url(#clothingWoman)"/>
+    
+    <!-- Delicate fingers wrapped around stem -->
+    <circle cx="168" cy="295" r="6" fill="url(#womanTone)"/>
+    <circle cx="164" cy="301" r="5" fill="url(#womanTone)"/>
+  </g>
+
+  <!-- CENTRAL ELEMENT: THE BALCONY TABLE AND ALCOHOLIC DRINKS -->
+  <g id="tableAndDrinks" transform="translate(420, 560)">
+    <!-- Table Base Structure -->
+    <path d="M60,240 L300,240 L240,110 L120,110 Z" fill="url(#woodTable)" />
+    <!-- Table Top Ellipse (Perspective flat view) -->
+    <ellipse cx="180" cy="110" rx="140" ry="35" fill="url(#tableTop)" />
+    <ellipse cx="180" cy="107" rx="138" ry="33" fill="none" stroke="#e69c73" stroke-width="1.5" opacity="0.5" /> <!-- Inlaid wood ring -->
+
+    <!-- DRINK 1: LARGE BEER MUG (In front of the man on the left) -->
+    <g transform="translate(90, 45)">
+      <!-- Beer Coaster -->
+      <ellipse cx="20" cy="45" rx="35" ry="10" fill="#a67c52" opacity="0.8" />
+      
+      <!-- Beer Liquid Body -->
+      <path d="M-5,10 L45,10 L38,42 L2,42 Z" fill="url(#beerLiquid)" />
+      
+      <!-- Thick Frothy Foam Top -->
+      <path d="M-8,10 C-8,-5 48,-5 48,10 C48,18 -8,18 -8,10 Z" fill="#ffffff" />
+      <circle cx="5" cy="5" r="8" fill="#fffcf0" />
+      <circle cx="20" cy="2" r="10" fill="#ffffff" />
+      <circle cx="35" cy="4" r="9" fill="#fffcf0" />
+      <circle cx="12" cy="12" r="6" fill="#eae5d8" opacity="0.7"/>
+      
+      <!-- Glass Mug Outer Shell & Reflections -->
+      <path d="M-8,8 L48,8 L40,45 L0,45 Z" fill="url(#glassReflection)" opacity="0.3" stroke="#ffffff" stroke-width="2" />
+      <!-- Vertical Glass Facet Lines -->
+      <line x1="8" y1="12" x2="10" y2="42" stroke="#ffffff" stroke-width="1.5" opacity="0.7" />
+      <line x1="20" y1="12" x2="20" y2="44" stroke="#ffffff" stroke-width="2" opacity="0.5" />
+      <line x1="32" y1="12" x2="30" y2="42" stroke="#ffffff" stroke-width="1.5" opacity="0.7" />
+      
+      <!-- Mug Handle -->
+      <path d="M-7,15 C-22,15 -22,35 -5,38" stroke="#ffffff" stroke-width="6" fill="none" opacity="0.4" />
+      <path d="M-7,15 C-22,15 -22,35 -5,38" stroke="url(#glassReflection)" stroke-width="4" fill="none" />
+
+      <!-- Condensation / Realism Glare -->
+      <path d="M42,15 L36,35" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+    </g>
+
+    <!-- DRINK 2: ELEGANT RED WINE GLASS (In front of the woman, slightly lifted) -->
+    <!-- Positioned precisely where her silhouetted hand meets the table perspective -->
+    <g transform="translate(240, 15)">
+      <!-- Wine Glass Base on Table Reflection (Even though lifted or near, gives grounding) -->
+      <ellipse cx="15" cy="75" rx="20" ry="6" fill="#3b1f18" opacity="0.6"/>
+      <ellipse cx="15" cy="75" rx="18" ry="5" fill="url(#glassReflection)" opacity="0.4"/>
+      
+      <!-- Glass Stem -->
+      <line x1="15" y1="35" x2="15" y2="75" stroke="url(#glassReflection)" stroke-width="3" opacity="0.8" />
+      <line x1="15" y1="35" x2="15" y2="75" stroke="#ffffff" stroke-width="1" opacity="0.9" />
+
+      <!-- Glass Bowl & Wine Liquid -->
+      <!-- Entire Bowl Outline -->
+      <path d="M-8,-5 C-8,25 38,25 38,-5 C38,-15 -8,-15 -8,-5 Z" fill="none" stroke="url(#glassReflection)" stroke-width="1.5" opacity="0.8"/>
+      <!-- Liquid Fill inside the bowl -->
+      <path d="M-6,5 C-6,23 36,23 36,5 C36,8 -6,8 -6,5 Z" fill="url(#wineLiquid)" />
+      <!-- Wine Surface Curve -->
+      <ellipse cx="15" cy="5" rx="21" ry="4" fill="#ff4d6a" opacity="0.7" />
+      
+      <!-- Specular Highlights / Light Caught from Golden Hour Sun -->
+      <path d="M-5,0 C-7,15 5,22 15,22" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.7" />
+      <circle cx="30" cy="12" r="3" fill="#ffffff" opacity="0.8" />
+      <path d="M35,-5 C37,5 30,15 25,18" stroke="#ffb3a1" stroke-width="1.5" fill="none" opacity="0.6" />
+    </g>
+
+    <!-- EVENING SNACK BAR PLATE (Calamares / Indian Finger Food / Murukku) -->
+    <g transform="translate(165, 85)">
+      <ellipse cx="0" cy="0" rx="45" ry="14" fill="#e8e3d5" stroke="#baa480" stroke-width="2"/>
+      <!-- Food Items Stacked -->
+      <ellipse cx="-15" cy="-2" rx="12" ry="5" fill="#b06c21" />
+      <ellipse cx="10" cy="-4" rx="15" ry="6" fill="#94530f" />
+      <ellipse cx="-2" cy="1" rx="14" ry="5" fill="#cf8430" />
+      <!-- Highlight on food -->
+      <circle cx="-5" cy="-1" r="3" fill="#ffd699" opacity="0.6"/>
+      <circle cx="12" cy="-5" r="4" fill="#ffd699" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- AMBIENT LIGHT OVERLAYS & POST-PROCESSING EFFECTS -->
+  <!-- Golden Hour Flare across the entire bottom-right frame to blend elements -->
+  <circle cx="550" cy="460" r="600" fill="url(#seaGlow)" opacity="0.15" mix-blend-mode="color-burn" style="pointer-events: none;"/>
+  <!-- Ultimate Foreground Shadow vignettes on corners for cinema look -->
+  <path d="M0,0 L300,0 L0,400 Z" fill="#0c0712" opacity="0.25" />
+  <path d="M1200,0 L900,0 L1200,500 Z" fill="#0c0712" opacity="0.25" />
+</svg>

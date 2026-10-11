@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "evaluations": [
+    {
+      "id": "bombay",
+      "title": "A drink in Bombay",
+      "subtitle": "One visual brief, eight model runs",
+      "description": "A side-by-side look at how different models interpreted a detailed SVG scene set in Bombay (Mumbai) at golden hour.",
+      "brief": "Create a detailed SVG showing someone enjoying a relaxing drink in Bombay during golden hour, with a clear sense of place and a warm atmosphere.",
+      "results": [
+        {
+          "id": "claude-sonnet-5.5-medium",
+          "label": "Claude Sonnet 5.5",
+          "family": "Claude",
+          "runtime": "Not recorded",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/claude-sonnet-5.5-medium/bombay_golden_hour.svg",
+              "bytes": 66211
+            }
+          ]
+        },
+        {
+          "id": "codex-chat-medium",
+          "label": "Codex Chat · medium",
+          "family": "GPT",
+          "runtime": "Codex Chat",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/codex-chat-medium/bombay_golden_hour_drinks.svg",
+              "bytes": 22250
+            }
+          ]
+        },
+        {
+          "id": "codex-work-gpt6-astra",
+          "label": "GPT-6 Astra",
+          "family": "GPT",
+          "runtime": "Codex Work",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/codex-work-gpt6-astra/bombay-golden-hour-vector.svg",
+              "bytes": 276243
+            }
+          ]
+        },
+        {
+          "id": "deepseek-r1-70b",
+          "label": "DeepSeek R1 70B",
+          "family": "DeepSeek",
+          "runtime": "Not recorded",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/deepseek-r1-70b/output.svg",
+              "bytes": 2282
+            }
+          ]
+        },
+        {
+          "id": "gemini-free",
+          "label": "Gemini · free tier",
+          "family": "Gemini",
+          "runtime": "Gemini",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemini-free/bombay_golden_hour.svg",
+              "bytes": 22054
+            }
+          ]
+        },
+        {
+          "id": "gemma4",
+          "label": "Gemma 4 · iterations",
+          "family": "Gemma",
+          "runtime": "Not recorded",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemma4/drink_in_bombay_v7_final.svg",
+              "bytes": 5102
+            },
+            {
+              "label": "drink in bombay",
+              "path": "assets/bombay/gemma4/drink_in_bombay.svg",
+              "bytes": 1225
+            },
+            {
+              "label": "drink in bombay v2",
+              "path": "assets/bombay/gemma4/drink_in_bombay_v2.svg",
+              "bytes": 1250
+            },
+            {
+              "label": "drink in bombay v3",
+              "path": "assets/bombay/gemma4/drink_in_bombay_v3.svg",
+              "bytes": 1487
+            },
+            {
+              "label": "drink in bombay v4",
+              "path": "assets/bombay/gemma4/drink_in_bombay_v4.svg",
+              "bytes": 1634
+            },
+            {
+              "label": "drink in bombay v5",
+              "path": "assets/bombay/gemma4/drink_in_bombay_v5.svg",
+              "bytes": 1705
+            },
+            {
+              "label": "drink in bombay v6",
+              "path": "assets/bombay/gemma4/drink_in_bombay_v6.svg",
+              "bytes": 2208
+            },
+            {
+              "label": "prog1",
+              "path": "assets/bombay/gemma4/prog1.svg",
+              "bytes": 928
+            },
+            {
+              "label": "prog2",
+              "path": "assets/bombay/gemma4/prog2.svg",
+              "bytes": 2700
+            },
+            {
+              "label": "prog3",
+              "path": "assets/bombay/gemma4/prog3.svg",
+              "bytes": 2637
+            },
+            {
+              "label": "scene level 1",
+              "path": "assets/bombay/gemma4/scene_level_1.svg",
+              "bytes": 899
+            },
+            {
+              "label": "scene level 2",
+              "path": "assets/bombay/gemma4/scene_level_2.svg",
+              "bytes": 2092
+            },
+            {
+              "label": "scene final",
+              "path": "assets/bombay/gemma4/scene_final.svg",
+              "bytes": 2637
+            }
+          ]
+        },
+        {
+          "id": "ollama-gemma4-26b",
+          "label": "Gemma 4 26B",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/ollama-gemma4-26b/bombay_drink.svg",
+              "bytes": 3775
+            }
+          ]
+        },
+        {
+          "id": "ollama-opencode-qwen3.8-27b",
+          "label": "Qwen 3.8 27B",
+          "family": "Qwen",
+          "runtime": "Ollama + OpenCode",
+          "quantization": null,
+          "memory_gb": null,
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/ollama-opencode-qwen3.8-27b/bombay-sunset-drink.svg",
+              "bytes": 23168
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">    <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />    <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />  </linearGradient>
+</defs>
+<rect width="800" height="600" fill="url(#bgGrad)" />
+<circle cx="100" cy="100" r="1" fill="white" opacity="0.5" />
+<circle cx="300" cy="150" r="1.5" fill="white" opacity="0.8" />
+<circle cx="500" cy="50" r="1" fill="white" opacity="0.4" />
+
+<defs>
+  <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">    <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />    <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />  </linearGradient>
+  <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">    <stop offset="0%" style="stop-color:#0f3460;stop-opacity:1" />    <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />  </linearGradient>
+</defs>
+<rect width="800" height="600" fill="url(#skyGrad)" />
+<rect y="420.0" width="800" height="180.0" fill="url(#seaGrad)" />
+<path d="M0 420.0 Q200.0 410.0 400.0 420.0 T800 420.0 V600 H0 Z" fill="#0f3460" opacity="0.5" />
+<g transform="translate(450, 350) scale(1.5)">
+  <rect x="0" y="0" width="180.0" height="270.0" fill="#c2b280" />
+  <path d="M45.0 270.0 V108.0 Q90.0 54.0 135.0 108.0 V270.0" fill="#1a1a1a" />
+  <rect x="0" y="0" width="180.0" height="20" fill="#a6956a" />
+</g>
+<g transform="translate(150, 450)">
+  <circle cx="0" cy="-80" r="15" fill="#d2b48c" />
+  <rect x="-20" y="-65" width="40" height="50" rx="10" fill="#2c3e50" />
+  <rect x="-15" y="-15" width="30" height="50" fill="#34495e" />
+</g>
+<path d="M180, 480 L240, 480 L230, 560 L190, 560 Z" fill="none" stroke="white" stroke-width="2" />
+<path d="M180, 480 L240, 480 L230, 560 L190, 560 Z" fill="rgba(255, 255, 255, 0.1)" />
+<path d="M192, 500 L228, 500 L222, 555 L198, 555 Z" fill="#f39c12" />
+<circle cx="210" cy="520" r="3" fill="white" opacity="0.4" />
+<circle cx="215" cy="530" r="2" fill="white" opacity="0.3" />
+</svg>

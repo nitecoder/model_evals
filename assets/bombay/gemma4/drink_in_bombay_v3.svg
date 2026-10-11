@@ -1,0 +1,36 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky and Sun -->
+  <rect width="400" height="400" fill="#87CEEB" />
+  <circle cx="200" cy="150" r="60" fill="#FFFACD" opacity="0.5" />
+  <circle cx="300" cy="80" r="40" fill="#FFD700" />
+  
+  <!-- Sea -->
+  <rect y="280" width="400" height="120" fill="#0077be" />
+  
+  <!-- Gateway of India (More recognizable arch) -->
+  <path d="M120 300 L120 150 Q200 50 280 150 L280 300 Z" fill="#555" />
+  <path d="M150 300 L150 180 Q200 120 250 180 L250 300 Z" fill="#FFF" /> <!-- Arch opening -->
+  <rect x="110" y="280" width="180" height="20" fill="#333" /> <!-- Base -->
+
+  <!-- Person Silhouette -->
+  <g fill="#222">
+    <!-- Head -->
+    <circle cx="70" cy="230" r="15" />
+    <!-- Neck -->
+    <rect x="65" y="245" width="10" height="5" />
+    <!-- Shoulders and Torso -->
+    <path d="M30 350 Q30 250 70 250 Q110 250 110 350 Z" />
+    <!-- Arm -->
+    <path d="M100 270 Q140 280 170 320" fill="none" stroke="#222" stroke-width="12" stroke-linecap="round" />
+  </g>
+
+  <!-- Table -->
+  <rect x="150" y="340" width="120" height="5" fill="#5D4037" />
+  
+  <!-- Drink Glass -->
+  <g>
+    <path d="M180 300 L210 300 L205 335 L185 335 Z" fill="rgba(255, 255, 255, 0.5)" stroke="#FFF" stroke-width="1" />
+    <rect x="185" y="305" width="20" height="25" fill="#FF8C00" /> <!-- Orange Juice -->
+    <line x1="195" y1="290" x2="195" y2="310" stroke="#FFF" stroke-width="2" /> <!-- Straw -->
+  </g>
+</svg>
