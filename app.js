@@ -177,21 +177,25 @@ function card(result, index) {
   const foot = document.createElement('div');
   foot.className = 'card-foot';
   if (hasImage) {
-    const versionWrap = document.createElement('div');
-    versionWrap.className = 'version-wrap';
-    const versionLabel = document.createElement('label');
-    versionLabel.textContent = `Version · ${result.images.length} ${result.images.length === 1 ? 'image' : 'images'}`;
-    const version = document.createElement('select');
-    version.setAttribute('aria-label', `Version for ${result.label}`);
-    result.images.forEach((item, imageIndex) => version.append(option(String(imageIndex), item.label)));
-    version.disabled = result.images.length === 1;
-    version.addEventListener('change', () => {
-      current = Number(version.value);
-      image.src = result.images[current].path;
-      image.alt = `${result.label}: ${result.images[current].label}`;
-      if (state.selected.has(result.id)) state.selected.set(result.id, current);
-    });
-    versionWrap.append(versionLabel, version);
+    if (result.images.length > 1) {
+      const versionWrap = document.createElement('div');
+      versionWrap.className = 'version-wrap';
+      const versionLabel = document.createElement('label');
+      versionLabel.textContent = `Version · ${result.images.length} images`;
+      const version = document.createElement('select');
+      version.setAttribute('aria-label', `Version for ${result.label}`);
+      result.images.forEach((item, imageIndex) => version.append(option(String(imageIndex), item.label)));
+      version.addEventListener('change', () => {
+        current = Number(version.value);
+        image.src = result.images[current].path;
+        image.alt = `${result.label}: ${result.images[current].label}`;
+        if (state.selected.has(result.id)) state.selected.set(result.id, current);
+      });
+      versionWrap.append(versionLabel, version);
+      foot.append(versionWrap);
+    } else {
+      foot.classList.add('card-foot-single');
+    }
     const compareLabel = document.createElement('label');
     compareLabel.className = 'compare-label';
     const compare = document.createElement('input');
@@ -208,7 +212,7 @@ function card(result, index) {
       updateCompareButton();
     });
     compareLabel.append(compare, document.createTextNode(' Compare'));
-    foot.append(versionWrap, compareLabel);
+    foot.append(compareLabel);
   } else {
     const unavailable = document.createElement('span');
     unavailable.className = 'card-status';
