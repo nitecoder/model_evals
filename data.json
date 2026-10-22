@@ -1,53 +1,13 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "evaluations": [
     {
       "id": "bombay",
       "title": "A drink in Bombay",
-      "subtitle": "One visual brief, 15 model runs",
-      "description": "Compare cloud and local model runs depicting a relaxing drink in Bombay (Mumbai) at golden hour. The gallery includes completed images and runs that produced no usable SVG.",
+      "subtitle": "One visual brief, 16 model runs",
+      "description": "Compare cloud and local model runs depicting a relaxing drink in Bombay (Mumbai) at golden hour. The leaderboard scores selected SVGs and includes runs that produced no usable image.",
       "brief": "Create a detailed SVG showing someone enjoying a relaxing drink in Bombay during golden hour, with a clear sense of place and a warm atmosphere.",
       "results": [
-        {
-          "id": "claude-sonnet-5.5-medium",
-          "label": "Claude Sonnet 5.5",
-          "family": "Claude",
-          "runtime": "Claude",
-          "tool": null,
-          "method": "One shot",
-          "quantization": null,
-          "memory_gb": null,
-          "source_type": "Cloud",
-          "run_date": null,
-          "status": "complete",
-          "images": [
-            {
-              "label": "Selected result",
-              "path": "assets/bombay/claude-sonnet-5.5-medium/bombay_golden_hour.svg",
-              "bytes": 66211
-            }
-          ]
-        },
-        {
-          "id": "codex-chat-medium",
-          "label": "Codex Chat · medium",
-          "family": "GPT",
-          "runtime": "Codex Chat",
-          "tool": null,
-          "method": "One shot",
-          "quantization": null,
-          "memory_gb": null,
-          "source_type": "Cloud",
-          "run_date": null,
-          "status": "complete",
-          "images": [
-            {
-              "label": "Selected result",
-              "path": "assets/bombay/codex-chat-medium/bombay_golden_hour_drinks.svg",
-              "bytes": 22250
-            }
-          ]
-        },
         {
           "id": "codex-work-gpt6-astra",
           "label": "GPT-6 Astra",
@@ -58,6 +18,8 @@
           "quantization": null,
           "memory_gb": null,
           "public_note": "The selected result is the vector revision.",
+          "score": 9.0,
+          "score_reason": "Detailed waterfront scene, clear Bombay landmarks, warm light, and a person visibly sipping a drink.",
           "source_type": "Cloud",
           "run_date": null,
           "status": "complete",
@@ -70,6 +32,29 @@
           ]
         },
         {
+          "id": "qwen3.8-27b-claudecode-20261021",
+          "label": "Qwen 3.8 27B · Claude Code",
+          "family": "Qwen",
+          "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Visual QA and refinement",
+          "quantization": null,
+          "memory_gb": null,
+          "duration": "27m 44s",
+          "score": 8.0,
+          "score_reason": "Strong golden-hour atmosphere and a raised cocktail; figures and landmarks are less precise.",
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/qwen3.8-27b-claudecode-20261021/output.svg",
+              "bytes": 33160
+            }
+          ]
+        },
+        {
           "id": "gemini-free",
           "label": "Gemini · free tier",
           "family": "Gemini",
@@ -78,6 +63,8 @@
           "method": "One shot",
           "quantization": null,
           "memory_gb": null,
+          "score": 7.5,
+          "score_reason": "Recognizable landmark and a relaxed pair with drinks; broad shapes limit realism.",
           "source_type": "Cloud",
           "run_date": null,
           "status": "complete",
@@ -90,39 +77,48 @@
           ]
         },
         {
-          "id": "deepseek-r1-70b-20261011",
-          "label": "DeepSeek R1 70B · Oct 11",
-          "family": "DeepSeek",
-          "runtime": "Ollama",
+          "id": "codex-chat-medium",
+          "label": "Codex Chat · medium",
+          "family": "GPT",
+          "runtime": "Codex Chat",
           "tool": null,
           "method": "One shot",
           "quantization": null,
           "memory_gb": null,
-          "source_type": "Local",
-          "run_date": "2026-10-11",
+          "score": 7.0,
+          "score_reason": "Clear raised drink and city cues, though the figure and setting remain fairly simple.",
+          "source_type": "Cloud",
+          "run_date": null,
           "status": "complete",
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/deepseek-r1-70b-20261011/output.svg",
-              "bytes": 2282
+              "path": "assets/bombay/codex-chat-medium/bombay_golden_hour_drinks.svg",
+              "bytes": 22250
             }
           ]
         },
         {
-          "id": "deepseek-r1-70b-20261021",
-          "label": "DeepSeek R1 70B · Oct 21",
-          "family": "DeepSeek",
-          "runtime": "Ollama",
-          "tool": "Claude Code",
-          "method": "Direct SVG · follow-up",
+          "id": "claude-sonnet-5.5-medium",
+          "label": "Claude Sonnet 5.5",
+          "family": "Claude",
+          "runtime": "Claude",
+          "tool": null,
+          "method": "One shot",
           "quantization": null,
           "memory_gb": null,
-          "public_note": "The saved SVG has malformed XML and cannot be displayed.",
-          "source_type": "Local",
-          "run_date": "2026-10-21",
-          "status": "invalid_svg",
-          "images": []
+          "score": 6.5,
+          "score_reason": "Rich local architecture and warm color, but the person is not visibly enjoying a drink.",
+          "source_type": "Cloud",
+          "run_date": null,
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/claude-sonnet-5.5-medium/bombay_golden_hour.svg",
+              "bytes": 66211
+            }
+          ]
         },
         {
           "id": "deepseek-v4-flash-iq2_m-20261015",
@@ -133,6 +129,8 @@
           "method": "Direct SVG",
           "quantization": "IQ2_M",
           "memory_gb": null,
+          "score": 6.0,
+          "score_reason": "Appealing sunset and two people; the drink and Bombay-specific details are less clear.",
           "source_type": "Local",
           "run_date": "2026-10-15",
           "status": "complete",
@@ -141,6 +139,28 @@
               "label": "Selected result",
               "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015/output.svg",
               "bytes": 24074
+            }
+          ]
+        },
+        {
+          "id": "qwen3.8-27b-opencode-20261010",
+          "label": "Qwen 3.8 27B · OpenCode",
+          "family": "Qwen",
+          "runtime": "Ollama",
+          "tool": "OpenCode",
+          "method": null,
+          "quantization": null,
+          "memory_gb": null,
+          "score": 5.5,
+          "score_reason": "Good sunset mood and a visible glass, but the person and skyline are mostly silhouettes.",
+          "source_type": "Local",
+          "run_date": "2026-10-10",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/qwen3.8-27b-opencode-20261010/output.svg",
+              "bytes": 23168
             }
           ]
         },
@@ -154,6 +174,8 @@
           "quantization": "IQ2_M",
           "memory_gb": null,
           "public_note": "This run generated the SVG with a program.",
+          "score": 5.0,
+          "score_reason": "A person holds a glass at sunset; the scene is sparse and place cues are weak.",
           "source_type": "Local",
           "run_date": "2026-10-15",
           "status": "complete",
@@ -171,57 +193,24 @@
           ]
         },
         {
-          "id": "deepseek-v4-flash-iq2_m-20261021",
-          "label": "DeepSeek V4 Flash · Oct 21",
-          "family": "DeepSeek",
+          "id": "nemotron-3.5-super-20261021",
+          "label": "Nemotron 3.5 Super",
+          "family": "Nemotron",
           "runtime": "Ollama",
-          "tool": "Claude Code",
-          "method": "Direct SVG · follow-up",
-          "quantization": "IQ2_M",
-          "memory_gb": null,
-          "public_note": "No renderable SVG was saved after a follow-up prompt.",
-          "source_type": "Local",
-          "run_date": "2026-10-21",
-          "status": "no_output",
-          "images": []
-        },
-        {
-          "id": "gemma4-26b-claudecode-20261021",
-          "label": "Gemma 4 26B · Claude Code",
-          "family": "Gemma",
-          "runtime": "Ollama",
-          "tool": "Claude Code",
-          "method": "Python generated",
+          "tool": null,
+          "method": "Direct SVG",
           "quantization": null,
           "memory_gb": null,
+          "score": 4.5,
+          "score_reason": "Two people with drinks and a Marine Drive cue, but simple shapes leave much of the scene empty.",
           "source_type": "Local",
           "run_date": "2026-10-21",
           "status": "complete",
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemma4-26b-claudecode-20261021/output.svg",
-              "bytes": 21580
-            }
-          ]
-        },
-        {
-          "id": "gemma4-26b-opencode-20261009",
-          "label": "Gemma 4 26B · OpenCode",
-          "family": "Gemma",
-          "runtime": "Ollama",
-          "tool": "OpenCode",
-          "method": null,
-          "quantization": null,
-          "memory_gb": null,
-          "source_type": "Local",
-          "run_date": "2026-10-09",
-          "status": "complete",
-          "images": [
-            {
-              "label": "Selected result",
-              "path": "assets/bombay/gemma4-26b-opencode-20261009/bombay_drink.svg",
-              "bytes": 3775
+              "path": "assets/bombay/nemotron-3.5-super-20261021/output.svg",
+              "bytes": 11316
             }
           ]
         },
@@ -235,6 +224,8 @@
           "quantization": null,
           "memory_gb": null,
           "public_note": "The selected result follows seven direct SVG iterations.",
+          "score": 3.5,
+          "score_reason": "A figure, drink, and taxi cue are present; crude forms and bright daylight miss the requested mood.",
           "source_type": "Local",
           "run_date": "2026-10-08",
           "status": "complete",
@@ -277,6 +268,50 @@
           ]
         },
         {
+          "id": "gemma4-26b-claudecode-20261021",
+          "label": "Gemma 4 26B · Claude Code",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Python generated",
+          "quantization": null,
+          "memory_gb": null,
+          "score": 3.0,
+          "score_reason": "Warm sunset colors, but no clear person enjoying a drink appears in the scene.",
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemma4-26b-claudecode-20261021/output.svg",
+              "bytes": 21580
+            }
+          ]
+        },
+        {
+          "id": "gemma4-26b-opencode-20261009",
+          "label": "Gemma 4 26B · OpenCode",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "tool": "OpenCode",
+          "method": null,
+          "quantization": null,
+          "memory_gb": null,
+          "score": 2.5,
+          "score_reason": "The drink is visible, but the person and Bombay setting are barely represented.",
+          "source_type": "Local",
+          "run_date": "2026-10-09",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemma4-26b-opencode-20261009/bombay_drink.svg",
+              "bytes": 3775
+            }
+          ]
+        },
+        {
           "id": "gemma4-opencode-20261009",
           "label": "Gemma 4 · program iterations",
           "family": "Gemma",
@@ -286,6 +321,8 @@
           "quantization": null,
           "memory_gb": null,
           "public_note": "The selected result follows several program-generated iterations.",
+          "score": 2.0,
+          "score_reason": "Minimal figure and glass; the night scene lacks golden-hour light and detail.",
           "source_type": "Local",
           "run_date": "2026-10-09",
           "status": "complete",
@@ -318,45 +355,60 @@
           ]
         },
         {
-          "id": "qwen3.8-27b-claudecode-20261021",
-          "label": "Qwen 3.8 27B · Claude Code",
-          "family": "Qwen",
+          "id": "deepseek-r1-70b-20261011",
+          "label": "DeepSeek R1 70B · Oct 11",
+          "family": "DeepSeek",
           "runtime": "Ollama",
-          "tool": "Claude Code",
-          "method": "Visual QA and refinement",
+          "tool": null,
+          "method": "One shot",
           "quantization": null,
           "memory_gb": null,
-          "duration": "27m 44s",
+          "score": 1.0,
+          "score_reason": "The SVG renders, but it scarcely depicts the requested person, drink, or Bombay setting.",
           "source_type": "Local",
-          "run_date": "2026-10-21",
+          "run_date": "2026-10-11",
           "status": "complete",
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/qwen3.8-27b-claudecode-20261021/output.svg",
-              "bytes": 33160
+              "path": "assets/bombay/deepseek-r1-70b-20261011/output.svg",
+              "bytes": 2282
             }
           ]
         },
         {
-          "id": "qwen3.8-27b-opencode-20261010",
-          "label": "Qwen 3.8 27B · OpenCode",
-          "family": "Qwen",
+          "id": "deepseek-r1-70b-20261021",
+          "label": "DeepSeek R1 70B · Oct 21",
+          "family": "DeepSeek",
           "runtime": "Ollama",
-          "tool": "OpenCode",
-          "method": null,
+          "tool": "Claude Code",
+          "method": "Direct SVG · follow-up",
           "quantization": null,
           "memory_gb": null,
+          "public_note": "The saved SVG has malformed XML and cannot be displayed.",
+          "score": 0.0,
+          "score_reason": "The saved SVG is malformed and cannot be judged as an image.",
           "source_type": "Local",
-          "run_date": "2026-10-10",
-          "status": "complete",
-          "images": [
-            {
-              "label": "Selected result",
-              "path": "assets/bombay/qwen3.8-27b-opencode-20261010/output.svg",
-              "bytes": 23168
-            }
-          ]
+          "run_date": "2026-10-21",
+          "status": "invalid_svg",
+          "images": []
+        },
+        {
+          "id": "deepseek-v4-flash-iq2_m-20261021",
+          "label": "DeepSeek V4 Flash · Oct 21",
+          "family": "DeepSeek",
+          "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Direct SVG · follow-up",
+          "quantization": "IQ2_M",
+          "memory_gb": null,
+          "public_note": "No renderable SVG was saved after a follow-up prompt.",
+          "score": 0.0,
+          "score_reason": "No saved SVG is available to evaluate.",
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "no_output",
+          "images": []
         }
       ]
     }

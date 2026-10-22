@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111b22">
-  <meta name="description" content="A visual gallery for side-by-side model evaluations.">
-  <title>Model Atlas — visual evaluations</title>
+  <meta name="description" content="A ranked visual leaderboard for model evaluations.">
+  <title>Model Atlas — evaluation leaderboard</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -21,8 +21,8 @@
     <section class="intro" aria-labelledby="page-title">
       <div class="intro-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> FIELD NOTES / 001</p>
-        <h1 id="page-title">One brief.<br><em>Different eyes.</em></h1>
-        <p class="intro-description">Explore cloud and local model runs on equal footing. Browse the images, inspect earlier iterations, and compare the work side by side.</p>
+        <h1 id="page-title">One brief.<br><em>Ranked results.</em></h1>
+        <p class="intro-description">Explore a scored leaderboard of cloud and local model runs. Inspect each selected SVG, revisit earlier iterations, and compare results side by side.</p>
         <a class="intro-link" href="#results">Explore the results <span aria-hidden="true">↘</span></a>
       </div>
       <div class="intro-aside" aria-label="Archive overview">
@@ -30,7 +30,7 @@
         <div class="overview-rule"></div>
         <div class="overview-number" id="result-count">—</div><div class="overview-caption">MODEL RUNS</div>
         <div class="overview-rule"></div>
-        <p>Compare cloud and local runs across model families, tools, runtimes, quantizations and memory profiles.</p>
+        <p>Every run receives a Score from 0 to 10. Filter the ranking by model family, tool, runtime, quantization and memory.</p>
       </div>
     </section>
 
@@ -41,8 +41,9 @@
     </section>
 
     <section class="gallery-section" id="results" aria-labelledby="results-title">
-      <div class="section-kicker"><span class="section-index">02</span><span>THE OUTPUTS</span></div>
-      <div class="results-heading"><div><h2 id="results-title">The gallery</h2><p id="visible-count">Browse completed images and runs without a usable SVG.</p></div><button id="compare-button" class="button-outline" type="button" disabled>Compare selected <span id="selected-count">0</span></button></div>
+      <div class="section-kicker"><span class="section-index">02</span><span>THE RANKING</span></div>
+      <div class="results-heading"><div><h2 id="results-title">Leaderboard</h2><p id="visible-count">Results are ranked by Score, best to worst.</p></div><button id="compare-button" class="button-outline" type="button" disabled>Compare selected <span id="selected-count">0</span></button></div>
+      <p class="scoring-note"><strong>About Score</strong> Each selected SVG receives a subjective 0–10 rating for the requested drink scene, Bombay cues, golden-hour atmosphere, detail, and visual craft. A run without a usable SVG scores 0. Earlier versions remain available to inspect but are not scored separately.</p>
       <div class="controls" aria-label="Filter results">
         <label>Study <select id="study-filter"></select></label>
         <label>Family <select id="family-filter"><option value="">All families</option></select></label>
@@ -59,7 +60,7 @@
 
     <section class="about" aria-labelledby="about-title">
       <div class="section-kicker"><span class="section-index">03</span><span>READING THE RESULTS</span></div>
-      <div class="about-grid"><h2 id="about-title">Look closely.<br><em>Judge for yourself.</em></h2><div><p>Completed runs show one selected SVG. Where earlier versions exist, use the version menu to inspect them. Runs without a usable SVG remain visible with their outcome. Open any image for a larger view or select up to four cards for a direct comparison.</p><p>Explore the images and model details to form your own view. Some details may not be available for every result.</p></div></div>
+      <div class="about-grid"><h2 id="about-title">Look closely.<br><em>Judge for yourself.</em></h2><div><p>The ranking uses one selected SVG per run. Each row shows its Score and a short reason. Where earlier versions exist, use the version menu to inspect them. Runs without a usable SVG remain at the bottom with a Score of 0. Open an image for a larger view or select up to four for direct comparison.</p><p>Explore the images and model details to form your own view. Some details may not be available for every result.</p></div></div>
     </section>
   </main>
 

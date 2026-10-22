@@ -1,4 +1,4 @@
-const state = { catalog: null, study: null, selected: new Map() };
+const state = { catalog: null, study: null, selected: new Map(), rankById: new Map() };
 const $ = (id) => document.getElementById(id);
 
 function option(value, label) {
@@ -19,6 +19,10 @@ function populateFilter(id, values, format = String) {
   select.disabled = values.length === 0;
 }
 
+function rankedResults() {
+  return [...state.study.results].sort((a, b) => b.score - a.score || a.label.localeCompare(b.label));
+}
+
 function currentResults() {
   const family = $('family-filter').value;
   const sourceType = $('source-filter').value;
@@ -26,7 +30,7 @@ function currentResults() {
   const runtime = $('runtime-filter').value;
   const quantization = $('quantization-filter').value;
   const memory = $('memory-filter').value;
-  return state.study.results.filter((result) =>
+  return rankedResults().filter((result) =>
     (!family || result.family === family) &&
     (!sourceType || result.source_type === sourceType) &&
     (!tool || result.tool === tool) &&
@@ -55,6 +59,14 @@ function showStudy() {
   $('study-brief').textContent = `“${study.brief}”`;
   const completed = study.results.filter((result) => result.images.length > 0).length;
   $('study-count').textContent = `${study.results.length} model runs · ${completed} with images`;
+  state.rankById.clear();
+  let rank = 0;
+  let lastScore = null;
+  rankedResults().forEach((result, index) => {
+    if (index === 0 || result.score !== lastScore) rank = index + 1;
+    state.rankById.set(result.id, rank);
+    lastScore = result.score;
+  });
   populateFilter('family-filter', uniqueValues(study.results, 'family'));
   populateFilter('source-filter', uniqueValues(study.results, 'source_type'));
   populateFilter('tool-filter', uniqueValues(study.results, 'tool'));
@@ -76,7 +88,7 @@ function openViewer(result, image) {
   $('viewer-title').textContent = result.label;
   $('viewer-image').src = image.path;
   $('viewer-image').alt = `${result.label}: ${image.label}`;
-  $('viewer-detail').textContent = [image.label, result.family, result.runtime, result.run_date].filter(Boolean).join(' · ');
+  $('viewer-detail').textContent = [`Score ${Number(result.score).toFixed(1)}/10`, image.label, result.family, result.runtime, result.run_date].filter(Boolean).join(' · ');
   $('viewer-original').href = image.path;
   $('viewer').showModal();
 }
@@ -87,7 +99,8 @@ function statusLabel(status) {
 
 function card(result, index) {
   const article = document.createElement('article');
-  article.className = 'card';
+  const rank = state.rankById.get(result.id);
+  article.className = rank <= 3 ? 'card card-top-three' : 'card';
   const hasImage = result.images.length > 0;
   let image;
   let current = 0;
@@ -120,12 +133,25 @@ function card(result, index) {
   const topline = document.createElement('div');
   topline.className = 'card-topline';
   const number = document.createElement('span');
-  number.textContent = `RUN ${String(index + 1).padStart(2, '0')}`;
+  number.textContent = `RANK #${String(rank).padStart(2, '0')}`;
   const sourceType = document.createElement('span');
   sourceType.textContent = result.source_type;
   topline.append(number, sourceType);
+  const heading = document.createElement('div');
+  heading.className = 'card-heading';
   const title = document.createElement('h3');
   title.textContent = result.label;
+  const scoreBadge = document.createElement('div');
+  scoreBadge.className = 'score-badge';
+  scoreBadge.setAttribute('aria-label', `Score ${Number(result.score).toFixed(1)} out of 10`);
+  const scoreLabel = document.createElement('span');
+  scoreLabel.textContent = 'Score';
+  const scoreValue = document.createElement('strong');
+  scoreValue.textContent = Number(result.score).toFixed(1);
+  const scoreMaximum = document.createElement('small');
+  scoreMaximum.textContent = '/ 10';
+  scoreBadge.append(scoreLabel, scoreValue, scoreMaximum);
+  heading.append(title, scoreBadge);
   const metadata = document.createElement('div');
   metadata.className = 'metadata';
   metadata.append(tag(result.family));
@@ -136,7 +162,11 @@ function card(result, index) {
   if (result.quantization) metadata.append(tag(`Quant. ${result.quantization}`));
   if (result.memory_gb != null) metadata.append(tag(`${result.memory_gb} GB memory`));
   if (result.duration) metadata.append(tag(result.duration));
-  body.append(topline, title, metadata);
+  body.append(topline, heading, metadata);
+  const reason = document.createElement('p');
+  reason.className = 'score-reason';
+  reason.textContent = result.score_reason;
+  body.append(reason);
   if (result.public_note) {
     const note = document.createElement('p');
     note.className = 'card-note';
@@ -194,7 +224,7 @@ function renderGallery() {
   const results = currentResults();
   $('gallery').replaceChildren(...results.map(card));
   const withImages = results.filter((result) => result.images.length > 0).length;
-  $('visible-count').textContent = `Showing ${results.length} of ${state.study.results.length} runs · ${withImages} with images. Select two to four images for a direct comparison.`;
+  $('visible-count').textContent = `Showing ${results.length} of ${state.study.results.length} runs, ranked best to worst by Score · ${withImages} with images. Select two to four images for comparison.`;
   $('empty-state').hidden = results.length > 0;
 }
 
@@ -215,7 +245,7 @@ function showComparison() {
     const title = document.createElement('strong');
     title.textContent = result.label;
     const detail = document.createElement('span');
-    detail.textContent = `${image.label} · ${result.family}`;
+    detail.textContent = `Score ${Number(result.score).toFixed(1)}/10 · ${image.label} · ${result.family}`;
     caption.append(title, detail);
     item.append(picture, caption);
     return item;
