@@ -259,7 +259,8 @@ function showComparison() {
 
 async function init() {
   try {
-    const response = await fetch('data.json');
+    const dataVersion = document.documentElement.dataset.dataVersion || Date.now().toString(36);
+    const response = await fetch(`data.json?v=${dataVersion}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.catalog = await response.json();
     const studies = state.catalog.evaluations;

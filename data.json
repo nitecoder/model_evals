@@ -26,7 +26,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/codex-work-gpt6-astra/bombay-golden-hour-vector.svg",
+              "path": "assets/bombay/codex-work-gpt6-astra/bombay-golden-hour-vector.svg?v=eaeabdbc84af914a",
               "bytes": 276243
             }
           ]
@@ -49,7 +49,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/qwen3.8-27b-claudecode-20261021/output.svg",
+              "path": "assets/bombay/qwen3.8-27b-claudecode-20261021/output.svg?v=2525eb91a6404202",
               "bytes": 33160
             }
           ]
@@ -71,7 +71,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemini-free/bombay_golden_hour.svg",
+              "path": "assets/bombay/gemini-free/bombay_golden_hour.svg?v=d03453d26d183e5e",
               "bytes": 22054
             }
           ]
@@ -93,7 +93,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/codex-chat-medium/bombay_golden_hour_drinks.svg",
+              "path": "assets/bombay/codex-chat-medium/bombay_golden_hour_drinks.svg?v=a40a7180b76a5ff8",
               "bytes": 22250
             }
           ]
@@ -115,7 +115,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/claude-sonnet-5.5-medium/bombay_golden_hour.svg",
+              "path": "assets/bombay/claude-sonnet-5.5-medium/bombay_golden_hour.svg?v=8808171c413b8784",
               "bytes": 66211
             }
           ]
@@ -137,7 +137,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015/output.svg",
+              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015/output.svg?v=65ae1a97d9fdd80d",
               "bytes": 24074
             }
           ]
@@ -159,7 +159,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/qwen3.8-27b-opencode-20261010/output.svg",
+              "path": "assets/bombay/qwen3.8-27b-opencode-20261010/output.svg?v=38b309269016b81b",
               "bytes": 23168
             }
           ]
@@ -182,12 +182,12 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015-2/bombay_drink.svg",
+              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015-2/bombay_drink.svg?v=f06697a0fafb6bc3",
               "bytes": 15748
             },
             {
               "label": "bombay drink 1400x900 s42",
-              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015-2/bombay_drink_1400x900_s42.svg",
+              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015-2/bombay_drink_1400x900_s42.svg?v=3c74c07aea78d1da",
               "bytes": 11746
             }
           ]
@@ -209,7 +209,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/nemotron-3.5-super-20261021/output.svg",
+              "path": "assets/bombay/nemotron-3.5-super-20261021/output.svg?v=5af5d0048a902ec2",
               "bytes": 11316
             }
           ]
@@ -232,37 +232,37 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemma4-opencode-20261008/output.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/output.svg?v=dc5e161b16bfa7bb",
               "bytes": 5102
             },
             {
               "label": "drink in bombay v1",
-              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v1.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v1.svg?v=b6e2c19ffedb5569",
               "bytes": 1225
             },
             {
               "label": "drink in bombay v2",
-              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v2.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v2.svg?v=d7bfd1ec2710200c",
               "bytes": 1250
             },
             {
               "label": "drink in bombay v3",
-              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v3.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v3.svg?v=e2f16f33f5d8e6af",
               "bytes": 1487
             },
             {
               "label": "drink in bombay v4",
-              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v4.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v4.svg?v=cc27104fbbdd5de2",
               "bytes": 1634
             },
             {
               "label": "drink in bombay v5",
-              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v5.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v5.svg?v=dff839f5fd70f89f",
               "bytes": 1705
             },
             {
               "label": "drink in bombay v6",
-              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v6.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v6.svg?v=45144b698eb3bb4e",
               "bytes": 2208
             }
           ]
@@ -284,7 +284,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemma4-26b-claudecode-20261021/output.svg",
+              "path": "assets/bombay/gemma4-26b-claudecode-20261021/output.svg?v=f4910929f9d8073b",
               "bytes": 21580
             }
           ]
@@ -306,7 +306,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemma4-26b-opencode-20261009/bombay_drink.svg",
+              "path": "assets/bombay/gemma4-26b-opencode-20261009/bombay_drink.svg?v=f6df13b4dd1981a0",
               "bytes": 3775
             }
           ]
@@ -329,27 +329,27 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemma4-opencode-20261009/output.svg",
+              "path": "assets/bombay/gemma4-opencode-20261009/output.svg?v=2d2208a804fa4fa5",
               "bytes": 2637
             },
             {
               "label": "prog1",
-              "path": "assets/bombay/gemma4-opencode-20261009/prog1.svg",
+              "path": "assets/bombay/gemma4-opencode-20261009/prog1.svg?v=23fb64d19dfe2ab7",
               "bytes": 928
             },
             {
               "label": "prog2",
-              "path": "assets/bombay/gemma4-opencode-20261009/prog2.svg",
+              "path": "assets/bombay/gemma4-opencode-20261009/prog2.svg?v=df21fce6e1a03f6c",
               "bytes": 2700
             },
             {
               "label": "scene level 1",
-              "path": "assets/bombay/gemma4-opencode-20261009/scene_level_1.svg",
+              "path": "assets/bombay/gemma4-opencode-20261009/scene_level_1.svg?v=8c733e58d06d02a4",
               "bytes": 899
             },
             {
               "label": "scene level 2",
-              "path": "assets/bombay/gemma4-opencode-20261009/scene_level_2.svg",
+              "path": "assets/bombay/gemma4-opencode-20261009/scene_level_2.svg?v=c02f7c1fe56b9442",
               "bytes": 2092
             }
           ]
@@ -371,7 +371,7 @@
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/deepseek-r1-70b-20261011/output.svg",
+              "path": "assets/bombay/deepseek-r1-70b-20261011/output.svg?v=429f9b449c0e615d",
               "bytes": 2282
             }
           ]

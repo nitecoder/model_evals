@@ -7,8 +7,30 @@
   <meta name="description" content="A ranked visual leaderboard for model evaluations.">
   <title>Model Atlas — evaluation leaderboard</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" id="site-styles" href="styles.css">
+  <script>
+    (() => {
+      const freshVersion = Date.now().toString(36);
+      const versions = fetch(`site-versions.json?v=${freshVersion}`, { cache: 'no-store' })
+        .then(async (response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const values = await response.json();
+          if (!['app', 'styles', 'data'].every((key) => /^[a-f0-9]{16}$/.test(values[key]))) {
+            throw new Error('Invalid site versions');
+          }
+          return values;
+        })
+        .catch(() => ({ app: freshVersion, styles: freshVersion, data: freshVersion }));
+      document.addEventListener('DOMContentLoaded', async () => {
+        const current = await versions;
+        document.getElementById('site-styles').href = `styles.css?v=${current.styles}`;
+        document.documentElement.dataset.dataVersion = current.data;
+        const script = document.createElement('script');
+        script.src = `app.js?v=${current.app}`;
+        document.head.append(script);
+      }, { once: true });
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#results">Skip to results</a>
