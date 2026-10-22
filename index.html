@@ -21,16 +21,16 @@
     <section class="intro" aria-labelledby="page-title">
       <div class="intro-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> FIELD NOTES / 001</p>
-        <h1 id="page-title">Same prompt.<br><em>Different eyes.</em></h1>
-        <p class="intro-description">Explore model outputs on equal footing. Browse each result, inspect earlier iterations, and compare the work side by side.</p>
+        <h1 id="page-title">One brief.<br><em>Different eyes.</em></h1>
+        <p class="intro-description">Explore cloud and local model runs on equal footing. Browse the images, inspect earlier iterations, and compare the work side by side.</p>
         <a class="intro-link" href="#results">Explore the results <span aria-hidden="true">↘</span></a>
       </div>
       <div class="intro-aside" aria-label="Archive overview">
         <div class="overview-number" id="evaluation-count">—</div><div class="overview-caption">EVALUATION<span id="evaluation-plural"></span></div>
         <div class="overview-rule"></div>
-        <div class="overview-number" id="result-count">—</div><div class="overview-caption">MODEL RESULTS</div>
+        <div class="overview-number" id="result-count">—</div><div class="overview-caption">MODEL RUNS</div>
         <div class="overview-rule"></div>
-        <p>Built for visual comparison today, with room for families, runtimes, quantizations and memory profiles as the archive grows.</p>
+        <p>Compare cloud and local runs across model families, tools, runtimes, quantizations and memory profiles.</p>
       </div>
     </section>
 
@@ -42,10 +42,12 @@
 
     <section class="gallery-section" id="results" aria-labelledby="results-title">
       <div class="section-kicker"><span class="section-index">02</span><span>THE OUTPUTS</span></div>
-      <div class="results-heading"><div><h2 id="results-title">The gallery</h2><p id="visible-count">Browse the selected result from each model run.</p></div><button id="compare-button" class="button-outline" type="button" disabled>Compare selected <span id="selected-count">0</span></button></div>
+      <div class="results-heading"><div><h2 id="results-title">The gallery</h2><p id="visible-count">Browse completed images and runs without a usable SVG.</p></div><button id="compare-button" class="button-outline" type="button" disabled>Compare selected <span id="selected-count">0</span></button></div>
       <div class="controls" aria-label="Filter results">
         <label>Study <select id="study-filter"></select></label>
         <label>Family <select id="family-filter"><option value="">All families</option></select></label>
+        <label>Source <select id="source-filter"><option value="">Cloud and local</option></select></label>
+        <label>Tool <select id="tool-filter"><option value="">All tools</option></select></label>
         <label>Runtime <select id="runtime-filter"><option value="">All runtimes</option></select></label>
         <label>Quantization <select id="quantization-filter"><option value="">All quantizations</option></select></label>
         <label>Memory <select id="memory-filter"><option value="">Any / unknown</option></select></label>
@@ -57,7 +59,7 @@
 
     <section class="about" aria-labelledby="about-title">
       <div class="section-kicker"><span class="section-index">03</span><span>READING THE RESULTS</span></div>
-      <div class="about-grid"><h2 id="about-title">Look closely.<br><em>Judge for yourself.</em></h2><div><p>Each card starts with one selected SVG per model run. Where earlier versions exist, use the version menu to inspect them. Open any image for a larger view or select up to four cards for a direct comparison.</p><p>Explore the images and model details to form your own view. Some details may not be available for every result.</p></div></div>
+      <div class="about-grid"><h2 id="about-title">Look closely.<br><em>Judge for yourself.</em></h2><div><p>Completed runs show one selected SVG. Where earlier versions exist, use the version menu to inspect them. Runs without a usable SVG remain visible with their outcome. Open any image for a larger view or select up to four cards for a direct comparison.</p><p>Explore the images and model details to form your own view. Some details may not be available for every result.</p></div></div>
     </section>
   </main>
 

@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- ===================== GRADIENTS ===================== -->
+
+    <!-- Golden-hour sky, top (dusk) to horizon (gold) -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#2f2350"/>
+      <stop offset="0.18" stop-color="#5a3663"/>
+      <stop offset="0.38" stop-color="#8f4a5f"/>
+      <stop offset="0.55" stop-color="#c46a4a"/>
+      <stop offset="0.72" stop-color="#e98b42"/>
+      <stop offset="0.86" stop-color="#f9b64f"/>
+      <stop offset="0.95" stop-color="#ffcf74"/>
+      <stop offset="1"    stop-color="#ffe7a6"/>
+    </linearGradient>
+
+    <!-- Broad soft sun glow -->
+    <radialGradient id="sunGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"    stop-color="#ffe6a0" stop-opacity="0.95"/>
+      <stop offset="0.3"  stop-color="#ffbf5a" stop-opacity="0.5"/>
+      <stop offset="0.65" stop-color="#ff9a3d" stop-opacity="0.2"/>
+      <stop offset="1"    stop-color="#ff8c3a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sun disc -->
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"    stop-color="#fff8dc"/>
+      <stop offset="0.45" stop-color="#ffecb0"/>
+      <stop offset="0.78" stop-color="#ffcf6b"/>
+      <stop offset="1"    stop-color="#ffb04a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Sea, horizon (bright) to near shore (dark warm) -->
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#ffce83"/>
+      <stop offset="0.12" stop-color="#f4a860"/>
+      <stop offset="0.35" stop-color="#cf7f55"/>
+      <stop offset="0.62" stop-color="#9c5c62"/>
+      <stop offset="0.85" stop-color="#6f4557"/>
+      <stop offset="1"    stop-color="#5c3d52"/>
+    </linearGradient>
+
+    <!-- Vertical sun-path on the water -->
+    <linearGradient id="sunPath" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#fff6cf" stop-opacity="0.95"/>
+      <stop offset="0.25" stop-color="#ffdd86" stop-opacity="0.7"/>
+      <stop offset="0.6"  stop-color="#ffbe5a" stop-opacity="0.4"/>
+      <stop offset="1"    stop-color="#ffa648" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Sandstone (Gateway of India), lit on the right, shadowed left -->
+    <linearGradient id="sandstone" x1="0" y1="0" x2="1" y2="0.1">
+      <stop offset="0"   stop-color="#9c7550"/>
+      <stop offset="0.5" stop-color="#c99a63"/>
+      <stop offset="1"   stop-color="#f7d39c"/>
+    </linearGradient>
+    <linearGradient id="sandstoneShadow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5f4531"/>
+      <stop offset="1" stop-color="#8a6440"/>
+    </linearGradient>
+
+    <!-- Taj Mahal Palace: glowing white facade -->
+    <linearGradient id="taj" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#fff2d6"/>
+      <stop offset="0.5" stop-color="#f3d8a6"/>
+      <stop offset="1"   stop-color="#d9a86a"/>
+    </linearGradient>
+
+    <!-- Warm rim-light for backlit figures -->
+    <linearGradient id="rimLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a1a20"/>
+      <stop offset="0.55" stop-color="#5a3326"/>
+      <stop offset="0.82" stop-color="#c87a3a"/>
+      <stop offset="1" stop-color="#ffd07a"/>
+    </linearGradient>
+
+    <!-- Woman's skin, lit warmly on the sun side -->
+    <linearGradient id="skinW" x1="0.15" y1="0" x2="0.95" y2="0.4">
+      <stop offset="0"   stop-color="#7a4530"/>
+      <stop offset="0.5" stop-color="#d68a5c"/>
+      <stop offset="1"   stop-color="#f4bf94"/>
+    </linearGradient>
+    <!-- Man's skin -->
+    <linearGradient id="skinM" x1="0.05" y1="0" x2="0.95" y2="0.4">
+      <stop offset="0"   stop-color="#f2b184"/>
+      <stop offset="0.5" stop-color="#d5885b"/>
+      <stop offset="1"   stop-color="#6f4130"/>
+    </linearGradient>
+
+    <!-- Drink liquids -->
+    <linearGradient id="drinkPink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd0e0"/>
+      <stop offset="0.4" stop-color="#ff8fb0"/>
+      <stop offset="1" stop-color="#e0457a"/>
+    </linearGradient>
+    <linearGradient id="drinkAmber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd98a"/>
+      <stop offset="0.5" stop-color="#e79a3a"/>
+      <stop offset="1" stop-color="#a5561a"/>
+    </linearGradient>
+    <linearGradient id="drinkMint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d6f2b0"/>
+      <stop offset="0.5" stop-color="#7fc25a"/>
+      <stop offset="1" stop-color="#3f8030"/>
+    </linearGradient>
+
+    <!-- Cocktail glass body (faint) -->
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="1"   stop-color="#ffffff" stop-opacity="0.30"/>
+    </linearGradient>
+
+    <!-- Warm vignette over the whole scene -->
+    <radialGradient id="vignette" cx="0.58" cy="0.5" r="0.9">
+      <stop offset="0"    stop-color="#ff9a3d" stop-opacity="0"/>
+      <stop offset="0.72" stop-color="#4a2426" stop-opacity="0.05"/>
+      <stop offset="0.92" stop-color="#1e0f16" stop-opacity="0.2"/>
+      <stop offset="1"    stop-color="#0d0710" stop-opacity="0.42"/>
+    </radialGradient>
+
+    <!-- Warm ambient wash -->
+    <linearGradient id="warmWash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#ffb45a" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#ff9a3d" stop-opacity="0.03"/>
+      <stop offset="1"   stop-color="#ff8c33" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Deck floor -->
+    <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a3a3f"/>
+      <stop offset="1" stop-color="#2b1b22"/>
+    </linearGradient>
+
+    <!-- ===================== FILTERS ===================== -->
+
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="soft2" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="bokeh" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="figureBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+
+    <!-- Water surface turbulence -->
+    <filter id="waterTex" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.05" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 1
+                0 0 0 0 0.86
+                0 0 0 0 0.6
+                0 0 0 0.6 0"/>
+    </filter>
+
+    <!-- Fine film grain over everything -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+
+    <radialGradient id="lampGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#fff6d0" stop-opacity="1"/>
+      <stop offset="0.4" stop-color="#ffdf8a" stop-opacity="0.9"/>
+      <stop offset="1"   stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bokehWarm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#ffd888" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#ff9a4a" stop-opacity="0.5"/>
+      <stop offset="1"   stop-color="#ff8c3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bokehCool" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#fff0c8" stop-opacity="0.85"/>
+      <stop offset="0.6" stop-color="#ffcf8a" stop-opacity="0.35"/>
+      <stop offset="1"   stop-color="#ffbe5a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============================ SKY ============================ -->
+  <rect x="0" y="0" width="1600" height="600" fill="url(#sky)"/>
+
+  <!-- High thin dusk clouds -->
+  <g filter="url(#soft2)" opacity="0.5">
+    <ellipse cx="360"  cy="90"  rx="180" ry="10" fill="#7d4a5e"/>
+    <ellipse cx="1180" cy="70"  rx="230" ry="9"  fill="#6a3f60"/>
+    <ellipse cx="900"  cy="150" rx="150" ry="8"  fill="#8a4f52"/>
+    <ellipse cx="600"  cy="210" rx="200" ry="11" fill="#a85a4e"/>
+    <ellipse cx="1300" cy="190" rx="160" ry="9"  fill="#9a5450"/>
+  </g>
+
+  <!-- Sun broad glow + disc (low, right of center) -->
+  <circle cx="1150" cy="498" r="440" fill="url(#sunGlow)"/>
+  <circle cx="1150" cy="506" r="84"  fill="url(#sun)" filter="url(#soft)"/>
+  <circle cx="1150" cy="506" r="48"  fill="#fffbe8" filter="url(#soft)"/>
+
+  <!-- Warm streaks of light radiating -->
+  <g opacity="0.18" filter="url(#soft)">
+    <polygon points="1150,512 300,560 300,530" fill="#ffcf74"/>
+    <polygon points="1150,512 300,520 300,500" fill="#ffb85a"/>
+    <polygon points="1150,512 1600,470 1600,500" fill="#ffcf74"/>
+    <polygon points="1150,512 800,300 1000,300" fill="#ffd88a"/>
+  </g>
+
+  <!-- ========================= SEA ========================= -->
+  <rect x="0" y="560" width="1600" height="150" fill="url(#sea)"/>
+  <rect x="0" y="560" width="1600" height="150" fill="url(#sea)" filter="url(#waterTex)" opacity="0.4"/>
+
+  <!-- Sun path on water -->
+  <g opacity="0.9">
+    <polygon points="1108,560 1192,560 1252,712 1048,712" fill="url(#sunPath)" opacity="1"/>
+    <!-- shimmering slivers -->
+    <g fill="#fff4c8" opacity="0.85">
+      <rect x="1096" y="566" width="108" height="2.4" rx="1" opacity="0.9"/>
+      <rect x="1080" y="576" width="140" height="2.6" rx="1" opacity="0.8"/>
+      <rect x="1062" y="588" width="176" height="2.6" rx="1" opacity="0.7"/>
+      <rect x="1086" y="600" width="128" height="2.2" rx="1" opacity="0.6"/>
+      <rect x="1050" y="614" width="200" height="3"   rx="1.5" opacity="0.55"/>
+      <rect x="1072" y="630" width="156" height="2.4" rx="1" opacity="0.45"/>
+      <rect x="1036" y="648" width="228" height="3"   rx="1.5" opacity="0.4"/>
+      <rect x="1066" y="666" width="168" height="2.6" rx="1" opacity="0.35"/>
+      <rect x="1024" y="686" width="252" height="3.2" rx="1.5" opacity="0.3"/>
+      <rect x="1058" y="700" width="184" height="2.6" rx="1" opacity="0.25"/>
+    </g>
+    <g fill="#ffb04a" opacity="0.5">
+      <rect x="1100" y="572" width="100" height="1.6"/>
+      <rect x="1076" y="596" width="148" height="1.8"/>
+      <rect x="1046" y="624" width="208" height="2"/>
+      <rect x="1030" y="674" width="240" height="2.2"/>
+    </g>
+  </g>
+
+  <!-- faint reflected light on sea far right/left -->
+  <ellipse cx="700" cy="600" rx="260" ry="6" fill="#ff9a4a" opacity="0.14" filter="url(#soft)"/>
+
+  <!-- ===================== BOMBAY WATERFRONT ===================== -->
+
+  <!-- Distant South-Mumbai skyline (low, warm, windows glowing) -->
+  <g opacity="0.85">
+    <g fill="#5a3a44">
+      <rect x="40"  y="524" width="30" height="36"/>
+      <rect x="78"  y="512" width="24" height="48"/>
+      <rect x="108" y="530" width="34" height="30"/>
+      <rect x="150" y="506" width="20" height="54"/>
+      <rect x="176" y="522" width="26" height="38"/>
+      <rect x="1500" y="520" width="30" height="40"/>
+      <rect x="1536" y="508" width="24" height="52"/>
+      <rect x="1566" y="526" width="30" height="34"/>
+    </g>
+    <!-- glowing windows -->
+    <g fill="#ffcf7a" opacity="0.9">
+      <rect x="154" y="516" width="3" height="4"/><rect x="162" y="524" width="3" height="4"/>
+      <rect x="154" y="532" width="3" height="4"/><rect x="160" y="540" width="3" height="4"/>
+      <rect x="86" y="522" width="3" height="4"/><rect x="94" y="532" width="3" height="4"/>
+      <rect x="52" y="534" width="3" height="4"/><rect x="62" y="542" width="3" height="4"/>
+      <rect x="1542" y="518" width="3" height="4"/><rect x="1550" y="528" width="3" height="4"/>
+      <rect x="1572" y="536" width="3" height="4"/>
+    </g>
+  </g>
+
+  <!-- Gateway of India (left, over the water) -->
+  <g>
+    <!-- reflection -->
+    <g opacity="0.22" filter="url(#soft)">
+      <path d="M252,560 L252,470 Q340,436 430,470 L430,560 Z" fill="#b08050"/>
+    </g>
+    <!-- main mass -->
+    <path d="M246,560 L246,432 Q250,398 286,392 L396,392 Q432,398 434,432 L434,560 Z" fill="url(#sandstone)"/>
+    <!-- big central arch opening -->
+    <path d="M300,560 L300,470 Q340,430 380,470 L380,560 Z" fill="#5b3f2b"/>
+    <path d="M312,560 L312,474 Q340,442 368,474 L368,560 Z" fill="#3d2919" opacity="0.6"/>
+    <!-- side arches -->
+    <path d="M258,560 L258,506 Q275,486 292,506 L292,560 Z" fill="#4a3320"/>
+    <path d="M388,560 L388,506 Q405,486 422,506 L422,560 Z" fill="#4a3320"/>
+    <!-- domed top -->
+    <path d="M286,392 Q340,352 394,392 Z" fill="url(#sandstone)"/>
+    <ellipse cx="340" cy="392" rx="55" ry="10" fill="#e6bd88"/>
+    <!-- finials -->
+    <rect x="337" y="356" width="6" height="18" fill="#c99a63"/>
+    <circle cx="340" cy="354" r="5" fill="#f0c890"/>
+    <!-- lit right edge -->
+    <path d="M434,432 L434,560 L426,560 L426,432 Z" fill="#ffe0a8" opacity="0.7"/>
+    <path d="M394,392 Q398,392 400,400 L398,404 Q390,396 388,392 Z" fill="#ffe0a8" opacity="0.5"/>
+    <!-- base shadow on water -->
+    <rect x="246" y="556" width="188" height="6" fill="#2e1d16" opacity="0.5"/>
+  </g>
+
+  <!-- Taj Mahal Palace (right of gateway, glowing white tower) -->
+  <g>
+    <g opacity="0.2" filter="url(#soft)">
+      <rect x="556" y="560" width="92" height="150" fill="#f3d8a6"/>
+    </g>
+    <!-- tower body -->
+    <rect x="558" y="430" width="90" height="130" fill="url(#taj)"/>
+    <!-- stepped top / dome -->
+    <path d="M566,430 Q603,392 640,430 Z" fill="#ffe9c0"/>
+    <ellipse cx="603" cy="430" rx="37" ry="8" fill="#f3d8a6"/>
+    <rect x="600" y="384" width="6" height="16" fill="#e6bd88"/>
+    <circle cx="603" cy="382" r="4" fill="#ffe9c0"/>
+    <!-- lit windows grid -->
+    <g fill="#fff2cf" opacity="0.9">
+      <g>
+        <rect x="566" y="442" width="6" height="10"/><rect x="582" y="442" width="6" height="10"/>
+        <rect x="598" y="442" width="6" height="10"/><rect x="614" y="442" width="6" height="10"/>
+        <rect x="630" y="442" width="6" height="10"/>
+        <rect x="566" y="466" width="6" height="10"/><rect x="582" y="466" width="6" height="10"/>
+        <rect x="598" y="466" width="6" height="10"/><rect x="614" y="466" width="6" height="10"/>
+        <rect x="630" y="466" width="6" height="10"/>
+        <rect x="566" y="490" width="6" height="10"/><rect x="582" y="490" width="6" height="10"/>
+        <rect x="598" y="490" width="6" height="10"/><rect x="614" y="490" width="6" height="10"/>
+        <rect x="630" y="490" width="6" height="10"/>
+        <rect x="566" y="514" width="6" height="10"/><rect x="582" y="514" width="6" height="10"/>
+        <rect x="598" y="514" width="6" height="10"/><rect x="614" y="514" width="6" height="10"/>
+        <rect x="630" y="514" width="6" height="10"/>
+        <rect x="566" y="538" width="6" height="10"/><rect x="582" y="538" width="6" height="10"/>
+        <rect x="598" y="538" width="6" height="10"/><rect x="614" y="538" width="6" height="10"/>
+        <rect x="630" y="538" width="6" height="10"/>
+      </g>
+    </g>
+    <!-- glow -->
+    <rect x="550" y="420" width="106" height="146" fill="#ffe0a0" opacity="0.14" filter="url(#soft)"/>
+  </g>
+
+  <!-- small sailboats on the water -->
+  <g opacity="0.8">
+    <g filter="url(#soft)">
+      <path d="M770,556 l4,-20 l4,20 Z" fill="#3a2530"/>
+      <path d="M768,556 l14,0 l-2,6 l-10,0 Z" fill="#2a1a22"/>
+      <path d="M1010,560 l3,-14 l3,14 Z" fill="#3a2530"/>
+      <path d="M1008,560 l12,0 l-2,4 l-8,0 Z" fill="#2a1a22"/>
+    </g>
+  </g>
+
+  <!-- ===================== DECK / PROMENADE ===================== -->
+  <rect x="0" y="700" width="1600" height="300" fill="url(#deck)"/>
+  <!-- plank lines -->
+  <g stroke="#1e1218" stroke-width="1.4" opacity="0.5">
+    <line x1="0" y1="760" x2="1600" y2="760"/>
+    <line x1="0" y1="820" x2="1600" y2="820"/>
+    <line x1="0" y1="890" x2="1600" y2="890"/>
+    <line x1="0" y1="960" x2="1600" y2="960"/>
+  </g>
+  <g stroke="#7a4a3f" stroke-width="0.8" opacity="0.25">
+    <line x1="0" y1="735" x2="1600" y2="735"/>
+    <line x1="0" y1="800" x2="1600" y2="800"/>
+    <line x1="0" y1="855" x2="1600" y2="855"/>
+    <line x1="0" y1="925" x2="1600" y2="925"/>
+  </g>
+  <!-- deck sheen catching sunset -->
+  <rect x="0" y="700" width="1600" height="300" fill="#ff8c33" opacity="0.06"/>
+
+  <!-- Railing at the sea edge -->
+  <g>
+    <rect x="0" y="686" width="1600" height="8" fill="#3a2418"/>
+    <rect x="0" y="690" width="1600" height="3" fill="#7a4d33" opacity="0.7"/>
+    <g fill="#2a1910">
+      <!-- posts -->
+      <rect x="60"  y="694" width="10" height="16"/>
+      <rect x="240" y="694" width="10" height="16"/>
+      <rect x="430" y="694" width="10" height="16"/>
+      <rect x="620" y="694" width="10" height="16"/>
+      <rect x="810" y="694" width="10" height="16"/>
+      <rect x="1000" y="694" width="10" height="16"/>
+      <rect x="1190" y="694" width="10" height="16"/>
+      <rect x="1380" y="694" width="10" height="16"/>
+      <rect x="1540" y="694" width="10" height="16"/>
+    </g>
+    <!-- rim light on top rail -->
+    <rect x="0" y="686" width="1600" height="1.6" fill="#ffcf8a" opacity="0.5"/>
+  </g>
+
+  <!-- ===================== PALM TREES (framing) ===================== -->
+  <!-- Big right palm, backlit -->
+  <g filter="url(#figureBlur)">
+    <!-- trunk -->
+    <path d="M1446,706 q6,-150 -14,-300 q-4,-40 6,-90 q10,46 16,92 q18,150 8,300 Z"
+          fill="url(#rimLight)" opacity="0.95"/>
+    <path d="M1450,690 q4,-150 -10,-300 q-2,-40 4,-80 q6,44 10,84 q10,150 4,300 Z"
+          fill="#1c1216" opacity="0.55"/>
+    <!-- fronds -->
+    <g fill="url(#rimLight)">
+      <path d="M1438,318 q-70,-40 -150,-30 q70,10 120,40 Z" opacity="0.95"/>
+      <path d="M1444,314 q-40,-90 -120,-120 q70,44 96,110 Z" opacity="0.95"/>
+      <path d="M1450,316 q20,-96 96,-140 q-40,60 -54,130 Z" opacity="0.95"/>
+      <path d="M1452,320 q90,-44 176,-34 q-80,18 -140,52 Z" opacity="0.95"/>
+      <path d="M1446,322 q60,10 130,54 q-90,-6 -150,-40 Z" opacity="0.9"/>
+      <path d="M1442,322 q-60,14 -134,58 q82,-8 150,-36 Z" opacity="0.9"/>
+      <path d="M1446,320 q-10,-60 -46,-116 q30,58 40,110 Z" opacity="0.9"/>
+    </g>
+    <!-- warm rim on frond tips -->
+    <g fill="#ffc874" opacity="0.5" filter="url(#soft)">
+      <path d="M1288,288 q70,10 120,40 q-90,-20 -120,-40 Z"/>
+      <path d="M1560,300 q-80,18 -140,52 q70,-34 140,-52 Z"/>
+    </g>
+  </g>
+
+  <!-- Smaller left palm -->
+  <g filter="url(#figureBlur)" opacity="0.96">
+    <path d="M150,706 q4,-130 -8,-250 q-3,-34 5,-72 q7,40 12,76 q12,130 4,250 Z" fill="url(#rimLight)"/>
+    <path d="M153,700 q3,-130 -6,-250 q-2,-34 3,-66 q5,38 9,72 q6,130 2,250 Z" fill="#160f13" opacity="0.5"/>
+    <g fill="url(#rimLight)">
+      <path d="M150,452 q-60,-30 -128,-22 q60,8 104,32 Z"/>
+      <path d="M154,448 q-34,-76 -104,-104 q60,38 82,94 Z"/>
+      <path d="M156,450 q18,-80 84,-116 q-34,52 -46,108 Z"/>
+      <path d="M158,454 q74,-36 148,-26 q-66,14 -118,44 Z"/>
+      <path d="M154,456 q52,10 112,46 q-74,-6 -130,-34 Z"/>
+    </g>
+  </g>
+
+  <!-- ===================== STRING / FAIRY LIGHTS ===================== -->
+  <g>
+    <!-- two swagging strands -->
+    <path d="M-10,150 Q400,330 800,190 Q1200,50 1610,240" fill="none" stroke="#3a2418" stroke-width="2.4" opacity="0.8"/>
+    <path d="M-10,110 Q420,250 820,150 Q1220,60 1610,180" fill="none" stroke="#3a2418" stroke-width="2" opacity="0.7"/>
+    <!-- bulbs on strand 1 -->
+    <g filter="url(#glow)">
+      <g fill="url(#lampGlow)">
+        <circle cx="60"   cy="176" r="6"/><circle cx="140"  cy="204" r="6"/>
+        <circle cx="220"  cy="232" r="6"/><circle cx="300"  cy="256" r="6"/>
+        <circle cx="380"  cy="276" r="6"/><circle cx="460"  cy="288" r="6"/>
+        <circle cx="540"  cy="286" r="6"/><circle cx="620"  cy="272" r="6"/>
+        <circle cx="700"  cy="248" r="6"/><circle cx="780"  cy="218" r="6"/>
+        <circle cx="860"  cy="196" r="6"/><circle cx="940"  cy="178" r="6"/>
+        <circle cx="1020" cy="172" r="6"/><circle cx="1100" cy="168" r="6"/>
+        <circle cx="1180" cy="172" r="6"/><circle cx="1260" cy="182" r="6"/>
+        <circle cx="1340" cy="200" r="6"/><circle cx="1420" cy="224" r="6"/>
+        <circle cx="1500" cy="244" r="6"/><circle cx="1580" cy="258" r="6"/>
+      </g>
+      <g fill="#fff6d8">
+        <circle cx="60"   cy="176" r="2"/><circle cx="140"  cy="204" r="2"/>
+        <circle cx="220"  cy="232" r="2"/><circle cx="300"  cy="256" r="2"/>
+        <circle cx="380"  cy="276" r="2"/><circle cx="460"  cy="288" r="2"/>
+        <circle cx="540"  cy="286" r="2"/><circle cx="620"  cy="272" r="2"/>
+        <circle cx="700"  cy="248" r="2"/><circle cx="780"  cy="218" r="2"/>
+        <circle cx="860"  cy="196" r="2"/><circle cx="940"  cy="178" r="2"/>
+        <circle cx="1020" cy="172" r="2"/><circle cx="1100" cy="168" r="2"/>
+        <circle cx="1180" cy="172" r="2"/><circle cx="1260" cy="182" r="2"/>
+        <circle cx="1340" cy="200" r="2"/><circle cx="1420" cy="224" r="2"/>
+        <circle cx="1500" cy="244" r="2"/><circle cx="1580" cy="258" r="2"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===================== THE COUPLE + TABLE ===================== -->
+  <g transform="translate(-70,10)">
+  <!-- soft warm light pool on deck under the table -->
+  <ellipse cx="790" cy="880" rx="360" ry="70" fill="#ffb45a" opacity="0.16" filter="url(#soft2)"/>
+
+  <!-- warm ambient light pool behind the couple -->
+  <ellipse cx="820" cy="742" rx="340" ry="150" fill="#ffb45a" opacity="0.12" filter="url(#soft2)"/>
+
+  <!-- Chairs behind the couple -->
+  <g fill="#2a1822" opacity="0.9" filter="url(#figureBlur)">
+    <path d="M556,782 q-8,-72 14,-88 q56,-8 96,4 q10,46 4,84 Z"/>
+    <path d="M892,782 q-10,-76 12,-90 q58,-6 104,6 q8,48 0,84 Z"/>
+  </g>
+
+  <!-- ===== WOMAN (left, facing right, raising a cocktail) ===== -->
+  <g filter="url(#figureBlur)">
+    <!-- hair: back length + bun (behind head) -->
+    <circle cx="546" cy="592" r="26" fill="#241410"/>
+    <path d="M556,556 q-40,-6 -46,60 q-6,96 34,168 q40,44 96,30 q36,-46 26,-120 q10,-92 -34,-150 q-40,-38 -76,-18 Z"
+          fill="#2a140f"/>
+    <!-- warm rim light on hair -->
+    <path d="M556,556 q-30,0 -34,40 q30,-20 44,-8 q6,-24 -10,-32 Z" fill="#c87a3a" opacity="0.6"/>
+    <path d="M648,556 q30,20 34,80 q-40,-16 -40,-70 Z" fill="#e0924a" opacity="0.55" filter="url(#soft)"/>
+
+    <!-- neck -->
+    <path d="M566,650 q4,26 4,44 q22,14 46,0 q2,-24 -2,-48 Z" fill="url(#skinW)"/>
+    <!-- shoulders / top (a light flowing blouse) -->
+    <path d="M548,694 q-30,10 -30,84 q-6,120 4,222 l150,0 q10,-118 2,-222 q2,-80 -30,-96 q-40,20 -96,12 Z"
+          fill="#f2d7b8"/>
+    <path d="M548,694 q-30,10 -30,84 q-6,120 4,222 l30,0 q-8,-118 -2,-206 q4,-56 30,-78 Z" fill="#caa07a" opacity="0.6"/>
+    <!-- warm highlight on shoulder toward sun -->
+    <path d="M668,700 q30,20 30,100 q0,90 -4,198 l-16,0 q4,-100 2,-196 q0,-70 -26,-98 Z" fill="#fff0d6" opacity="0.5"/>
+
+    <!-- face (3/4, lit on right) -->
+    <path d="M566,600 q-18,30 -12,70 q8,40 44,52 q40,6 52,-30 q14,-40 4,-84 q-14,-46 -60,-40 q-20,4 -28,32 Z"
+          fill="url(#skinW)"/>
+    <!-- warm cheek/rim highlight -->
+    <path d="M600,606 q34,8 40,52 q4,34 -12,58 q30,-20 28,-60 q-2,-44 -34,-52 Z" fill="#ffd8a8" opacity="0.55"/>
+    <path d="M616,628 q20,20 18,54 q-16,10 -14,-24 q-2,-26 -4,-30 Z" fill="#fff2d8" opacity="0.5"/>
+    <!-- subtle face features -->
+    <g opacity="0.75">
+      <path d="M582,656 q6,6 14,4" fill="none" stroke="#5a2f24" stroke-width="2"/>
+      <path d="M600,646 q10,-4 18,0" fill="none" stroke="#6a3a2a" stroke-width="2"/>
+      <path d="M584,690 q14,8 26,2" fill="none" stroke="#8a4632" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <!-- earring glint -->
+    <circle cx="566" cy="696" r="2.4" fill="#fff2c0" filter="url(#glow)"/>
+    <!-- front hair / crown framing the face -->
+    <path d="M548,652 Q 536,584 566,562 Q 602,544 638,560 Q 666,582 660,650 Q 652,618 636,624 Q 622,614 608,622 Q 594,614 580,624 Q 566,616 556,636 Q 552,624 548,652 Z" fill="#24140f"/>
+    <path d="M636,562 q28,22 24,86 q-14,-40 -30,-64 Z" fill="#c87a3a" opacity="0.5" filter="url(#soft)"/>
+
+    <!-- Right arm raised, holding a cocktail glass -->
+    <path d="M662,742 q40,-18 78,-64 q20,-30 30,-72 q14,10 16,26 q-6,52 -34,96 q-30,46 -78,62 q-14,-26 -12,-48 Z"
+          fill="url(#skinW)"/>
+    <path d="M704,636 q18,-30 30,-66 q12,8 12,24 q-8,40 -30,72 Z" fill="#ffd8a8" opacity="0.5"/>
+    <!-- hand -->
+    <path d="M726,556 q22,-8 30,10 q6,18 -6,34 q-16,16 -32,6 q-10,-22 8,-50 Z" fill="url(#skinW)"/>
+    <path d="M730,562 q14,-2 22,8 q-8,0 -14,4 q-8,6 -8,-12 Z" fill="#ffe6c0" opacity="0.55"/>
+
+    <!-- Cocktail glass (coupe) in her hand -->
+    <g>
+      <!-- stem + base -->
+      <rect x="741" y="546" width="3" height="42" fill="#eef3f0" opacity="0.7"/>
+      <ellipse cx="742" cy="588" rx="16" ry="4" fill="#dfe8e6" opacity="0.6"/>
+      <!-- bowl -->
+      <path d="M712,520 q30,22 60,0 q-6,30 -30,34 q-24,-4 -30,-34 Z" fill="url(#glass)"/>
+      <!-- liquid -->
+      <path d="M716,521 q26,16 52,0 q-4,18 -26,22 q-22,-4 -26,-22 Z" fill="url(#drinkPink)"/>
+      <!-- highlight -->
+      <path d="M718,524 q8,12 8,20 q-6,-6 -8,-20 Z" fill="#ffffff" opacity="0.7"/>
+      <!-- garnish cherry -->
+      <circle cx="744" cy="518" r="5" fill="#c0202f"/>
+      <circle cx="742" cy="516" r="1.6" fill="#ff9aa6"/>
+    </g>
+  </g>
+
+  <!-- ===== MAN (right, facing left, relaxed) ===== -->
+  <g filter="url(#figureBlur)">
+    <!-- hair -->
+    <path d="M1000,548 q30,-40 80,-24 q40,16 40,70 q0,20 -6,34 q-30,-24 -70,-20 q-30,4 -44,24 q-8,-38 0,-84 Z"
+          fill="#1c120f"/>
+    <path d="M1000,548 q30,-40 80,-24 q26,10 34,40 q-30,-24 -66,-14 q-30,8 -44,22 q0,-20 24,-40 Z" fill="#3a2a1a" opacity="0.6"/>
+    <!-- warm rim on hair -->
+    <path d="M1120,560 q14,20 8,44 q-16,-14 -18,-36 Z" fill="#c87a3a" opacity="0.55"/>
+
+    <!-- neck -->
+    <path d="M1024,648 q-2,26 -2,46 q-24,12 -48,0 q-2,-24 0,-48 Z" fill="url(#skinM)"/>
+    <!-- shoulders / shirt (a warm open linen shirt) -->
+    <path d="M1000,692 q-32,8 -34,86 q-4,116 6,222 l156,0 q8,-116 2,-222 q0,-80 -32,-98 q-44,20 -98,10 Z"
+          fill="#d9c3a2"/>
+    <path d="M1000,692 q-32,8 -34,86 q-4,116 6,222 l30,0 q-6,-116 0,-204 q4,-58 34,-80 Z" fill="#a68a66" opacity="0.5"/>
+    <!-- sun highlight on his near shoulder -->
+    <path d="M1000,700 q-30,20 -32,104 q-2,92 4,200 l14,0 q-6,-104 -4,-198 q2,-72 30,-100 Z" fill="#fff0d6" opacity="0.5"/>
+    <!-- open collar -->
+    <path d="M1006,694 q-14,30 -8,60 l30,0 q6,-30 -6,-60 Z" fill="#c7ab86" opacity="0.6"/>
+    <path d="M1030,700 l-8,52 M1062,700 l6,50" stroke="#8a6f50" stroke-width="2" fill="none" opacity="0.5"/>
+
+    <!-- face (3/4 facing left, lit on left toward viewer) -->
+    <path d="M1024,596 q-20,28 -14,68 q6,42 44,54 q40,4 52,-32 q12,-40 2,-84 q-12,-48 -58,-44 q-20,2 -26,38 Z"
+          fill="url(#skinM)"/>
+    <path d="M1024,600 q-16,30 -12,66 q-8,-34 8,-66 Z" fill="#ffd8a8" opacity="0.55"/>
+    <!-- subtle features, slight smile -->
+    <g opacity="0.72">
+      <path d="M1036,656 q10,4 18,0" fill="none" stroke="#3a241a" stroke-width="2"/>
+      <path d="M1030,646 q8,-4 16,-2" fill="none" stroke="#4a3020" stroke-width="2"/>
+      <path d="M1034,690 q14,10 30,2" fill="none" stroke="#7a3a28" stroke-width="3" stroke-linecap="round"/>
+      <path d="M1030,682 q16,6 30,-2" fill="none" stroke="#6a3020" stroke-width="1.4" opacity="0.5"/>
+    </g>
+    <!-- jaw shadow -->
+    <path d="M1024,662 q-4,40 20,54 q-16,-24 -14,-50 Z" fill="#7a4a30" opacity="0.3"/>
+
+    <!-- Left arm relaxed down, hand near table with a glass -->
+    <path d="M1000,744 q-30,16 -44,64 q-10,30 -8,72 q16,8 30,2 q14,-40 30,-78 q16,-40 30,-64 q-18,-10 -38,4 Z"
+          fill="url(#skinM)"/>
+    <path d="M966,818 q-6,30 0,58 q14,4 24,-2 q-6,-30 0,-56 Z" fill="#ffd8a8" opacity="0.45"/>
+    <!-- hand holding glass on table -->
+    <path d="M958,858 q24,-6 34,10 q4,18 -10,30 q-18,10 -32,-2 q-8,-20 8,-38 Z" fill="url(#skinM)"/>
+    <!-- warm front fill light -->
+    <ellipse cx="1030" cy="690" rx="86" ry="150" fill="#ffb355" opacity="0.18" filter="url(#soft)"/>
+  </g>
+
+  <!-- ===== ROUND BISTRO TABLE + DRINKS ===== -->
+  <g>
+    <!-- table shadow on deck -->
+    <ellipse cx="792" cy="902" rx="150" ry="22" fill="#160c12" opacity="0.5" filter="url(#soft)"/>
+    <!-- table top -->
+    <ellipse cx="792" cy="812" rx="132" ry="34" fill="#3a2a24"/>
+    <ellipse cx="792" cy="806" rx="132" ry="34" fill="#5a4234"/>
+    <ellipse cx="792" cy="802" rx="132" ry="34" fill="#6a4d3a"/>
+    <!-- warm top sheen -->
+    <ellipse cx="820" cy="798" rx="96" ry="22" fill="#ffcf88" opacity="0.18"/>
+    <!-- pedestal + base -->
+    <rect x="784" y="836" width="16" height="52" fill="#241612"/>
+    <path d="M756,900 q36,-16 72,0 q-8,14 -36,14 q-28,0 -36,-14 Z" fill="#2e1c14"/>
+
+    <!-- Drinks on the table -->
+    <!-- Amber old fashioned glass (left of center) -->
+    <g>
+      <rect x="742" y="748" width="30" height="46" rx="3" fill="url(#glass)"/>
+      <path d="M744,762 q14,10 28,0 l0,28 q-14,8 -28,0 Z" fill="url(#drinkAmber)"/>
+      <rect x="744" y="748" width="30" height="46" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.3"/>
+      <rect x="748" y="752" width="4" height="34" fill="#ffffff" opacity="0.5"/>
+      <!-- ice -->
+      <rect x="748" y="766" width="9" height="9" rx="2" fill="#fff4d8" opacity="0.4"/>
+      <rect x="762" y="772" width="8" height="8" rx="2" fill="#fff4d8" opacity="0.35"/>
+      <!-- orange slice -->
+      <path d="M752,752 q14,-6 22,2 q-6,10 -20,6 q-2,-4 -2,-8 Z" fill="#f2a03a"/>
+    </g>
+
+    <!-- Pink highball / mocktail (center) -->
+    <g>
+      <rect x="782" y="736" width="26" height="60" rx="3" fill="url(#glass)"/>
+      <path d="M784,750 q12,8 22,0 l0,44 q-11,7 -22,0 Z" fill="url(#drinkPink)"/>
+      <rect x="782" y="736" width="26" height="60" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.3"/>
+      <rect x="786" y="740" width="3.5" height="50" fill="#ffffff" opacity="0.5"/>
+      <!-- straw -->
+      <line x1="800" y1="742" x2="808" y2="720" stroke="#ff5a7a" stroke-width="3" stroke-linecap="round"/>
+      <!-- mint -->
+      <path d="M790,736 q6,-10 14,-6 q-4,8 -14,6 Z" fill="#4a8a30"/>
+      <path d="M794,738 q8,-6 14,-2" fill="none" stroke="#3a6a24" stroke-width="1"/>
+    </g>
+
+    <!-- Green mocktail in her hand's neighbor (right of center) -->
+    <g>
+      <rect x="812" y="742" width="26" height="54" rx="3" fill="url(#glass)"/>
+      <path d="M814,754 q11,8 22,0 l0,40 q-11,6 -22,0 Z" fill="url(#drinkMint)"/>
+      <rect x="812" y="742" width="26" height="54" rx="3" fill="none" stroke="#ffffff" stroke-opacity="0.3"/>
+      <rect x="816" y="746" width="3.5" height="46" fill="#ffffff" opacity="0.5"/>
+      <path d="M818,742 q6,-8 12,-4 q-4,6 -12,4 Z" fill="#3f7a28"/>
+    </g>
+
+    <!-- A small bottle (gin / whiskey) leaning -->
+    <g transform="rotate(-14 862 786)">
+      <rect x="852" y="726" width="18" height="60" rx="3" fill="#3a4a30" opacity="0.85"/>
+      <rect x="858" y="712" width="6" height="16" fill="#2a3a24"/>
+      <rect x="855" y="740" width="12" height="30" fill="#6a4a20" opacity="0.7"/>
+      <rect x="856" y="742" width="3" height="26" fill="#ffe6a0" opacity="0.5"/>
+      <rect x="856" y="756" width="10" height="12" fill="#f2e0b0" opacity="0.6"/>
+    </g>
+  </g>
+
+  </g>
+
+  <!-- ===================== BOKEH / AMBIENT LIGHT DOTS ===================== -->
+  <g filter="url(#bokeh)">
+    <circle cx="120"  cy="760" r="34" fill="url(#bokehWarm)" opacity="0.5"/>
+    <circle cx="40"   cy="640" r="26" fill="url(#bokehWarm)" opacity="0.4"/>
+    <circle cx="1520" cy="640" r="30" fill="url(#bokehWarm)" opacity="0.45"/>
+    <circle cx="1560" cy="800" r="44" fill="url(#bokehCool)" opacity="0.4"/>
+    <circle cx="1480" cy="560" r="20" fill="url(#bokehWarm)" opacity="0.4"/>
+    <circle cx="100"  cy="900" r="40" fill="url(#bokehWarm)" opacity="0.35"/>
+    <circle cx="1360" cy="700" r="24" fill="url(#bokehWarm)" opacity="0.35"/>
+    <circle cx="220"  cy="520" r="16" fill="url(#bokehCool)" opacity="0.3"/>
+    <circle cx="1440" cy="420" r="18" fill="url(#bokehCool)" opacity="0.3"/>
+  </g>
+
+  <!-- ===================== ATMOSPHERIC WASH + VIGNETTE ===================== -->
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#warmWash)"/>
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#vignette)"/>
+
+  <!-- Fine film grain -->
+  <rect x="0" y="0" width="1600" height="1000" filter="url(#grain)" opacity="0.16"/>
+</svg>

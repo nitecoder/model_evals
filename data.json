@@ -1,20 +1,25 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "evaluations": [
     {
       "id": "bombay",
       "title": "A drink in Bombay",
-      "subtitle": "One visual brief, eight model runs",
-      "description": "A side-by-side look at how different models interpreted a detailed SVG scene set in Bombay (Mumbai) at golden hour.",
+      "subtitle": "One visual brief, 15 model runs",
+      "description": "Compare cloud and local model runs depicting a relaxing drink in Bombay (Mumbai) at golden hour. The gallery includes completed images and runs that produced no usable SVG.",
       "brief": "Create a detailed SVG showing someone enjoying a relaxing drink in Bombay during golden hour, with a clear sense of place and a warm atmosphere.",
       "results": [
         {
           "id": "claude-sonnet-5.5-medium",
           "label": "Claude Sonnet 5.5",
           "family": "Claude",
-          "runtime": "Not recorded",
+          "runtime": "Claude",
+          "tool": null,
+          "method": "One shot",
           "quantization": null,
           "memory_gb": null,
+          "source_type": "Cloud",
+          "run_date": null,
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
@@ -28,8 +33,13 @@
           "label": "Codex Chat · medium",
           "family": "GPT",
           "runtime": "Codex Chat",
+          "tool": null,
+          "method": "One shot",
           "quantization": null,
           "memory_gb": null,
+          "source_type": "Cloud",
+          "run_date": null,
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
@@ -43,8 +53,14 @@
           "label": "GPT-6 Astra",
           "family": "GPT",
           "runtime": "Codex Work",
+          "tool": null,
+          "method": "Vector revision",
           "quantization": null,
           "memory_gb": null,
+          "public_note": "The selected result is the vector revision.",
+          "source_type": "Cloud",
+          "run_date": null,
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
@@ -54,27 +70,17 @@
           ]
         },
         {
-          "id": "deepseek-r1-70b",
-          "label": "DeepSeek R1 70B",
-          "family": "DeepSeek",
-          "runtime": "Not recorded",
-          "quantization": null,
-          "memory_gb": null,
-          "images": [
-            {
-              "label": "Selected result",
-              "path": "assets/bombay/deepseek-r1-70b/output.svg",
-              "bytes": 2282
-            }
-          ]
-        },
-        {
           "id": "gemini-free",
           "label": "Gemini · free tier",
           "family": "Gemini",
           "runtime": "Gemini",
+          "tool": null,
+          "method": "One shot",
           "quantization": null,
           "memory_gb": null,
+          "source_type": "Cloud",
+          "run_date": null,
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
@@ -84,106 +90,270 @@
           ]
         },
         {
-          "id": "gemma4",
-          "label": "Gemma 4 · iterations",
-          "family": "Gemma",
-          "runtime": "Not recorded",
+          "id": "deepseek-r1-70b-20261011",
+          "label": "DeepSeek R1 70B · Oct 11",
+          "family": "DeepSeek",
+          "runtime": "Ollama",
+          "tool": null,
+          "method": "One shot",
           "quantization": null,
           "memory_gb": null,
+          "source_type": "Local",
+          "run_date": "2026-10-11",
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/gemma4/drink_in_bombay_v7_final.svg",
-              "bytes": 5102
-            },
-            {
-              "label": "drink in bombay",
-              "path": "assets/bombay/gemma4/drink_in_bombay.svg",
-              "bytes": 1225
-            },
-            {
-              "label": "drink in bombay v2",
-              "path": "assets/bombay/gemma4/drink_in_bombay_v2.svg",
-              "bytes": 1250
-            },
-            {
-              "label": "drink in bombay v3",
-              "path": "assets/bombay/gemma4/drink_in_bombay_v3.svg",
-              "bytes": 1487
-            },
-            {
-              "label": "drink in bombay v4",
-              "path": "assets/bombay/gemma4/drink_in_bombay_v4.svg",
-              "bytes": 1634
-            },
-            {
-              "label": "drink in bombay v5",
-              "path": "assets/bombay/gemma4/drink_in_bombay_v5.svg",
-              "bytes": 1705
-            },
-            {
-              "label": "drink in bombay v6",
-              "path": "assets/bombay/gemma4/drink_in_bombay_v6.svg",
-              "bytes": 2208
-            },
-            {
-              "label": "prog1",
-              "path": "assets/bombay/gemma4/prog1.svg",
-              "bytes": 928
-            },
-            {
-              "label": "prog2",
-              "path": "assets/bombay/gemma4/prog2.svg",
-              "bytes": 2700
-            },
-            {
-              "label": "prog3",
-              "path": "assets/bombay/gemma4/prog3.svg",
-              "bytes": 2637
-            },
-            {
-              "label": "scene level 1",
-              "path": "assets/bombay/gemma4/scene_level_1.svg",
-              "bytes": 899
-            },
-            {
-              "label": "scene level 2",
-              "path": "assets/bombay/gemma4/scene_level_2.svg",
-              "bytes": 2092
-            },
-            {
-              "label": "scene final",
-              "path": "assets/bombay/gemma4/scene_final.svg",
-              "bytes": 2637
+              "path": "assets/bombay/deepseek-r1-70b-20261011/output.svg",
+              "bytes": 2282
             }
           ]
         },
         {
-          "id": "ollama-gemma4-26b",
-          "label": "Gemma 4 26B",
-          "family": "Gemma",
+          "id": "deepseek-r1-70b-20261021",
+          "label": "DeepSeek R1 70B · Oct 21",
+          "family": "DeepSeek",
           "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Direct SVG · follow-up",
           "quantization": null,
           "memory_gb": null,
+          "public_note": "The saved SVG has malformed XML and cannot be displayed.",
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "invalid_svg",
+          "images": []
+        },
+        {
+          "id": "deepseek-v4-flash-iq2_m-20261015",
+          "label": "DeepSeek V4 Flash · direct",
+          "family": "DeepSeek",
+          "runtime": "Ollama",
+          "tool": null,
+          "method": "Direct SVG",
+          "quantization": "IQ2_M",
+          "memory_gb": null,
+          "source_type": "Local",
+          "run_date": "2026-10-15",
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/ollama-gemma4-26b/bombay_drink.svg",
+              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015/output.svg",
+              "bytes": 24074
+            }
+          ]
+        },
+        {
+          "id": "deepseek-v4-flash-iq2_m-20261015-2",
+          "label": "DeepSeek V4 Flash · program",
+          "family": "DeepSeek",
+          "runtime": "Ollama",
+          "tool": null,
+          "method": "Program generated",
+          "quantization": "IQ2_M",
+          "memory_gb": null,
+          "public_note": "This run generated the SVG with a program.",
+          "source_type": "Local",
+          "run_date": "2026-10-15",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015-2/bombay_drink.svg",
+              "bytes": 15748
+            },
+            {
+              "label": "bombay drink 1400x900 s42",
+              "path": "assets/bombay/deepseek-v4-flash-iq2_m-20261015-2/bombay_drink_1400x900_s42.svg",
+              "bytes": 11746
+            }
+          ]
+        },
+        {
+          "id": "deepseek-v4-flash-iq2_m-20261021",
+          "label": "DeepSeek V4 Flash · Oct 21",
+          "family": "DeepSeek",
+          "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Direct SVG · follow-up",
+          "quantization": "IQ2_M",
+          "memory_gb": null,
+          "public_note": "No renderable SVG was saved after a follow-up prompt.",
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "no_output",
+          "images": []
+        },
+        {
+          "id": "gemma4-26b-claudecode-20261021",
+          "label": "Gemma 4 26B · Claude Code",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Python generated",
+          "quantization": null,
+          "memory_gb": null,
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemma4-26b-claudecode-20261021/output.svg",
+              "bytes": 21580
+            }
+          ]
+        },
+        {
+          "id": "gemma4-26b-opencode-20261009",
+          "label": "Gemma 4 26B · OpenCode",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "tool": "OpenCode",
+          "method": null,
+          "quantization": null,
+          "memory_gb": null,
+          "source_type": "Local",
+          "run_date": "2026-10-09",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemma4-26b-opencode-20261009/bombay_drink.svg",
               "bytes": 3775
             }
           ]
         },
         {
-          "id": "ollama-opencode-qwen3.8-27b",
-          "label": "Qwen 3.8 27B",
-          "family": "Qwen",
-          "runtime": "Ollama + OpenCode",
+          "id": "gemma4-opencode-20261008",
+          "label": "Gemma 4 · direct iterations",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "tool": "OpenCode",
+          "method": "Direct SVG · iterative",
           "quantization": null,
           "memory_gb": null,
+          "public_note": "The selected result follows seven direct SVG iterations.",
+          "source_type": "Local",
+          "run_date": "2026-10-08",
+          "status": "complete",
           "images": [
             {
               "label": "Selected result",
-              "path": "assets/bombay/ollama-opencode-qwen3.8-27b/bombay-sunset-drink.svg",
+              "path": "assets/bombay/gemma4-opencode-20261008/output.svg",
+              "bytes": 5102
+            },
+            {
+              "label": "drink in bombay v1",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v1.svg",
+              "bytes": 1225
+            },
+            {
+              "label": "drink in bombay v2",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v2.svg",
+              "bytes": 1250
+            },
+            {
+              "label": "drink in bombay v3",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v3.svg",
+              "bytes": 1487
+            },
+            {
+              "label": "drink in bombay v4",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v4.svg",
+              "bytes": 1634
+            },
+            {
+              "label": "drink in bombay v5",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v5.svg",
+              "bytes": 1705
+            },
+            {
+              "label": "drink in bombay v6",
+              "path": "assets/bombay/gemma4-opencode-20261008/drink_in_bombay_v6.svg",
+              "bytes": 2208
+            }
+          ]
+        },
+        {
+          "id": "gemma4-opencode-20261009",
+          "label": "Gemma 4 · program iterations",
+          "family": "Gemma",
+          "runtime": "Ollama",
+          "tool": "OpenCode",
+          "method": "Python generated · iterative",
+          "quantization": null,
+          "memory_gb": null,
+          "public_note": "The selected result follows several program-generated iterations.",
+          "source_type": "Local",
+          "run_date": "2026-10-09",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/gemma4-opencode-20261009/output.svg",
+              "bytes": 2637
+            },
+            {
+              "label": "prog1",
+              "path": "assets/bombay/gemma4-opencode-20261009/prog1.svg",
+              "bytes": 928
+            },
+            {
+              "label": "prog2",
+              "path": "assets/bombay/gemma4-opencode-20261009/prog2.svg",
+              "bytes": 2700
+            },
+            {
+              "label": "scene level 1",
+              "path": "assets/bombay/gemma4-opencode-20261009/scene_level_1.svg",
+              "bytes": 899
+            },
+            {
+              "label": "scene level 2",
+              "path": "assets/bombay/gemma4-opencode-20261009/scene_level_2.svg",
+              "bytes": 2092
+            }
+          ]
+        },
+        {
+          "id": "qwen3.8-27b-claudecode-20261021",
+          "label": "Qwen 3.8 27B · Claude Code",
+          "family": "Qwen",
+          "runtime": "Ollama",
+          "tool": "Claude Code",
+          "method": "Visual QA and refinement",
+          "quantization": null,
+          "memory_gb": null,
+          "duration": "27m 44s",
+          "source_type": "Local",
+          "run_date": "2026-10-21",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/qwen3.8-27b-claudecode-20261021/output.svg",
+              "bytes": 33160
+            }
+          ]
+        },
+        {
+          "id": "qwen3.8-27b-opencode-20261010",
+          "label": "Qwen 3.8 27B · OpenCode",
+          "family": "Qwen",
+          "runtime": "Ollama",
+          "tool": "OpenCode",
+          "method": null,
+          "quantization": null,
+          "memory_gb": null,
+          "source_type": "Local",
+          "run_date": "2026-10-10",
+          "status": "complete",
+          "images": [
+            {
+              "label": "Selected result",
+              "path": "assets/bombay/qwen3.8-27b-opencode-20261010/output.svg",
               "bytes": 23168
             }
           ]
