@@ -1,0 +1,650 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <!-- Gradient for golden hour sky -->
+    <linearGradient id="goldenSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD4A8"/>
+      <stop offset="30%" stop-color="#FFB37A"/>
+      <stop offset="60%" stop-color="#E69A5C"/>
+      <stop offset="100%" stop-color="#D48E7A"/>
+    </linearGradient>
+
+    <!-- Gradient for distant buildings -->
+    <linearGradient id="buildingGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C4A47A"/>
+      <stop offset="100%" stop-color="#8B7355"/>
+    </linearGradient>
+
+    <!-- Wood texture pattern -->
+    <pattern id="woodTexture" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="20" height="20" fill="#8B5A2B"/>
+      <path d="M0 10 h20" stroke="#6D4822" stroke-width="0.5" opacity="0.3"/>
+      <circle cx="5" cy="5" r="0.5" fill="#6D4822" opacity="0.2"/>
+      <circle cx="15" cy="12" r="0.5" fill="#6D4822" opacity="0.2"/>
+      <path d="M10 0 v20" stroke="#A06B3A" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+
+    <!-- Table surface texture -->
+    <linearGradient id="tableGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4B483"/>
+      <stop offset="50%" stop-color="#C4A47A"/>
+      <stop offset="100%" stop-color="#B4946A"/>
+    </linearGradient>
+
+    <!-- Glass bottle gradient -->
+    <linearGradient id="bottleGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A7C59"/>
+      <stop offset="50%" stop-color="#3A6C49"/>
+      <stop offset="100%" stop-color="#2A5C39"/>
+    </linearGradient>
+
+    <!-- Skin shading gradient -->
+    <radialGradient id="skinShading" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4B088"/>
+      <stop offset="100%" stop-color="#B89068"/>
+    </radialGradient>
+
+    <!-- Ocean gradient -->
+    <linearGradient id="oceanGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90E0"/>
+      <stop offset="100%" stop-color="#2A70C0"/>
+    </linearGradient>
+
+    <!-- Reflection gradient -->
+    <linearGradient id="reflectionGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Soft glow for golden hour light -->
+    <radialGradient id="goldenHourGlow" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <!-- Soft shadow for person -->
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="black" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Bokeh lights -->
+    <radialGradient id="bokehLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky background with golden hour gradient -->
+  <rect width="1200" height="800" fill="url(#goldenSky)"/>
+
+  <!-- Sun glow effect -->
+  <ellipse cx="600" cy="300" rx="200" ry="100" fill="url(#goldenHourGlow)" opacity="0.8"/>
+
+  <!-- Sun disc -->
+  <circle cx="600" cy="250" r="80" fill="#FFD700" opacity="0.9"/>
+
+  <!-- Decorative sun rays -->
+  <g opacity="0.4">
+    <path d="M500 250 L450 50" stroke="#FFD700" stroke-width="2" opacity="0.5"/>
+    <path d="M600 250 L600 20" stroke="#FFD700" stroke-width="3" opacity="0.4"/>
+    <path d="M700 250 L750 50" stroke="#FFD700" stroke-width="2" opacity="0.5"/>
+    <path d="M550 200 L500 100" stroke="#FFD700" stroke-width="1.5" opacity="0.4"/>
+    <path d="M650 200 L700 100" stroke="#FFD700" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- Distant architecture - Bombay-style buildings with arches -->
+  <g transform="translate(0, 400)">
+    <!-- Far buildings -->
+    <path d="M0 0 L200 0 L200 50 L220 50 L220 30 L240 30 L240 60 L260 60 L260 20 L300 20 L300 80 L400 80 L400 30 L430 30 L430 60 L460 60 L460 40 L500 40 L500 90 L600 90 L600 20 L630 20 L630 70 L660 70 L660 50 L700 50 L700 100 L800 100 L800 40 L830 40 L830 80 L860 80 L860 60 L900 60 L900 110 L1200 110 L1200 0 Z" fill="#C4B090"/>
+
+    <!-- Building details with arches -->
+    <path d="M20 50 L20 100 L60 100 L60 60 L70 60 L70 110 L110 110 L110 50 Z" fill="#B8A48A"/>
+    <path d="M25 70 L25 100 L55 100 L55 70 Z" fill="#D4C0A0" opacity="0.7"/>
+
+    <path d="M100 50 L100 120 L150 120 L150 60 L160 60 L160 130 L200 130 L200 50 Z" fill="#B8A48A"/>
+    <path d="M105 80 L105 120 L145 120 L145 80 Z" fill="#D4C0A0" opacity="0.7"/>
+
+    <!-- Architectural columns with Indo-Saracenic style -->
+    <g fill="#C4B090">
+      <rect x="300" y="0" width="20" height="110"/>
+      <rect x="350" y="0" width="20" height="110"/>
+      <rect x="400" y="0" width="20" height="110"/>
+      <rect x="450" y="0" width="20" height="110"/>
+      <rect x="500" y="0" width="20" height="110"/>
+      <rect x="550" y="0" width="20" height="110"/>
+      <rect x="600" y="0" width="20" height="110"/>
+      <rect x="650" y="0" width="20" height="110"/>
+      <rect x="700" y="0" width="20" height="110"/>
+      <rect x="750" y="0" width="20" height="110"/>
+      <rect x="800" y="0" width="20" height="110"/>
+    </g>
+
+    <!-- Balconies with intricate railings -->
+    <path d="M300 70 L320 70 M305 60 L315 80 M320 70 L320 110" stroke="#A08C70" stroke-width="2"/>
+    <path d="M350 70 L370 70 M355 60 L365 80 M370 70 L370 110" stroke="#A08C70" stroke-width="2"/>
+    <path d="M400 70 L420 70 M405 60 L415 80 M420 70 L420 110" stroke="#A08C70" stroke-width="2"/>
+
+    <!-- decorative finials -->
+    <circle cx="310" cy="10" r="5" fill="#A08C70"/>
+    <circle cx="360" cy="10" r="5" fill="#A08C70"/>
+    <circle cx="410" cy="10" r="5" fill="#A08C70"/>
+  </g>
+
+  <!-- Foreground buildings closer to viewer -->
+  <g transform="translate(0, 450)">
+    <!-- Left side building -->
+    <path d="M-50 0 L200 0 L200 350 L-50 350 Z" fill="#B89C7A"/>
+    <path d="M200 0 L350 0 L350 400 L200 400 Z" fill="#AC9070"/>
+    <path d="M350 0 L500 0 L500 320 L350 320 Z" fill="#C4A88A"/>
+
+    <!-- Building details -->
+    <rect x="100" y="50" width="60" height="80" fill="#D4B898" opacity="0.6"/>
+    <rect x="250" y="80" width="50" height="100" fill="#C4A88A" opacity="0.5"/>
+    <rect x="400" y="40" width="70" height="90" fill="#DCBC9C" opacity="0.6"/>
+
+    <!-- Windows with shutters -->
+    <g fill="#8B5A2B" opacity="0.4">
+      <rect x="110" y="60" width="40" height="60" rx="5"/>
+      <rect x="260" y="90" width="35" height="80" rx="5"/>
+      <rect x="410" y="50" width="50" height="70" rx="5"/>
+    </g>
+
+    <!-- Balcony with pillars -->
+    <path d="M150 150 L250 150 L260 160 L140 160 Z" fill="#D4B898" opacity="0.7"/>
+    <rect x="160" y="150" width="10" height="30" fill="#B89C7A"/>
+    <rect x="200" y="150" width="10" height="30" fill="#B89C7A"/>
+    <rect x="240" y="150" width="10" height="30" fill="#B89C7A"/>
+
+    <!-- String lights on building -->
+    <path d="M150 40 L250 40" stroke="#FFD700" stroke-width="1"/>
+    <circle cx="175" cy="40" r="3" fill="#FFD700" opacity="0.6"/>
+    <circle cx="200" cy="40" r="3" fill="#FFD700" opacity="0.6"/>
+    <circle cx="225" cy="40" r="3" fill="#FFD700" opacity="0.6"/>
+
+    <!-- Right side building with marquee -->
+    <path d="M600 0 L850 0 L850 450 L600 450 Z" fill="#B89C7A"/>
+    <path d="M700 50 L800 50 L800 250 L700 250 Z" fill="#D4B898" opacity="0.7"/>
+
+    <!-- Marquee sign -->
+    <path d="M650 30 L820 30 L820 70 L650 70 Z" fill="#8B4513" stroke="#A0522D" stroke-width="2"/>
+    <text x="700" y="55" font-family="Arial, sans-serif" font-size="18" fill="#FFD700" font-weight="bold">BAR &amp; GRILL</text>
+
+    <!-- Sign with hanging lights -->
+    <path d="M650 70 L650 90 M820 70 L820 90" stroke="#8B4513" stroke-width="2"/>
+    <path d="M650 90 L820 90" stroke="#FFD700" stroke-width="1"/>
+    <circle cx="685" cy="90" r="3" fill="#FFD700"/>
+    <circle cx="735" cy="90" r="3" fill="#FFD700"/>
+    <circle cx="785" cy="90" r="3" fill="#FFD700"/>
+  </g>
+
+  <!-- Arabian Sea background -->
+  <g transform="translate(0, 550)">
+    <path d="M0 0 L1200 0 L1200 200 L0 200 Z" fill="url(#oceanGradient)"/>
+
+    <!-- Water surface waves -->
+    <path d="M0 50 Q100 40 200 50 T400 50 T600 50 T800 50 T1000 50 T1200 50" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M0 80 Q150 70 300 80 T600 80 T900 80 T1200 80" stroke="white" stroke-width="1" opacity="0.3"/>
+    <path d="M50 110 Q200 100 350 110 T700 110 T1050 110" stroke="white" stroke-width="1" opacity="0.2"/>
+
+    <!-- Sunset reflection on water -->
+    <path d="M500 150 L700 150 L600 20 Z" fill="url(#reflectionGradient)"/>
+
+    <!-- Sea horizon line -->
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="white" stroke-width="1" opacity="0.4"/>
+  </g>
+
+  <!-- Boat in the distance -->
+  <g transform="translate(300, 530)">
+    <path d="M0 0 L40 0 L35 10 L5 10 Z" fill="#8B4513"/>
+    <path d="M20 0 L20 -30 L35 -10 Z" fill="#F5F5DC"/>
+    <path d="M20 0 L20 -30" stroke="#8B4513" stroke-width="1"/>
+    <circle cx="20" cy="-5" r="2" fill="#FFD700" opacity="0.8"/>
+  </g>
+
+  <!-- Promenade / Seaface area -->
+  <g transform="translate(0, 700)">
+    <!-- Stone pavement pattern -->
+    <path d="M0 0 L1200 0 L1200 100 L0 100 Z" fill="#C4B090"/>
+    <path d="M0 0 L200 0 M0 50 L1200 50 M0 100 L1200 100" stroke="#B89C7A" stroke-width="2"/>
+    <path d="M100 0 L100 100 M250 0 L250 100 M400 0 L400 100 M550 0 L550 100 M700 0 L700 100 M850 0 L850 100 M1000 0 L1000 100" stroke="#B89C7A" stroke-width="2"/>
+
+    <!-- Promenade railing -->
+    <path d="M0 5 L1200 5" stroke="#A08C70" stroke-width="3"/>
+    <path d="M0 15 L1200 15" stroke="#A08C70" stroke-width="2"/>
+
+    <!-- Railing posts -->
+    <g fill="#A08C70">
+      <rect x="50" y="-20" width="6" height="35" rx="1"/>
+      <rect x="150" y="-20" width="6" height="35" rx="1"/>
+      <rect x="250" y="-20" width="6" height="35" rx="1"/>
+      <rect x="350" y="-20" width="6" height="35" rx="1"/>
+      <rect x="450" y="-20" width="6" height="35" rx="1"/>
+      <rect x="550" y="-20" width="6" height="35" rx="1"/>
+      <rect x="650" y="-20" width="6" height="35" rx="1"/>
+      <rect x="750" y="-20" width="6" height="35" rx="1"/>
+      <rect x="850" y="-20" width="6" height="35" rx="1"/>
+      <rect x="950" y="-20" width="6" height="35" rx="1"/>
+      <rect x="1050" y="-20" width="6" height="35" rx="1"/>
+      <rect x="1150" y="-20" width="6" height="35" rx="1"/>
+    </g>
+
+    <!-- Decorative lamp posts -->
+    <g>
+      <!-- Lamp post 1 -->
+      <path d="M100 100 L100 80" stroke="#8B5A2B" stroke-width="3"/>
+      <circle cx="100" cy="80" r="10" fill="#FFD700" opacity="0.9"/>
+      <path d="M100 80 L80 70 M100 80 L120 70" stroke="#8B5A2B" stroke-width="2"/>
+
+      <!-- Lamp post 2 -->
+      <path d="M300 100 L300 80" stroke="#8B5A2B" stroke-width="3"/>
+      <circle cx="300" cy="80" r="10" fill="#FFD700" opacity="0.9"/>
+      <path d="M300 80 L280 70 M300 80 L320 70" stroke="#8B5A2B" stroke-width="2"/>
+
+      <!-- Lamp post 3 -->
+      <path d="M500 100 L500 80" stroke="#8B5A2B" stroke-width="3"/>
+      <circle cx="500" cy="80" r="10" fill="#FFD700" opacity="0.9"/>
+      <path d="M500 80 L480 70 M500 80 L520 70" stroke="#8B5A2B" stroke-width="2"/>
+    </g>
+
+    <!-- Potted plants along promenade -->
+    <g>
+      <path d="M180 95 L200 95 L200 105 L180 105 Z" fill="#654321"/>
+      <circle cx="190" cy="95" r="15" fill="#228B22" opacity="0.8"/>
+      <circle cx="195" cy="90" r="10" fill="#32CD32" opacity="0.8"/>
+
+      <path d="M450 95 L470 95 L470 105 L450 105 Z" fill="#654321"/>
+      <circle cx="460" cy="95" r="15" fill="#228B22" opacity="0.8"/>
+      <circle cx="465" cy="90" r="10" fill="#32CD32" opacity="0.8"/>
+
+      <path d="M720 95 L740 95 L740 105 L720 105 Z" fill="#654321"/>
+      <circle cx="730" cy="95" r="15" fill="#228B22" opacity="0.8"/>
+      <circle cx="735" cy="90" r="10" fill="#32CD32" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- Outdoor bar counter -->
+  <g transform="translate(200, 600)">
+    <!-- Bar top -->
+    <rect x="0" y="0" width="300" height="40" fill="url(#tableGradient)" rx="5" filter="url(#softShadow)"/>
+
+    <!-- Bar counter texture details -->
+    <path d="M0 10 L300 10" stroke="#A08C70" stroke-width="1" opacity="0.5"/>
+    <path d="M50 15 L50 25" stroke="#8B5A2B" stroke-width="0.5" opacity="0.3"/>
+    <path d="M100 15 L100 25" stroke="#8B5A2B" stroke-width="0.5" opacity="0.3"/>
+    <path d="M150 15 L150 25" stroke="#8B5A2B" stroke-width="0.5" opacity="0.3"/>
+    <path d="M200 15 L200 25" stroke="#8B5A2B" stroke-width="0.5" opacity="0.3"/>
+    <path d="M250 15 L250 25" stroke="#8B5A2B" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- Bar front panel -->
+    <rect x="0" y="40" width="300" height="60" fill="#8B5A2B" opacity="0.9" filter="url(#softShadow)"/>
+
+    <!-- Bar back cabinet -->
+    <rect x="0" y="100" width="300" height="80" fill="#6D4822" opacity="0.95"/>
+    <path d="M50 100 L50 180" stroke="#503518" stroke-width="2"/>
+    <path d="M100 100 L100 180" stroke="#503518" stroke-width="2"/>
+    <path d="M150 100 L150 180" stroke="#503518" stroke-width="2"/>
+    <path d="M200 100 L200 180" stroke="#503518" stroke-width="2"/>
+    <path d="M250 100 L250 180" stroke="#503518" stroke-width="2"/>
+
+    <!-- Bottle display -->
+    <g transform="translate(10, 110)">
+      <!-- Whiskey bottle -->
+      <rect x="0" y="0" width="20" height="50" fill="url(#bottleGradient)" rx="2" filter="url(#softShadow)"/>
+      <path d="M0 0 L20 0" stroke="#5A7C59" stroke-width="2"/>
+      <text x="5" y="65" font-family="Arial, sans-serif" font-size="8" fill="#D4B483" transform="rotate(0, 5, 65)">OLD MONK</text>
+
+      <!-- Rum bottle -->
+      <rect x="40" y="5" width="18" height="45" fill="#5D4037" rx="2" filter="url(#softShadow)"/>
+      <circle cx="49" cy="10" r="3" fill="#8B4513" opacity="0.8"/>
+
+      <!-- Cola bottle -->
+      <rect x="80" y="10" width="16" height="40" fill="#2F4F4F" rx="2" filter="url(#softShadow)"/>
+      <text x="83" y="65" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF" transform="rotate(0, 83, 65)">COKE</text>
+
+      <!-- Gin bottle -->
+      <rect x="120" y="8" width="14" height="42" fill="#D4AF37" rx="2" filter="url(#softShadow)"/>
+      <text x="121" y="65" font-family="Arial, sans-serif" font-size="7" fill="#FFFFFF" transform="rotate(0, 121, 65)">GIN</text>
+
+      <!-- Vodka bottle -->
+      <rect x="160" y="5" width="16" height="45" fill="#F0F8FF" rx="2" filter="url(#softShadow)"/>
+      <text x="161" y="65" font-family="Arial, sans-serif" font-size="7" fill="#000000" transform="rotate(0, 161, 65)">VODKA</text>
+
+      <!-- Beer bottles -->
+      <rect x="200" y="15" width="12" height="35" fill="#8B4513" rx="2" filter="url(#softShadow)"/>
+      <rect x="225" y="15" width="12" height="35" fill="#8B4513" rx="2" filter="url(#softShadow)"/>
+    </g>
+
+    <!-- Bar stool legs -->
+    <g fill="#6D4822">
+      <rect x="50" y="170" width="8" height="50"/>
+      <rect x="150" y="170" width="8" height="50"/>
+      <rect x="250" y="170" width="8" height="50"/>
+    </g>
+
+    <!-- Bar stool seats -->
+    <g>
+      <ellipse cx="54" cy="165" rx="12" ry="12" fill="#8B4513" filter="url(#softShadow)"/>
+      <ellipse cx="154" cy="165" rx="12" ry="12" fill="#8B4513" filter="url(#softShadow)"/>
+      <ellipse cx="254" cy="165" rx="12" ry="12" fill="#8B4513" filter="url(#softShadow)"/>
+    </g>
+
+    <!-- Bar stools padding -->
+    <g>
+      <ellipse cx="54" cy="165" rx="15" ry="15" fill="#D4B483" opacity="0.9"/>
+      <ellipse cx="154" cy="165" rx="15" ry="15" fill="#D4B483" opacity="0.9"/>
+      <ellipse cx="254" cy="165" rx="15" ry="15" fill="#D4B483" opacity="0.9"/>
+    </g>
+  </g>
+
+  <!-- Customers at the bar -->
+  <!-- Person 1 - Man with drink -->
+  <g transform="translate(140, 540)">
+    <!-- Legs -->
+    <path d="M10 165 L10 200" stroke="#2F4F4F" stroke-width="8" stroke-linecap="round"/>
+    <path d="M30 165 L30 200" stroke="#2F4F4F" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Body (white kurta) -->
+    <path d="M5 100 L35 100 L35 165 L5 165 Z" fill="#F8F8FF" filter="url(#softShadow)"/>
+    <path d="M5 100 L5 120 L2 115 L2 95 L5 100" fill="#F8F8FF" filter="url(#softShadow)"/>
+
+    <!-- Arms -->
+    <path d="M5 100 L-10 120" stroke="#F8F8FF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M35 100 L50 120" stroke="#F8F8FF" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Head -->
+    <circle cx="20" cy="80" r="18" fill="url(#skinShading)" filter="url(#softShadow)"/>
+
+    <!-- Hair -->
+    <path d="M20 65 C5 70 5 90 20 90 C35 90 35 70 20 65" fill="#2F4F4F"/>
+    <path d="M2 75 L8 70" stroke="#2F4F4F" stroke-width="1"/>
+    <path d="M38 75 L32 70" stroke="#2F4F4F" stroke-width="1"/>
+
+    <!-- Mustache -->
+    <path d="M12 82 Q20 85 28 82" stroke="#2F4F4F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Beard stubble -->
+    <path d="M12 90 L14 95 L16 92 L18 96 L20 93 L22 96 L24 92 L26 95 L28 90" fill="#2F4F4F" opacity="0.6"/>
+
+    <!-- Facial features -->
+    <circle cx="15" cy="78" r="1.5" fill="#1a1a1a"/>
+    <circle cx="25" cy="78" r="1.5" fill="#1a1a1a"/>
+    <path d="M18 82 L20 85 L22 82" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Head tilt and shadow -->
+    <ellipse cx="20" cy="100" rx="25" ry="8" fill="black" opacity="0.15"/>
+
+    <!-- Drink in hand - glass with amber liquid -->
+    <g transform="translate(50, 115)">
+      <!-- Hand -->
+      <path d="M0 0 L5 -3 L10 2 L8 7 L2 8 -2 5" fill="#E8D5B8" stroke="#C8B598" stroke-width="0.5"/>
+      <path d="M0 0 L2 2 L5 -1" fill="#E8D5B8"/>
+
+      <!-- Glass tumbler -->
+      <path d="M0 0 L12 0 L10 25 L2 25 Z" fill="#E0F0FF" opacity="0.8" filter="url(#softShadow)"/>
+      <path d="M2 25 L10 25 L12 28 L0 28 Z" fill="#D0E0EE" opacity="0.9"/>
+      <path d="M0 0 L12 0" stroke="#B0C0DE" stroke-width="2"/>
+      <path d="M2 28 L10 28" stroke="#B0C0DE" stroke-width="1"/>
+
+      <!-- Liquid -->
+      <path d="M3 5 L11 5 L10 18 L4 18 Z" fill="#D4A520" opacity="0.95"/>
+      <ellipse cx="7" cy="5" rx="6" ry="2" fill="#F4C430" opacity="0.5"/>
+
+      <!-- Ice cubes -->
+      <circle cx="5" cy="10" r="2" fill="white" opacity="0.6"/>
+      <circle cx="9" cy="15" r="2" fill="white" opacity="0.6"/>
+
+      <!-- Drink stirrer -->
+      <path d="M7 5 L7 -10" stroke="#FF6B6B" stroke-width="1"/>
+      <circle cx="7" cy="-10" r="2" fill="white" opacity="0.8"/>
+    </g>
+
+    <!-- Elbow rest on bar -->
+    <ellipse cx="20" cy="155" rx="12" ry="6" fill="#2F4F4F" opacity="0.4"/>
+  </g>
+
+  <!-- Person 2 - Woman having drink, sitting beside man -->
+  <g transform="translate(240, 540)">
+    <!-- Legs -->
+    <path d="M12 165 L12 200" stroke="#504030" stroke-width="7" stroke-linecap="round"/>
+    <path d="M32 165 L32 200" stroke="#504030" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Body (silk kurti) -->
+    <path d="M8 100 L38 100 L38 165 L8 165 Z" fill="#8B4513" filter="url(#softShadow)"/>
+    <path d="M8 100 L8 125 L5 120 L5 95 L8 100" fill="#8B4513" filter="url(#softShadow)"/>
+
+    <!-- Sleeves -->
+    <path d="M8 100 L-5 110 L-5 130 L8 125" fill="#8B4513" stroke="#6D3B11" stroke-width="1"/>
+    <path d="M38 100 L51 110 L51 130 L38 125" fill="#8B4513" stroke="#6D3B11" stroke-width="1"/>
+
+    <!-- Embroidery detail -->
+    <circle cx="23" cy="115" r="8" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="23" cy="115" r="3" fill="#FFD700" opacity="0.6"/>
+
+    <!-- Arms -->
+    <path d="M8 100 L-5 120" stroke="#8B4513" stroke-width="7" stroke-linecap="round"/>
+    <path d="M38 100 L52 120" stroke="#8B4513" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Head -->
+    <ellipse cx="23" cy="78" rx="16" ry="18" fill="url(#skinShading)" filter="url(#softShadow)"/>
+
+    <!-- Hair (long, dark) -->
+    <path d="M7 78 C-5 60 -5 95 7 90" fill="#1a1a1a"/>
+    <path d="M39 78 C51 60 51 95 39 90" fill="#1a1a1a"/>
+    <path d="M7 78 L7 100 M39 78 L39 100 M23 78 L23 105" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Hair ornament -->
+    <circle cx="23" cy="70" r="4" fill="#FFD700" stroke="#D4AF37" stroke-width="1"/>
+
+    <!-- Face features -->
+    <circle cx="18" cy="75" r="1.2" fill="#1a1a1a"/>
+    <circle cx="28" cy="75" r="1.2" fill="#1a1a1a"/>
+    <path d="M23 78 Q25 80 27 78" stroke="#C89068" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="M20 92 L23 94 L26 92" stroke="#C89068" stroke-width="1" fill="none" stroke-linecap="round"/>
+
+    <!-- Earrings -->
+    <circle cx="16" cy="85" r="2.5" fill="#FFD700" stroke="#D4AF37" stroke-width="0.5"/>
+    <circle cx="30" cy="85" r="2.5" fill="#FFD700" stroke="#D4AF37" stroke-width="0.5"/>
+    <path d="M16 87 L16 95" stroke="#FFD700" stroke-width="0.5"/>
+    <path d="M30 87 L30 95" stroke="#FFD700" stroke-width="0.5"/>
+
+    <!-- Bangle -->
+    <path d="M-5 120 L10 120" stroke="#FFD700" stroke-width="4" fill="none"/>
+    <path d="M52 120 L65 120" stroke="#FFD700" stroke-width="4" fill="none"/>
+
+    <!-- Drink in hand - cocktail glass -->
+    <g transform="translate(65, 115)">
+      <!-- Hand -->
+      <path d="M0 0 L5 -3 L10 2 L8 7 L2 8 -2 5" fill="#F0E6D2" stroke="#D0C0A2" stroke-width="0.5"/>
+
+      <!-- Cocktail glass -->
+      <path d="M0 0 L14 0 L12 25 L2 25 Z" fill="#E0F0FF" opacity="0.7" filter="url(#softShadow)"/>
+      <path d="M2 25 L12 25 L14 28 L0 28 Z" fill="#D0E0EE" opacity="0.9"/>
+      <path d="M0 0 L14 0" stroke="#B0C0DE" stroke-width="2"/>
+
+      <!-- Drink -->
+      <path d="M3 5 L13 5 L12 20 L4 20 Z" fill="#FF6347" opacity="0.9"/>
+      <path d="M7 10 L7 20" stroke="white" stroke-width="2" opacity="0.3"/>
+
+      <!-- Cherry on stirrer -->
+      <circle cx="7" cy="5" r="2" fill="#DC143C"/>
+      <path d="M7 5 L7 -8" stroke="#228B22" stroke-width="1"/>
+      <circle cx="7" cy="-8" r="1.5" fill="#32CD32"/>
+
+      <!-- Orange slice garnish -->
+      <circle cx="10" cy="12" r="2.5" fill="#FF8C00" opacity="0.9"/>
+    </g>
+
+    <!-- Elbow rest -->
+    <ellipse cx="23" cy="155" rx="10" ry="5" fill="#504030" opacity="0.35"/>
+
+    <!-- Head tilt shadow -->
+    <ellipse cx="23" cy="95" rx="20" ry="6" fill="black" opacity="0.12"/>
+  </g>
+
+  <!-- Interaction between people -->
+  <!-- Man pointing toward woman's drink with his free hand -->
+  <g>
+    <path d="M140 540 L240 540" stroke="#D4B483" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <!-- Background elements showing Bombay details -->
+  <g opacity="0.7">
+    <!-- Electric wires strung between buildings -->
+    <path d="M100 100 Q200 80 300 100 T500 90 T700 110" stroke="#444" stroke-width="1.5"/>
+    <path d="M100 105 Q200 85 300 105 T500 95 T700 115" stroke="#444" stroke-width="1.5"/>
+    <path d="M100 110 Q200 90 300 110 T500 100 T700 120" stroke="#444" stroke-width="1.5"/>
+
+    <!-- Street signs in Hindi and English -->
+    <rect x="800" y="20" width="100" height="40" fill="#1E3A8A" rx="5" opacity="0.9"/>
+    <text x="820" y="45" font-family="Arial, sans-serif" font-size="14" fill="#FFFFFF">MARINE DRIVE</text>
+    <text x="820" y="60" font-family="Arial, sans-serif" font-size="10" fill="#FFFFE0">मरीन ड्राइव</text>
+
+    <!-- Another sign -->
+    <rect x="900" y="50" width="80" height="35" fill="#8B0000" rx="5" opacity="0.9"/>
+    <text x="910" y="73" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF">BAR</text>
+  </g>
+
+  <!-- Foreground elements -->
+  <!-- Potted plants near bar -->
+  <g transform="translate(50, 630)">
+    <path d="M0 0 L60 0 L55 20 L5 20 Z" fill="#654321"/>
+    <circle cx="30" cy="0" r="25" fill="#228B22" opacity="0.8"/>
+    <circle cx="25" cy="5" r="18" fill="#32CD32" opacity="0.8"/>
+    <circle cx="35" cy="5" r="15" fill="#2E8B57" opacity="0.7"/>
+
+    <path d="M0 80 L60 80 L55 100 L5 100 Z" fill="#503518"/>
+    <circle cx="30" cy="80" r="20" fill="#228B22" opacity="0.8"/>
+    <circle cx="25" cy="85" r="15" fill="#32CD32" opacity="0.8"/>
+  </g>
+
+  <!-- Another potted plant -->
+  <g transform="translate(550, 630)">
+    <path d="M0 0 L40 0 L35 15 L5 15 Z" fill="#654321"/>
+    <circle cx="20" cy="0" r="18" fill="#228B22" opacity="0.8"/>
+    <circle cx="15" cy="5" r="12" fill="#32CD32" opacity="0.8"/>
+    <circle cx="25" cy="5" r="10" fill="#2E8B57" opacity="0.7"/>
+  </g>
+
+  <!-- Table near bar -->
+  <g transform="translate(350, 620)">
+    <!-- Table top -->
+    <ellipse cx="50" cy="0" rx="50" ry="15" fill="#8B4513" filter="url(#softShadow)"/>
+    <path d="M0 0 L100 0" stroke="#A0522D" stroke-width="3"/>
+    <path d="M50 0 L50 -40" stroke="#654321" stroke-width="4"/>
+    <path d="M50 -40 L20 -20 L80 -20 Z" fill="#654321"/>
+
+    <!-- Table settings -->
+    <circle cx="40" cy="-10" r="12" fill="#F0F8FF" opacity="0.9"/>
+    <path d="M40 -10 L40 -35" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <circle cx="40" cy="-35" r="5" fill="#FFD700" opacity="0.8"/>
+
+    <!-- Salt and pepper shakers -->
+    <circle cx="55" cy="-15" r="4" fill="white" stroke="#CCC" stroke-width="1"/>
+    <circle cx="70" cy="-15" r="4" fill="white" stroke="#CCC" stroke-width="1"/>
+    <circle cx="70" cy="-15" r="1" fill="black"/>
+
+    <!-- Napkin -->
+    <path d="M25 -20 L55 -20 L50 -10 L20 -10 Z" fill="#F8F8FF" opacity="0.8"/>
+    <path d="M30 -18 L40 -13 L35 -8" stroke="#D4AF37" stroke-width="0.5" fill="none"/>
+  </g>
+
+  <!-- Additional ambient details -->
+  <g opacity="0.6">
+    <!-- String lights overhead -->
+    <path d="M100 120 Q200 100 300 120 T500 110 T700 130" stroke="#FFD700" stroke-width="2" opacity="0.8"/>
+    <circle cx="150" cy="110" r="4" fill="#FFD700" opacity="0.9"/>
+    <circle cx="250" cy="105" r="4" fill="#FFD700" opacity="0.9"/>
+    <circle cx="350" cy="115" r="4" fill="#FFD700" opacity="0.9"/>
+    <circle cx="450" cy="108" r="4" fill="#FFD700" opacity="0.9"/>
+    <circle cx="550" cy="112" r="4" fill="#FFD700" opacity="0.9"/>
+    <circle cx="650" cy="120" r="4" fill="#FFD700" opacity="0.9"/>
+
+    <!-- Hanging lanterns -->
+    <path d="M200 130 L200 150" stroke="#8B4513" stroke-width="2"/>
+    <path d="M200 150 L215 160 L185 160 Z" fill="#8B4513"/>
+    <circle cx="200" cy="150" r="12" fill="#FFD700" opacity="0.7"/>
+    <path d="M200 150 M200 150" stroke="white" stroke-width="1" opacity="0.3"/>
+
+    <path d="M400 140 L400 160" stroke="#8B4513" stroke-width="2"/>
+    <path d="M400 160 L415 170 L385 170 Z" fill="#8B4513"/>
+    <circle cx="400" cy="160" r="12" fill="#FFD700" opacity="0.7"/>
+
+    <path d="M600 135 L600 155" stroke="#8B4513" stroke-width="2"/>
+    <path d="M600 155 L615 165 L585 165 Z" fill="#8B4513"/>
+    <circle cx="600" cy="155" r="12" fill="#FFD700" opacity="0.7"/>
+  </g>
+
+  <!-- Bokeh light effects in background -->
+  <g>
+    <circle cx="300" cy="200" r="30" fill="url(#bokehLight)" opacity="0.5"/>
+    <circle cx="800" cy="150" r="25" fill="url(#bokehLight)" opacity="0.4"/>
+    <circle cx="500" cy="250" r="40" fill="url(#bokehLight)" opacity="0.3"/>
+    <circle cx="200" cy="300" r="20" fill="url(#bokehLight)" opacity="0.4"/>
+    <circle cx="900" cy="200" r="35" fill="url(#bokehLight)" opacity="0.5"/>
+  </g>
+
+  <!-- Foreground shadow gradient for depth -->
+  <defs>
+    <linearGradient id="foregroundShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="black" stop-opacity="0"/>
+      <stop offset="100%" stop-color="black" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="700" width="1200" height="100" fill="url(#foregroundShadow)"/>
+
+  <!-- Sunset clouds with golden edges -->
+  <g opacity="0.7">
+    <path d="M100 280 Q150 260 200 280 T300 280" fill="none" stroke="#FFD700" stroke-width="2"/>
+    <path d="M120 270 Q160 250 200 270 T280 270" fill="none" stroke="#FFA500" stroke-width="1.5"/>
+
+    <path d="M400 250 Q450 230 500 250 T600 250" fill="none" stroke="#FFD700" stroke-width="2"/>
+    <path d="M420 240 Q460 220 500 240 T580 240" fill="none" stroke="#FFA500" stroke-width="1.5"/>
+
+    <path d="M650 260 Q700 240 750 260 T850 260" fill="none" stroke="#FFD700" stroke-width="2"/>
+    <path d="M670 250 Q710 230 750 250 T830 250" fill="none" stroke="#FFA500" stroke-width="1.5"/>
+
+    <path d="M900 240 Q950 220 1000 240" fill="none" stroke="#FFD700" stroke-width="2"/>
+    <path d="M920 230 Q960 210 1000 230" fill="none" stroke="#FFA500" stroke-width="1.5"/>
+  </g>
+
+  <!-- Reflection in wet pavement -->
+  <g opacity="0.3">
+    <!-- Bar reflection -->
+    <path d="M200 700 L300 700 L300 740 L200 740 Z" fill="#C4B090"/>
+    <path d="M220 710 L240 710 M260 710 L280 710" stroke="#A08C70" stroke-width="2"/>
+    <path d="M230 710 L230 725 M250 710 L250 725 M270 710 L270 725" stroke="#A08C70" stroke-width="1"/>
+
+    <!-- Building reflection -->
+    <path d="M100 700 L150 700 L150 780 L100 780 Z" fill="#8B7355" opacity="0.5"/>
+    <path d="M120 710 L130 710" stroke="#A08C70" stroke-width="1"/>
+
+    <!-- Person reflection -->
+    <path d="M140 740 L160 740 L160 800 L140 800 Z" fill="url(#skinShading)" opacity="0.3"/>
+    <path d="M240 740 L260 740 L260 800 L240 800 Z" fill="#8B4513" opacity="0.3"/>
+
+    <!-- Bar stool reflection -->
+    <ellipse cx="190" cy="755" rx="8" ry="4" fill="#8B4513" opacity="0.4"/>
+    <ellipse cx="290" cy="755" rx="8" ry="4" fill="#8B4513" opacity="0.4"/>
+  </g>
+
+  <!-- Final decorative touches -->
+  <g opacity="0.5">
+    <!-- Sun rays through buildings -->
+    <path d="M550 250 L520 500 L580 500 Z" fill="url(#goldenHourGlow)" opacity="0.3"/>
+    <path d="M650 250 L620 500 L680 500 Z" fill="url(#goldenHourGlow)" opacity="0.3"/>
+
+    <!-- Bird in flight -->
+    <path d="M800 150 Q820 140 840 150 M850 140 Q870 130 890 140" stroke="black" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M900 160 Q920 150 940 160" stroke="black" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Background signage details -->
+    <rect x="50" y="50" width="60" height="40" fill="#8B0000" rx="3" opacity="0.5"/>
+    <circle cx="80" cy="70" r="5" fill="yellow" opacity="0.5"/>
+    <text x="55" y="75" font-family="Arial" font-size="8" fill="white" opacity="0.7">TEA</text>
+
+    <rect x="600" y="60" width="80" height="35" fill="#006400" rx="3" opacity="0.5"/>
+    <circle cx="640" cy="77" r="4" fill="yellow" opacity="0.5"/>
+    <text x="610" y="82" font-family="Arial" font-size="7" fill="white" opacity="0.7">COFFEE</text>
+  </g>
+</svg>

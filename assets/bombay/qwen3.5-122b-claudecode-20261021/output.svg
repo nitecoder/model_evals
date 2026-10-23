@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Golden hour sky gradient -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#2d2d5a;stop-opacity:1" />
+      <stop offset="55%" style="stop-color:#4a3b5c;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#d47847;stop-opacity:1" />
+      <stop offset="90%" style="stop-color:#f4a460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd763;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Warm ambient light overlay -->
+    <radialGradient id="goldenGlow" cx="50%" cy="70%" r="50%">
+      <stop offset="0%" style="stop-color:#ffaa5e;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffaa5e;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Building gradient for Marine Buildings -->
+    <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4c4a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9a8b6f;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Window glow gradient -->
+    <radialGradient id="windowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fff4d4;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#ffdd88;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#ffdd88;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Cocktail glass gradient -->
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#d0d0d0;stop-opacity:0.3" />
+    </linearGradient>
+
+    <!-- Cocktail liquid gradient -->
+    <linearGradient id="cocktailGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c44d2a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Ocean gradient -->
+    <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c5f7a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e4d64;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#153d52;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Stone texture pattern -->
+    <pattern id="stoneTexture" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#8b7355"/>
+      <circle cx="3" cy="5" r="1" fill="#6b5745" opacity="0.5"/>
+      <circle cx="12" cy="15" r="1.5" fill="#5a4a3a" opacity="0.4"/>
+      <circle cx="17" cy="3" r="0.8" fill="#6b5745" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Sky background -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)"/>
+
+  <!-- Sun during golden hour -->
+  <circle cx="1600" cy="680" r="80" fill="#ffd966" opacity="0.9"/>
+  <circle cx="1600" cy="680" r="100" fill="#ffd966" opacity="0.4"/>
+  <circle cx="1600" cy="680" r="140" fill="#ffd966" opacity="0.15"/>
+
+  <!-- Golden hour glow overlay -->
+  <ellipse cx="1600" cy="700" rx="600" ry="400" fill="url(#goldenGlow)"/>
+
+  <!-- Distant clouds -->
+  <ellipse cx="300" cy="400" rx="200" ry="60" fill="#3d3d5c" opacity="0.3"/>
+  <ellipse cx="500" cy="380" rx="180" ry="50" fill="#4a4a6a" opacity="0.25"/>
+  <ellipse cx="1000" cy="450" rx="250" ry="70" fill="#2d2d4a" opacity="0.2"/>
+  <ellipse cx="700" cy="500" rx="150" ry="45" fill="#5a4a6a" opacity="0.25"/>
+
+  <!-- Arabian Sea -->
+  <rect y="700" width="1920" height="380" fill="url(#oceanGradient)"/>
+
+  <!-- Ocean waves detail -->
+  <path d="M0 750 Q200 730 400 750 T800 750 T1200 750 T1600 750 T2000 750"
+        stroke="#3d7a9a" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M0 780 Q200 760 400 780 T800 780 T1200 780 T1600 780 T2000 780"
+        stroke="#3d7a9a" stroke-width="1.5" fill="none" opacity="0.35"/>
+  <path d="M0 820 Q200 800 400 820 T800 820 T1200 820 T1600 820 T2000 820"
+        stroke="#4a8aab" stroke-width="2" fill="none" opacity="0.3"/>
+
+  <!-- Gateway of India - silhouetted in the distance -->
+  <g transform="translate(600, 700) scale(0.8)">
+    <!-- Main arch -->
+    <path d="M200 0 L200 180 Q200 220 220 240 L380 240 Q400 220 400 180 L400 0 L460 0 L460 180 Q460 250 420 290 L580 290 L580 350 L40 350 L40 290 L200 290 Q160 250 160 180 L160 0 Z"
+          fill="#1a1a2e" opacity="0.85"/>
+    <!-- Turrets -->
+    <circle cx="180" cy="80" r="25" fill="#1a1a2e" opacity="0.85"/>
+    <circle cx="440" cy="80" r="25" fill="#1a1a2e" opacity="0.85"/>
+    <!-- Dome detail -->
+    <ellipse cx="300" cy="200" rx="60" ry="40" fill="#1a1a2e" opacity="0.85"/>
+  </g>
+
+  <!-- Marine Drive buildings - Art Deco style -->
+  <g transform="translate(100, 500)">
+    <!-- Building 1 -->
+    <rect x="0" y="0" width="180" height="350" fill="url(#buildingGradient)" opacity="0.85"/>
+    <rect x="10" y="20" width="20" height="40" fill="#2a2a4a" opacity="0.7"/>
+    <rect x="45" y="20" width="20" height="40" fill="#2a2a4a" opacity="0.7"/>
+    <rect x="80" y="20" width="20" height="40" fill="url(#windowGlow)"/>
+    <rect x="115" y="20" width="20" height="40" fill="#2a2a4a" opacity="0.7"/>
+    <rect x="150" y="20" width="20" height="40" fill="url(#windowGlow)"/>
+
+    <!-- Art Deco balconies -->
+    <rect x="0" y="120" width="180" height="15" fill="#b8a888" opacity="0.9"/>
+    <rect x="30" y="220" width="50" height="20" fill="#a89878" opacity="0.85"/>
+    <rect x="100" y="220" width="50" height="20" fill="#a89878" opacity="0.85"/>
+
+    <!-- Building 2 -->
+    <rect x="200" y="40" width="200" height="310" fill="url(#buildingGradient)" opacity="0.9"/>
+    <!-- Curved Art Deco facade -->
+    <path d="M200 80 Q250 80 250 150 Q250 220 200 220 Q180 220 180 250 L400 250 L400 220 Q350 220 350 150 Q350 80 400 80"
+          fill="#c4b494" opacity="0.7"/>
+    <!-- Windows with golden glow -->
+    <rect x="230" y="70" width="18" height="35" fill="url(#windowGlow)"/>
+    <rect x="270" y="70" width="18" height="35" fill="url(#windowGlow)"/>
+    <rect x="310" y="70" width="18" height="35" fill="url(#windowGlow)"/>
+    <rect x="350" y="70" width="18" height="35" fill="url(#windowGlow)"/>
+
+    <!-- Building 3 - taller -->
+    <rect x="420" y="-50" width="150" height="400" fill="url(#buildingGradient)" opacity="0.82"/>
+    <rect x="435" y="-30" width="15" height="30" fill="#2a2a4a" opacity="0.6"/>
+    <rect x="465" y="-30" width="15" height="30" fill="url(#windowGlow)"/>
+    <rect x="495" y="-30" width="15" height="30" fill="#2a2a4a" opacity="0.6"/>
+    <rect x="525" y="-30" width="15" height="30" fill="url(#windowGlow)"/>
+    <rect x="435" y="10" width="15" height="30" fill="url(#windowGlow)"/>
+    <rect x="465" y="10" width="15" height="30" fill="#2a2a4a" opacity="0.6"/>
+    <rect x="495" y="10" width="15" height="30" fill="url(#windowGlow)"/>
+    <rect x="525" y="10" width="15" height="30" fill="#2a2a4a" opacity="0.6"/>
+
+    <!-- Rooftop terrace with people silhouettes -->
+    <rect x="420" y="-70" width="150" height="20" fill="#8b7355" opacity="0.9"/>
+  </g>
+
+  <!-- Rooftop terrace in foreground -->
+  <rect y="750" width="1920" height="330" fill="#5a4a3a"/>
+  <rect y="750" width="1920" height="30" fill="#4a3a2a"/>
+
+  <!-- Stone floor texture -->
+  <rect y="750" width="1920" height="330" fill="url(#stoneTexture)" opacity="0.3"/>
+
+  <!-- Terrace railing -->
+  <rect x="0" y="730" width="1920" height="8" fill="#3a2a1a"/>
+  <rect x="0" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="150" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="300" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="450" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="600" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="750" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="900" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1050" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1200" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1350" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1500" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1650" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1800" y="730" width="10" height="20" fill="#2a1a0a"/>
+  <rect x="1910" y="730" width="10" height="20" fill="#2a1a0a"/>
+
+  <!-- Table -->
+  <ellipse cx="960" cy="880" rx="180" ry="60" fill="#3a2a1a"/>
+  <ellipse cx="960" cy="880" rx="160" ry="50" fill="#4a3a2a"/>
+  <rect x="820" y="890" width="20" height="80" fill="#2a1a0a"/>
+  <rect x="1100" y="890" width="20" height="80" fill="#2a1a0a"/>
+  <rect x="950" y="890" width="20" height="80" fill="#2a1a0a"/>
+
+  <!-- Person on the left (main subject) -->
+  <g transform="translate(800, 700)">
+    <!-- Body - relaxed sitting pose -->
+    <path d="M50 200 L50 280 Q50 320 80 330 L120 340 Q150 345 170 330 L200 310"
+          fill="none" stroke="#2d4a3e" stroke-width="28" stroke-linecap="round"/>
+
+    <!-- Shirt/tunic -->
+    <path d="M60 200 L60 250 Q60 300 90 310 L130 315 Q160 310 175 280 L185 240"
+          fill="#4a6b5a" stroke="#2d4a3e" stroke-width="3" opacity="0.9"/>
+
+    <!-- Head -->
+    <ellipse cx="125" cy="160" rx="35" ry="42" fill="#8b6956"/>
+
+    <!-- Hair - short, wavy -->
+    <path d="M95 140 Q90 120 115 115 Q145 110 165 130 Q170 145 165 160"
+          fill="none" stroke="#2d1f1a" stroke-width="22" stroke-linecap="round"/>
+    <path d="M100 145 Q100 125 120 122 Q140 120 158 135"
+          fill="none" stroke="#3d2f2a" stroke-width="8" opacity="0.5"/>
+
+    <!-- Face details -->
+    <!-- Eyes - relaxed, looking at friend -->
+    <ellipse cx="110" cy="162" rx="6" ry="3" fill="#3d2f2a"/>
+    <ellipse cx="145" cy="162" rx="6" ry="3" fill="#3d2f2a"/>
+
+    <!-- Nose -->
+    <path d="M125 168 Q128 180 125 185" fill="none" stroke="#6b4f3f" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Mouth - subtle smile -->
+    <path d="M115 195 Q125 202 135 195" fill="none" stroke="#7b5f4f" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Ears -->
+    <ellipse cx="90" cy="165" rx="5" ry="7" fill="#8b6956"/>
+    <ellipse cx="160" cy="165" rx="5" ry="7" fill="#8b6956"/>
+
+    <!-- Right arm - holding glass -->
+    <path d="M165 260 Q190 280 210 300 L240 320"
+          fill="none" stroke="#8b6956" stroke-width="18" stroke-linecap="round"/>
+
+    <!-- Hand holding glass -->
+    <circle cx="245" cy="325" r="12" fill="#8b6956"/>
+
+    <!-- Cocktail glass -->
+    <path d="M240 280 L235 310 Q230 330 245 335 L255 335 Q270 330 265 310 L260 280 Z"
+          fill="url(#glassGradient)" stroke="#c0c0c0" stroke-width="1"/>
+
+    <!-- Cocktail liquid -->
+    <ellipse cx="250" cy="310" rx="15" ry="4" fill="url(#cocktailGradient)"/>
+
+    <!-- Orange slice garnish -->
+    <circle cx="260" cy="308" r="6" fill="#ff8c42" stroke="#cc6622" stroke-width="1"/>
+    <circle cx="260" cy="308" r="4" fill="#ff9d5c" opacity="0.7"/>
+
+    <!-- Mint leaf -->
+    <path d="M250 300 Q245 295 248 290 Q252 292 255 300 Z" fill="#4a7a4a" stroke="#2d5a2d" stroke-width="1"/>
+
+    <!-- Straw -->
+    <line x1="250" y1="305" x2="275" y2="275" stroke="#2d8a2d" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Ice cubes -->
+    <polygon points="242,302 248,300 252,305 248,310 242,308" fill="#aaddff" opacity="0.6"/>
+    <polygon points="255,305 260,303 263,308 258,312 253,310" fill="#aaddff" opacity="0.5"/>
+
+    <!-- Left arm - resting on knee -->
+    <path d="M85 260 Q70 290 65 320"
+          fill="none" stroke="#8b6956" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Shoulder/wrap -->
+    <path d="M55 210 Q40 230 45 280 Q50 310 70 330"
+          fill="none" stroke="#5a4a3a" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+  </g>
+
+  <!-- Person on the right (friend/company) -->
+  <g transform="translate(1150, 700)">
+    <!-- Body -->
+    <path d="M50 200 L50 275 Q50 315 75 325 L110 335 Q140 338 155 325 L175 305"
+          fill="none" stroke="#3d5a7e" stroke-width="26" stroke-linecap="round"/>
+
+    <!-- Dress/kurta -->
+    <path d="M55 200 L55 245 Q55 290 78 300 L112 305 Q138 300 150 270 L158 235"
+          fill="#6b8ba8" stroke="#3d5a7e" stroke-width="2" opacity="0.9"/>
+
+    <!-- Head -->
+    <ellipse cx="105" cy="160" rx="32" ry="40" fill="#9b7b66"/>
+
+    <!-- Hair - tied back -->
+    <ellipse cx="105" cy="140" rx="28" ry="35" fill="#2d1f1a"/>
+    <ellipse cx="105" cy="180" rx="15" ry="20" fill="#2d1f1a"/>
+
+    <!-- Face - turned toward friend -->
+    <ellipse cx="110" cy="162" rx="6" ry="3" fill="#3d2f2a"/>
+    <ellipse cx="138" cy="162" rx="6" ry="3" fill="#3d2f2a"/>
+
+    <!-- Nose -->
+    <path d="M118 168 Q120 178 118 183" fill="none" stroke="#6b4f3f" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Smile -->
+    <path d="M112 193 Q120 200 128 193" fill="none" stroke="#7b5f4f" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Earrings (jhumka style) -->
+    <circle cx="85" cy="168" r="3" fill="#d4af37"/>
+    <circle cx="125" cy="168" r="3" fill="#d4af37"/>
+
+    <!-- Left arm - gesturing -->
+    <path d="M135 250 Q155 265 170 285"
+          fill="none" stroke="#9b7b66" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Hand with small glass -->
+    <circle cx="172" cy="290" r="10" fill="#9b7b66"/>
+
+    <!-- Whiskey/brandy glass -->
+    <path d="M168 300 L165 320 L182 320 L178 300 Z" fill="url(#glassGradient)" stroke="#c0c0c0" stroke-width="1"/>
+    <ellipse cx="173.5" cy="300" rx="8.5" ry="3" fill="#8b5a2b"/>
+
+    <!-- Right arm - on table -->
+    <path d="M65 250 Q55 280 58 310"
+          fill="none" stroke="#9b7b66" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- Additional drinks on table -->
+  <!-- Beer glass -->
+  <g transform="translate(850, 870)">
+    <path d="M0 0 L5 50 Q5 60 15 60 L25 60 Q35 60 35 50 L40 0 Z"
+          fill="url(#glassGradient)" stroke="#c0c0c0" stroke-width="1"/>
+    <ellipse cx="20" cy="0" rx="18" ry="5" fill="url(#windowGlow)" opacity="0.8"/>
+    <ellipse cx="20" cy="0" rx="15" ry="4" fill="#e8b84d"/>
+    <!-- Foam -->
+    <ellipse cx="20" cy="-3" rx="16" ry="4" fill="#fff8e8"/>
+  </g>
+
+  <!-- Bottle of wine/whiskey -->
+  <g transform="translate(1050, 850)">
+    <rect x="10" y="10" width="25" height="70" fill="#2d1f1a" opacity="0.9"/>
+    <rect x="15" y="10" width="15" height="25" fill="#3d2f1f"/>
+    <ellipse cx="22.5" cy="10" rx="12" ry="4" fill="#2d1f1a"/>
+    <rect x="18" y="30" width="9" height="35" fill="#8b7355" opacity="0.8"/>
+  </g>
+
+  <!-- Small plate of snacks -->
+  <g transform="translate(960, 895)">
+    <ellipse cx="0" cy="0" rx="50" ry="15" fill="#8b7355" opacity="0.9"/>
+    <ellipse cx="-15" cy="-3" rx="10" ry="6" fill="#c4a574"/>
+    <ellipse cx="10" cy="2" rx="8" ry="5" fill="#b89868"/>
+    <ellipse cx="5" cy="-8" rx="12" ry="7" fill="#c8a878"/>
+    <ellipse cx="-20" cy="5" rx="9" ry="5" fill="#b89868"/>
+    <ellipse cx="20" cy="-2" rx="11" ry="6" fill="#c4a574"/>
+  </g>
+
+  <!-- Cigarette pack (optional, for Bombay cafe culture) -->
+  <g transform="translate(1120, 875)">
+    <rect x="0" y="0" width="35" height="25" fill="#1a1a1a" opacity="0.8"/>
+    <rect x="2" y="2" width="31" height="21" fill="#2a2a2a"/>
+    <text x="8" y="16" font-family="serif" font-size="8" fill="#d4af37" opacity="0.7">M</text>
+  </g>
+
+  <!-- Warm string lights hanging above -->
+  <g opacity="0.8">
+    <path d="M0 700 Q200 650 400 700 T800 700 T1200 700 T1600 700 T2000 700"
+          stroke="#3a2a1a" stroke-width="2" fill="none"/>
+
+    <!-- Individual light bulbs -->
+    <g transform="translate(0, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(200, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(400, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(600, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(800, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(1000, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(1200, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(1400, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(1600, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+    <g transform="translate(1800, 700)">
+      <circle cx="100" cy="0" r="8" fill="#ffdd88"/>
+      <circle cx="100" cy="0" r="15" fill="#ffdd88" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- Potted plants on terrace -->
+  <!-- Plant pot 1 -->
+  <g transform="translate(100, 800)">
+    <ellipse cx="50" cy="80" rx="50" ry="15" fill="#6b4f3f"/>
+    <path d="M0 0 Q0 70 20 80 L80 80 Q100 70 100 0 Z" fill="#7b5f4f"/>
+    <ellipse cx="50" cy="0" rx="50" ry="15" fill="#8b6f5f"/>
+    <!-- Plant -->
+    <path d="M50 0 Q40 -30 30 -50" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="30" cy="-50" rx="15" ry="8" fill="#3d7a3d"/>
+    <path d="M50 0 Q60 -35 75 -55" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="75" cy="-55" rx="18" ry="10" fill="#3d7a3d"/>
+    <path d="M50 0 Q50 -40 50 -70" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="50" cy="-70" rx="12" ry="6" fill="#2d6a2d"/>
+  </g>
+
+  <!-- Plant pot 2 -->
+  <g transform="translate(1770, 800)">
+    <ellipse cx="50" cy="80" rx="50" ry="15" fill="#6b4f3f"/>
+    <path d="M0 0 Q0 70 20 80 L80 80 Q100 70 100 0 Z" fill="#7b5f4f"/>
+    <ellipse cx="50" cy="0" rx="50" ry="15" fill="#8b6f5f"/>
+    <!-- Plant -->
+    <path d="M50 0 Q35 -25 25 -45" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="25" cy="-45" rx="14" ry="7" fill="#3d7a3d"/>
+    <path d="M50 0 Q65 -30 80 -50" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="80" cy="-50" rx="16" ry="9" fill="#3d7a3d"/>
+    <path d="M50 0 Q50 -35 45 -60" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="45" cy="-60" rx="10" ry="5" fill="#2d6a2d"/>
+    <path d="M50 0 Q55 -40 70 -65" stroke="#2d5a2d" stroke-width="4" fill="none"/>
+    <ellipse cx="70" cy="-65" rx="12" ry="6" fill="#3d7a3d"/>
+  </g>
+
+  <!-- Distant Mumbai local train silhouettes on harbor bridge -->
+  <g transform="translate(1300, 650) scale(0.3)" opacity="0.5">
+    <rect x="0" y="0" width="500" height="40" fill="#1a1a2e"/>
+    <rect x="20" y="10" width="60" height="20" fill="#2d2d4a"/>
+    <rect x="100" y="10" width="60" height="20" fill="#2d2d4a"/>
+    <rect x="180" y="10" width="60" height="20" fill="#2d2d4a"/>
+    <rect x="260" y="10" width="60" height="20" fill="#2d2d4a"/>
+    <rect x="340" y="10" width="60" height="20" fill="#2d2d4a"/>
+    <rect x="420" y="10" width="60" height="20" fill="#2d2d4a"/>
+  </g>
+
+  <!-- Seagulls flying -->
+  <g fill="none" stroke="#1a1a2e" stroke-width="2" opacity="0.6">
+    <path d="M200 350 Q210 345 220 350 Q230 355 240 350"/>
+    <path d="M250 370 Q260 365 270 370 Q280 375 290 370"/>
+    <path d="M1700 400 Q1710 395 1720 400 Q1730 405 1740 400"/>
+    <path d="M1750 380 Q1760 375 1770 380 Q1780 385 1790 380"/>
+  </g>
+
+  <!-- Warm light reflection on water from the sun -->
+  <ellipse cx="1600" cy="780" rx="150" ry="40" fill="#ffd966" opacity="0.2"/>
+  <ellipse cx="1600" cy="830" rx="120" ry="30" fill="#ffd966" opacity="0.15"/>
+  <ellipse cx="1600" cy="890" rx="100" ry="25" fill="#ffd966" opacity="0.1"/>
+
+  <!-- Atmospheric haze layer -->
+  <rect x="0" y="500" width="1920" height="300" fill="#f4a460" opacity="0.05"/>
+
+  <!-- Foreground railing detail -->
+  <g transform="translate(0, 720)">
+    <line x1="0" y1="10" x2="1920" y2="10" stroke="#4a3a2a" stroke-width="3"/>
+    <line x1="0" y1="5" x2="1920" y2="5" stroke="#5a4a3a" stroke-width="2"/>
+  </g>
+
+  <!-- Subtle lens flare effect -->
+  <g opacity="0.15">
+    <circle cx="1700" cy="600" r="30" fill="#ffffff"/>
+    <circle cx="1750" cy="550" r="20" fill="#ffffff"/>
+    <circle cx="1800" cy="520" r="15" fill="#ffffff"/>
+  </g>
+
+  <!-- Additional atmospheric details - distant boats -->
+  <g transform="translate(200, 730)" opacity="0.6">
+    <path d="M0 10 L20 0 L40 10 Z" fill="#1a1a2e"/>
+  </g>
+  <g transform="translate(500, 750)" opacity="0.5">
+    <path d="M0 10 L15 0 L30 10 Z" fill="#1a1a2e"/>
+  </g>
+  <g transform="translate(1400, 720)" opacity="0.65">
+    <path d="M0 10 L25 0 L50 10 Z" fill="#1a1a2e"/>
+  </g>
+
+  <!-- Final golden hour overlay for warmth -->
+  <rect width="1920" height="1080" fill="#ffaa5e" opacity="0.08"/>
+</svg>

@@ -1,0 +1,441 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <!-- Golden Hour Sky Gradients -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4a3728;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#f58220;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#ffb347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Water Gradient -->
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a7c59;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Building Sunlight Gradient -->
+    <linearGradient id="buildingSunlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f5deb3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#daa520;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Table Wood Texture -->
+    <pattern id="woodTexture" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#8b7355" stroke-width="0.5" opacity="0.3"/>
+      <line x1="0" y2="4" x2="4" y1="0" stroke="#654321" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+
+    <!-- Glass Reflection -->
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.3" />
+    </linearGradient>
+
+    <!-- Person Glow -->
+    <radialGradient id="personGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Golden Light Filter -->
+    <filter id="goldenLight">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#ffd700" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Wave Animation -->
+    <animateTransform id="waveAnimation" attributeName="transform" type="translate" from="0 0" to="-10 0" dur="8s" repeatCount="indefinite"/>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1200" height="800" fill="url(#skyGradient)"/>
+
+  <!-- Sun with Glow -->
+  <g filter="url(#softGlow)">
+    <circle cx="900" cy="250" r="60" fill="#ffeb3b" opacity="0.9"/>
+    <circle cx="900" cy="250" r="100" fill="#ffc107" opacity="0.4"/>
+    <circle cx="900" cy="250" r="150" fill="#ff9800" opacity="0.2"/>
+  </g>
+
+  <!-- Sun Light Rays -->
+  <g opacity="0.3">
+    <line x1="900" y1="250" x2="600" y2="100" stroke="#ffd700" stroke-width="2"/>
+    <line x1="900" y1="250" x2="800" y2="150" stroke="#ffd700" stroke-width="2"/>
+    <line x1="900" y1="250" x2="1000" y2="150" stroke="#ffd700" stroke-width="2"/>
+    <line x1="900" y1="250" x2="700" y2="300" stroke="#ffd700" stroke-width="2"/>
+    <line x1="900" y1="250" x2="1100" y2="300" stroke="#ffd700" stroke-width="2"/>
+  </g>
+
+  <!-- Sea with Waves -->
+  <g>
+    <rect x="0" y="450" width="1200" height="200" fill="url(#waterGradient)"/>
+    <g filter="url(#waveAnimation)">
+      <path d="M0 500 Q300 490 600 500 T1200 500 V520 H0 Z" fill="#ffd700" opacity="0.4"/>
+      <path d="M0 520 Q300 510 600 520 T1200 520 V540 H0 Z" fill="#ffb347" opacity="0.5"/>
+      <path d="M0 540 Q300 530 600 540 T1200 540 V560 H0 Z" fill="#ff8c00" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Marine Drive Shoreline -->
+  <ellipse cx="600" cy="500" rx="500" ry="30" fill="#4a4a4a"/>
+
+  <!-- Bombay Skyline with Colonial Buildings -->
+  <!-- Left side - Colonial Architecture -->
+  <g>
+    <!-- Building 1 -->
+    <rect x="80" y="320" width="120" height="180" fill="#c9b387"/>
+    <rect x="85" y="315" width="110" height="15" fill="#8b4513"/>
+    <rect x="90" y="350" width="25" height="35" fill="#2c1810" stroke="#ffd700" stroke-width="2"/>
+    <rect x="125" y="350" width="25" height="35" fill="#2c1810" stroke="#ffd700" stroke-width="2"/>
+    <rect x="90" y="400" width="60" height="40" fill="#2c1810" stroke="#ffd700" stroke-width="2"/>
+    <rect x="80" y="310" width="120" height="25" fill="#8b4513"/>
+
+    <!-- Building 2 -->
+    <rect x="200" y="340" width="100" height="160" fill="#d4af37"/>
+    <rect x="205" y="335" width="90" height="12" fill="#8b4513"/>
+    <rect x="215" y="370" width="20" height="30" fill="#2c1810"/>
+    <rect x="245" y="370" width="20" height="30" fill="#2c1810"/>
+    <rect x="215" y="410" width="50" height="35" fill="#2c1810"/>
+
+    <!-- Building 3 -->
+    <rect x="300" y="360" width="90" height="140" fill="#b8a870"/>
+    <rect x="305" y="355" width="80" height="10" fill="#654321"/>
+    <circle cx="345" cy="360" r="12" fill="#ffd700" opacity="0.8"/>
+    <rect x="320" y="390" width="15" height="25" fill="#2c1810"/>
+    <rect x="345" y="390" width="15" height="25" fill="#2c1810"/>
+    <rect x="370" y="390" width="15" height="25" fill="#2c1810"/>
+  </g>
+
+  <!-- Right side - Modern Buildings -->
+  <g>
+    <!-- High-rise with windows reflecting sunset -->
+    <rect x="950" y="200" width="150" height="300" fill="#5a4a3a"/>
+    <defs>
+      <pattern id="windowGrid" x="0" y="0" width="20" height="30" patternUnits="userSpaceOnUse">
+        <rect x="1" y="1" width="16" height="24" fill="#ffd700" opacity="0.6"/>
+      </pattern>
+    </defs>
+    <rect x="950" y="200" width="150" height="300" fill="url(#windowGrid)"/>
+
+    <!-- Building 2 -->
+    <rect x="1100" y="280" width="80" height="220" fill="#6b5a4a"/>
+    <rect x="1105" y="290" width="70" height="10" fill="#ffd700" opacity="0.4"/>
+    <rect x="1105" y="310" width="70" height="10" fill="#ff8c00" opacity="0.5"/>
+    <rect x="1105" y="330" width="70" height="10" fill="#ffb347" opacity="0.6"/>
+
+    <!-- Building 3 -->
+    <rect x="1020" y="320" width="60" height="180" fill="#5a4a3a"/>
+    <rect x="1025" y="330" width="50" height="8" fill="#ffd700" opacity="0.5"/>
+    <rect x="1025" y="350" width="50" height="8" fill="#ffc107" opacity="0.6"/>
+  </g>
+
+  <!-- Palm Trees in Foreground -->
+  <g>
+    <!-- Left Palm Tree -->
+    <rect x="60" y="420" width="15" height="120" fill="#3d2914" stroke="#2c1810" stroke-width="1"/>
+    <circle cx="67.5" cy="415" r="40" fill="none" stroke="#3d2914" stroke-width="8"/>
+    <path d="M30 400 L50 380 L40 360 L60 370 L67 340 L75 370 L95 360 L85 380 L105 400" fill="#2d4a1e" stroke="#1a3d0f" stroke-width="2"/>
+    <path d="M35 395 Q50 410 67 395" fill="none" stroke="#3d4a2e" stroke-width="3"/>
+    <path d="M90 395 Q75 410 60 395" fill="none" stroke="#3d4a2e" stroke-width="3"/>
+
+    <!-- Right Palm Tree -->
+    <rect x="1125" y="430" width="18" height="130" fill="#3d2914" stroke="#2c1810" stroke-width="1"/>
+    <circle cx="1134" cy="425" r="45" fill="none" stroke="#3d2914" stroke-width="8"/>
+    <path d="M1085 405 L1110 385 L1095 365 L1120 375 L1134 345 L1148 375 L1173 365 L1158 385 L1183 405" fill="#2d4a1e" stroke="#1a3d0f" stroke-width="2"/>
+    <path d="M1090 400 Q1105 415 1130 400" fill="none" stroke="#3d4a2e" stroke-width="3"/>
+    <path d="M1165 400 Q1150 415 1135 400" fill="none" stroke="#3d4a2e" stroke-width="3"/>
+  </g>
+
+  <!-- Beach Area -->
+  <ellipse cx="600" cy="530" rx="400" ry="60" fill="#c9b387" opacity="0.8"/>
+
+  <!-- Outdoor Seating Area with People -->
+  <!-- Main Table Setup -->
+  <g transform="translate(550, 580)">
+    <!-- Wooden Table -->
+    <ellipse cx="0" cy="0" rx="200" ry="120" fill="#6b4423" stroke="#5c3a1e" stroke-width="3"/>
+    <ellipse cx="0" cy="0" rx="190" ry="110" fill="url(#woodTexture)" opacity="0.7"/>
+
+    <!-- Table Items -->
+    <!-- Glass of Whiskey -->
+    <g transform="translate(-80, -30)">
+      <path d="M-50 -10 L50 -10 L60 40 L-60 40 Z" fill="#d4af37" opacity="0.9" stroke="#b8860b" stroke-width="2"/>
+      <rect x="-55" y="-15" width="110" height="8" fill="#d4af37" opacity="0.5"/>
+      <path d="M-45 -8 L45 -8 Q48 -5 45 -2 Q42 0 45 2 Q48 5 45 8 L-45 8 Q-48 5 -45 2 Q-42 0 -45 -2 Z" fill="#ffd700" opacity="0.6"/>
+      <!-- Ice cubes -->
+      <circle cx="-15" cy="25" r="8" fill="#ffffff" opacity="0.7"/>
+      <circle cx="20" cy="20" r="10" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- Cocktail Glass -->
+    <g transform="translate(60, -25)">
+      <path d="M-30 -15 L30 -15 L20 35 Q0 45 -20 35 Z" fill="#98FB98" opacity="0.7" stroke="#2E8B57" stroke-width="1.5"/>
+      <path d="M-28 -12 L28 -12 L18 25 Q0 32 -18 25 Z" fill="#ffffff" opacity="0.4"/>
+      <path d="M-25 28 Q0 35 25 28" fill="#98FB98" opacity="0.5"/>
+    </g>
+
+    <!-- Plate with Snacks -->
+    <ellipse cx="-120" cy="40" rx="45" ry="12" fill="#f5f5dc" stroke="#d3d3a0" stroke-width="2"/>
+    <circle cx="-110" cy="35" r="8" fill="#cd853f" opacity="0.9"/>
+    <circle cx="-95" cy="42" r="7" fill="#daa520" opacity="0.9"/>
+    <circle cx="-105" cy="50" r="6" fill="#deb887" opacity="0.8"/>
+
+    <!-- Small Plate -->
+    <ellipse cx="130" cy="-50" rx="35" ry="10" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="2"/>
+    <circle cx="120" cy="-58" r="6" fill="#ff6347"/>
+    <circle cx="135" cy="-52" r="5" fill="#ffd700"/>
+
+    <!-- Smartphone -->
+    <rect x="90" y="30" width="50" height="80" rx="4" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+    <rect x="95" y="35" width="40" height="60" rx="2" fill="#2a2a2a"/>
+    <circle cx="115" cy="88" r="3" fill="#4a4a4a"/>
+
+    <!-- Napkins -->
+    <ellipse cx="-50" cy="-60" rx="25" ry="8" fill="#f5f5f5" opacity="0.9"/>
+  </g>
+
+  <!-- Person 1 - Woman Relaxing with Cocktail -->
+  <g transform="translate(580, 480)">
+    <!-- Chair Back -->
+    <rect x="-60" y="-80" width="30" height="120" fill="#8b7355"/>
+    <line x1="-30" y1="-60" x2="60" y2="-60" stroke="#8b7355" stroke-width="4"/>
+
+    <!-- Body -->
+    <ellipse cx="0" cy="40" rx="40" ry="35" fill="url(#personGlow)" opacity="0.9"/>
+
+    <!-- Head -->
+    <ellipse cx="-10" cy="-20" rx="28" ry="32" fill="url(#personGlow)" opacity="0.95"/>
+    <path d="M-35 -10 Q-45 10 -40 35 L40 30 Q45 10 30 -10" fill="#8b6f47" stroke="#654321" stroke-width="2"/>
+
+    <!-- Hair -->
+    <path d="M-38 -25 Q-50 -35 -45 -5 L-35 25 Q-20 30 0 25 Q25 20 35 25 Q48 15 45 -10 Q42 -30 25 -25" fill="#4a3728" stroke="#2c1e14" stroke-width="1"/>
+
+    <!-- Face Details -->
+    <ellipse cx="-15" cy="-18" rx="20" ry="25" fill="#f5d5b8"/>
+    <circle cx="-8" cy="-25" r="3" fill="#3a2a1a"/>
+    <circle cx="-3" cy="-25" r="3" fill="#3a2a1a"/>
+    <path d="M-15 -10 Q-10 -7 -5 -10 Q0 -13 5 -10 Q10 -7 15 -8" stroke="#b86f47" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <ellipse cx="-5" cy="-8" rx="8" ry="3" fill="#e8a898" opacity="0.5"/>
+
+    <!-- Arms holding glass -->
+    <path d="M25 10 L60 -30 Q70 -40 75 -35 Q78 -28 65 -25" fill="#f5d5b8" stroke="#e8c4a0" stroke-width="1"/>
+    <ellipse cx="70" cy="-30" rx="12" ry="15" fill="#98FB98" opacity="0.7" stroke="#2E8B57" stroke-width="1"/>
+
+    <!-- Dress/Clothing -->
+    <path d="M-40 5 Q0 20 40 5 L35 60 Q-5 75 -35 60 Z" fill="#f5deb3" stroke="#d4af8f" stroke-width="1"/>
+
+    <!-- Relaxation pose -->
+    <path d="M5 50 Q20 65 35 55" stroke="#e8c4a0" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Person 2 - Man with Whiskey Glass -->
+  <g transform="translate(720, 500)">
+    <!-- Chair -->
+    <rect x="-50" y="-90" width="25" height="130" fill="#6b4423"/>
+    <line x1="-25" y1="-70" x2="50" y2="-70" stroke="#6b4423" stroke-width="4"/>
+
+    <!-- Body -->
+    <ellipse cx="0" cy="50" rx="42" ry="38" fill="url(#personGlow)" opacity="0.9"/>
+
+    <!-- Head -->
+    <ellipse cx="15" cy="-15" rx="26" ry="30" fill="url(#personGlow)" opacity="0.95"/>
+    <path d="M-15 -15 Q-25 -35 -20 -10 L-15 20 Q0 28 15 22 Q30 15 35 -10 Q38 -30 20 -25" fill="#5c4033" stroke="#3a281f" stroke-width="2"/>
+
+    <!-- Face Details -->
+    <ellipse cx="12" cy="-15" rx="18" ry="22" fill="#e8c4a0"/>
+    <circle cx="8" cy="-22" r="3" fill="#2a1a0a"/>
+    <circle cx="15" cy="-22" r="3" fill="#2a1a0a"/>
+    <path d="M10 -8 Q15 -5 20 -8 Q25 -11 30 -8" stroke="#b88f7e" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+    <!-- Hair -->
+    <path d="M-18 -20 Q-25 -40 -15 -15 L-8 18 Q5 25 18 20 Q30 12 32 -8 Q33 -28 18 -22" fill="#3d2914"/>
+
+    <!-- Arms holding glass -->
+    <path d="M-20 15 L-60 -25 Q-70 -35 -65 -30 Q-60 -20 -45 -20" fill="#e8c4a0" stroke="#d4b090" stroke-width="1"/>
+    <path d="M-55 -25 L-45 -40 L-35 -35 Z" fill="#d4af37" opacity="0.9" stroke="#8b4513" stroke-width="1"/>
+
+    <!-- Shirt -->
+    <path d="M-45 60 Q0 75 45 60 L40 100 Q-2 110 -40 100 Z" fill="#f5f5dc" stroke="#d3d3d3" stroke-width="1"/>
+
+    <!-- Relaxed smile -->
+    <path d="M5 -5 Q12 -8 20 -6" stroke="#b87f68" stroke-width="1.2" fill="none"/>
+  </g>
+
+  <!-- Person 3 - Woman laughing with friends -->
+  <g transform="translate(450, 510)">
+    <!-- Table edge visible -->
+    <ellipse cx="0" cy="70" rx="150" ry="20" fill="#6b4423" opacity="0.8"/>
+
+    <!-- Body -->
+    <ellipse cx="0" cy="45" rx="38" ry="35" fill="url(#personGlow)" opacity="0.9"/>
+
+    <!-- Head tilted back laughing -->
+    <ellipse cx="-20" cy="-10" rx="25" ry="28" fill="url(#personGlow)" opacity="0.95"/>
+    <path d="M-35 -15 Q-45 -40 -38 -15 L-30 20 Q-10 28 10 22 Q25 15 30 -5 Q32 -30 15 -25" fill="#6b4a3f" stroke="#4a3728" stroke-width="2"/>
+
+    <!-- Face - Laughing expression -->
+    <ellipse cx="-25" cy="-10" rx="16" ry="20" fill="#f0d5b8"/>
+    <circle cx="-22" cy="-18" r="2.5" fill="#3a2a1a"/>
+    <circle cx="-18" cy="-18" r="2.5" fill="#3a2a1a"/>
+    <path d="M-30 -5 Q-25 -2 -22 -5 Q-18 -8 -15 -5 Q-12 -2 -8 -4" stroke="#b87f6f" stroke-width="1.5" fill="none"/>
+    <path d="M-32 -2 Q-25 2 -20 -2" stroke="#d48a98" stroke-width="1.5" fill="none"/>
+
+    <!-- Hair flowing -->
+    <path d="M-38 -20 Q-50 -50 -40 -20 L-32 15 Q-15 22 2 18 Q18 12 25 -5 Q28 -28 12 -22" fill="#4a2f25" stroke="#3a1f18" stroke-width="1"/>
+
+    <!-- Arm raised in laughter -->
+    <path d="M-30 10 L-60 -20 Q-70 -30 -68 -25 Q-65 -18 -50 -15" fill="#f5d5b8" stroke="#e8c4a0" stroke-width="1"/>
+
+    <!-- Dress -->
+    <path d="M-40 50 Q0 65 40 50 L38 95 Q-2 105 -38 95 Z" fill="#d4af8f" stroke="#b89373" stroke-width="1"/>
+    <ellipse cx="-35" cy="55" rx="6" ry="8" fill="#ffd700" opacity="0.9"/>
+
+    <!-- Drink on table nearby -->
+    <ellipse cx="-70" cy="60" rx="12" ry="18" fill="#98FB98" opacity="0.7" stroke="#2E8B57" stroke-width="1"/>
+  </g>
+
+  <!-- More People in Background -->
+  <!-- Group at another table -->
+  <g transform="translate(300, 540)">
+    <ellipse cx="0" cy="0" rx="120" ry="80" fill="#7b5a3f" opacity="0.7"/>
+
+    <!-- Person A -->
+    <ellipse cx="-30" cy="-10" rx="20" ry="24" fill="#e8c8a8" opacity="0.9"/>
+    <path d="M-45 -15 Q-50 -35 -42 -15 L-38 10 Q-25 15 -15 10" fill="#4a3728"/>
+
+    <!-- Person B -->
+    <ellipse cx="40" cy="-5" rx="22" ry="26" fill="#f0d8b8" opacity="0.9"/>
+    <path d="M60 -12 Q65 -38 55 -12 L48 12 Q35 18 25 12" fill="#3d2914"/>
+
+    <!-- Drinks -->
+    <rect x="-20" y="-20" width="18" height="25" rx="2" fill="#d4af37" opacity="0.8"/>
+    <rect x="15" y="-18" width="16" height="22" rx="2" fill="#98FB98" opacity="0.7"/>
+  </g>
+
+  <!-- Person at Bar Counter -->
+  <g transform="translate(850, 560)">
+    <!-- Bar counter -->
+    <rect x="-60" y="0" width="120" height="15" fill="#5c3a21"/>
+    <rect x="-60" y="15" width="120" height="50" fill="#4a2a15"/>
+
+    <!-- Person sitting -->
+    <ellipse cx="-20" cy="-10" rx="18" ry="22" fill="#e0c8a8" opacity="0.9"/>
+    <path d="M-32 -15 Q-36 -35 -30 -15 L-25 8 Q-15 12 -8 8" fill="#3d2914"/>
+
+    <!-- Drink on bar -->
+    <ellipse cx="40" cy="-8" rx="10" ry="14" fill="#b8860b" opacity="0.7"/>
+  </g>
+
+  <!-- Seagulls over the sea -->
+  <g opacity="0.8">
+    <path d="M200 380 Q210 375 220 380 Q230 385 220 390 Q210 395 200 390 Z" fill="#f5f5f5"/>
+    <path d="M400 360 Q410 355 420 360 Q430 365 420 370 Q410 375 400 370 Z" fill="#f0f0f0"/>
+    <path d="M650 390 Q660 385 670 390 Q680 395 670 400 Q660 405 650 400 Z" fill="#f5f5f5"/>
+    <path d="M1000 370 Q1010 365 1020 370 Q1030 375 1020 380 Q1010 385 1000 380 Z" fill="#f0f0f0"/>
+  </g>
+
+  <!-- Lanterns hanging above the seating area -->
+  <g opacity="0.7">
+    <circle cx="400" cy="420" r="8" fill="#ffd700"/>
+    <line x1="400" y1="412" x2="400" y2="390" stroke="#8b7355" stroke-width="1"/>
+
+    <circle cx="600" cy="400" r="10" fill="#ffeb3b"/>
+    <line x1="600" y1="390" x2="600" y2="360" stroke="#8b7355" stroke-width="1.5"/>
+
+    <circle cx="800" cy="410" r="9" fill="#ffb347"/>
+    <line x1="800" y1="401" x2="800" y2="375" stroke="#8b7355" stroke-width="1.2"/>
+  </g>
+
+  <!-- Background People Walking on Shoreline -->
+  <g opacity="0.6">
+    <ellipse cx="250" cy="480" rx="8" ry="25" fill="#3d2914"/>
+    <ellipse cx="270" cy="482" rx="7" ry="23" fill="#4a3728"/>
+    <ellipse cx="350" cy="485" rx="6" ry="22" fill="#2c1e14"/>
+
+    <!-- Couple walking -->
+    <ellipse cx="900" cy="475" rx="9" ry="26" fill="#5c4033"/>
+    <ellipse cx="920" cy="478" rx="8" ry="24" fill="#6b4a3f"/>
+
+    <!-- Person with umbrella -->
+    <path d="M1050 460 L1040 480 H1070 Z" fill="#8b4513" opacity="0.7"/>
+  </g>
+
+  <!-- Fireflies/Glowing elements for ambiance -->
+  <g filter="url(#softGlow)" opacity="0.6">
+    <circle cx="200" cy="450" r="2" fill="#ffd700"/>
+    <circle cx="350" cy="430" r="1.5" fill="#ffeb3b"/>
+    <circle cx="950" cy="440" r="2" fill="#ffd700"/>
+    <circle cx="1050" cy="460" r="1.5" fill="#ff8c00"/>
+    <circle cx="450" cy="470" r="2" fill="#ffb347"/>
+  </g>
+
+  <!-- Additional Seating Tables -->
+  <!-- Table in middle ground -->
+  <ellipse cx="150" cy="560" rx="80" ry="50" fill="#6b4423" opacity="0.7"/>
+  <circle cx="120" cy="540" r="10" fill="#d4af37" opacity="0.8"/>
+
+  <!-- Another table -->
+  <ellipse cx="1000" cy="580" rx="70" ry="45" fill="#7b5a3f" opacity="0.7"/>
+  <circle cx="980" cy="560" r="8" fill="#ffeb3b" opacity="0.7"/>
+
+  <!-- Umbrella/Covering -->
+  <path d="M480 380 L180 420 Q100 430 80 450 L460 410 Z" fill="#8b4513" opacity="0.8"/>
+  <line x1="320" y1="380" x2="320" y2="420" stroke="#6b4423" stroke-width="8"/>
+
+  <!-- Street Scene Details -->
+  <!-- Auto-rickshaws in distance -->
+  <g opacity="0.7">
+    <rect x="100" y="450" width="40" height="25" fill="#ffd700" stroke="#daa520"/>
+    <circle x="108" y="475" r="6" fill="#1a1a1a"/>
+    <circle x="132" y="475" r="6" fill="#1a1a1a"/>
+
+    <rect x="1100" y="460" width="35" height="22" fill="#ffd700" stroke="#daa520"/>
+    <circle x="1105" y="482" r="5" fill="#1a1a1a"/>
+  </g>
+
+  <!-- Banner/Festival decorations -->
+  <path d="M300 320 L500 315 Q600 310 700 315 L500 330 Z" fill="#ff6b35" opacity="0.6"/>
+
+  <!-- Ocean Details - waves approaching shore -->
+  <g opacity="0.4">
+    <path d="M0 490 Q200 485 400 490 T800 490 T1200 490 V500 H0 Z" fill="#ffd700"/>
+    <path d="M0 510 Q200 505 400 510 T800 510 T1200 510 V520 H0 Z" fill="#ff8c00"/>
+  </g>
+
+  <!-- Reflection on wet sand -->
+  <ellipse cx="600" cy="525" rx="300" ry="20" fill="#ffd700" opacity="0.2"/>
+
+  <!-- Signage for Café -->
+  <rect x="180" y="340" width="60" height="25" fill="#d4af37" stroke="#b8860b" stroke-width="2"/>
+  <text x="185" y="358" fill="#3d2914" font-family="serif" font-size="10" font-weight="bold">Cafe</text>
+  <line x1="210" y1="365" x2="230" y2="370" stroke="#8b4513" stroke-width="2"/>
+
+  <!-- Clock on building -->
+  <circle cx="250" cy="330" r="15" fill="#f5deb3" stroke="#8b4513" stroke-width="2"/>
+  <line x1="250" y1="330" x2="260" y2="325" stroke="#3d2914" stroke-width="2"/>
+  <line x1="250" y1="330" x2="250" y2="345" stroke="#3d2914" stroke-width="2"/>
+
+  <!-- Palm Fronds in foreground -->
+  <path d="M60 600 Q100 580 120 560 T180 540 T240 520" fill="#2d4a1e" stroke="#1a3d0f" stroke-width="3"/>
+  <path d="M1140 620 Q1100 600 1080 580 T1020 540" fill="#2d4a1e" stroke="#1a3d0f" stroke-width="3"/>
+
+</svg>
